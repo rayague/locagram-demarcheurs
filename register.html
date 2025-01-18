@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Locagram | Inscription des Démarcheurs</title>
+  </head>
+  <body>
+    <div
+      class="min-h-screen bg-slate-600 py-6 flex flex-col justify-center sm:py-12"
+    >
+      <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-green-300 to-green-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"
+        ></div>
+        <div
+          class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20"
+        >
+          <div class="max-w-md mx-auto">
+            <div>
+              <h1 class="text-2xl font-semibold">
+                Inscription des Démarcheurs
+              </h1>
+              <p class="text-sm text-gray-600 mt-2">
+                Créez votre compte pour rejoindre la plateforme Locagram et
+                commencer vos démarches.
+              </p>
+            </div>
+            <div class="divide-y divide-gray-200">
+              <div
+                class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7"
+              >
+                <!-- Nom Complet -->
+                <div class="relative">
+                  <input
+                    autocomplete="off"
+                    id="name"
+                    name="name"
+                    type="text"
+                    class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-rose-600"
+                    placeholder="Nom complet"
+                  />
+                  <label
+                    for="name"
+                    class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    >Nom complet</label
+                  >
+                </div>
+
+                <!-- Email -->
+                <div class="relative">
+                  <input
+                    autocomplete="off"
+                    id="email"
+                    name="email"
+                    type="email"
+                    class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-blue-600"
+                    placeholder="Adresse email"
+                  />
+                  <label
+                    for="email"
+                    class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    >Adresse Email</label
+                  >
+                </div>
+
+                <!-- Téléphone -->
+                <div class="relative">
+                  <input
+                    autocomplete="off"
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-blue-600"
+                    placeholder="Numéro de téléphone"
+                  />
+                  <label
+                    for="phone"
+                    class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    >Numéro de téléphone</label
+                  >
+                </div>
+
+                <!-- Numéro IFU -->
+                <div class="relative">
+                  <input
+                    autocomplete="off"
+                    id="ifu"
+                    name="ifu"
+                    type="text"
+                    class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-blue-600"
+                    placeholder="Numéro IFU"
+                  />
+                  <label
+                    for="ifu"
+                    class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    >Numéro IFU</label
+                  >
+                </div>
+
+                <!-- Numéro de la Carte CIP -->
+                <div class="relative">
+                  <input
+                    autocomplete="off"
+                    id="cip"
+                    name="cip"
+                    type="text"
+                    class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-blue-600"
+                    placeholder="Numéro de la carte CIP"
+                  />
+                  <label
+                    for="cip"
+                    class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    >Numéro de la carte CIP</label
+                  >
+                </div>
+
+                <!-- Mot de passe -->
+                <div class="relative">
+                  <input
+                    autocomplete="off"
+                    id="password"
+                    name="password"
+                    type="password"
+                    class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-blue-600"
+                    placeholder="Mot de passe"
+                  />
+                  <label
+                    for="password"
+                    class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    >Mot de passe</label
+                  >
+                </div>
+
+                <!-- Confirmation du mot de passe -->
+                <div class="relative">
+                  <input
+                    autocomplete="off"
+                    id="confirm_password"
+                    name="confirm_password"
+                    type="password"
+                    class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-blue-600"
+                    placeholder="Confirmer le mot de passe"
+                  />
+                  <label
+                    for="confirm_password"
+                    class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                    >Confirmer le mot de passe</label
+                  >
+                </div>
+
+                <!-- Submit Button -->
+                <div class="relative">
+                  <button
+                    class="bg-green-500 text-white rounded-md px-2 py-1 w-full"
+                  >
+                    S'inscrire
+                  </button>
+                </div>
+                <a
+                  href="index.html"
+                  class="text-sky-600 underline underline-offset-2 text-sm"
+                >
+                  Se connecter
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
