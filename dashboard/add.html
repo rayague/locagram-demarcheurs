@@ -72,115 +72,205 @@
           </h1>
         </div>
 
-        <!-- Action Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Card 1: Ajouter un utilisateur -->
-          <div
-            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
-          >
-            <div class="flex items-center mb-4">
-              <i class="fas fa-user-plus text-3xl text-green-600 mr-4"></i>
-              <h3 class="text-xl font-semibold">Ajouter un utilisateur</h3>
-            </div>
-            <p class="text-gray-600">
-              Ajoutez un nouvel utilisateur à la plateforme.
-            </p>
-            <button
-              class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition"
-            >
-              Ajouter
-            </button>
-          </div>
+        <div
+          class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+        >
+          <h3 class="text-2xl font-semibold mb-6 text-center">
+            Enregistrer une nouvelle location
+          </h3>
 
-          <!-- Card 2: Gestion des utilisateurs -->
-          <div
-            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
-          >
-            <div class="flex items-center mb-4">
-              <i class="fas fa-user-edit text-3xl text-green-600 mr-4"></i>
-              <h3 class="text-xl font-semibold">Gérer les utilisateurs</h3>
+          <form action="#" method="POST">
+            <!-- Champ pour le titre de la location -->
+            <div class="mb-4">
+              <label for="title" class="block text-sm font-medium text-gray-700"
+                >Titre de la location</label
+              >
+              <input
+                type="text"
+                id="title"
+                name="title"
+                class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                placeholder="Ex: Appartement à Paris"
+                required
+              />
             </div>
-            <p class="text-gray-600">
-              Modifiez ou supprimez les utilisateurs existants.
-            </p>
-            <button
-              class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition"
-            >
-              Gérer
-            </button>
-          </div>
 
-          <!-- Card 3: Suivi des démarches -->
-          <div
-            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
-          >
-            <div class="flex items-center mb-4">
-              <i
-                class="fas fa-clipboard-check text-3xl text-green-600 mr-4"
-              ></i>
-              <h3 class="text-xl font-semibold">Suivi des démarches</h3>
+            <!-- Champ pour la description de la location -->
+            <div class="mb-4">
+              <label
+                for="description"
+                class="block text-sm font-medium text-gray-700"
+                >Description</label
+              >
+              <textarea
+                id="description"
+                name="description"
+                class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                placeholder="Ex: Un bel appartement situé en plein centre de Paris."
+                rows="4"
+                required
+              ></textarea>
             </div>
-            <p class="text-gray-600">Consultez les démarches en cours.</p>
-            <button
-              class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition"
-            >
-              Voir
-            </button>
-          </div>
 
-          <!-- Card 4: Statistiques -->
-          <div
-            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
-          >
-            <div class="flex items-center mb-4">
-              <i class="fas fa-chart-line text-3xl text-green-600 mr-4"></i>
-              <h3 class="text-xl font-semibold">Statistiques</h3>
+            <!-- Champ pour la localisation sur la carte -->
+            <div class="mb-4">
+              <label
+                for="location"
+                class="block text-sm font-medium text-gray-700"
+                >Localisation sur la carte</label
+              >
+              <input
+                type="text"
+                id="location"
+                name="location"
+                class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                placeholder="Ex: Cotonou"
+                required
+                readonly
+              />
             </div>
-            <p class="text-gray-600">
-              Consultez les performances des démarches.
-            </p>
-            <button
-              class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition"
-            >
-              Voir
-            </button>
-          </div>
 
-          <!-- Card 5: Sécurité -->
-          <div
-            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
-          >
-            <div class="flex items-center mb-4">
-              <i class="fas fa-shield-alt text-3xl text-green-600 mr-4"></i>
-              <h3 class="text-xl font-semibold">Sécurité</h3>
+            <!-- Champ pour la ville -->
+            <div class="mb-4">
+              <label for="city" class="block text-sm font-medium text-gray-700"
+                >Ville</label
+              >
+              <input
+                type="text"
+                id="city"
+                name="city"
+                class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                placeholder="Entrez la ville"
+                required
+              />
             </div>
-            <p class="text-gray-600">
-              Gérez les paramètres de sécurité de votre compte.
-            </p>
-            <button
-              class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition"
-            >
-              Gérer
-            </button>
-          </div>
 
-          <!-- Card 6: Paramètres -->
-          <div
-            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
-          >
-            <div class="flex items-center mb-4">
-              <i class="fas fa-cogs text-3xl text-green-600 mr-4"></i>
-              <h3 class="text-xl font-semibold">Paramètres</h3>
+            <!-- Champ pour le quartier -->
+            <div class="mb-4">
+              <label
+                for="neighborhood"
+                class="block text-sm font-medium text-gray-700"
+                >Quartier</label
+              >
+              <input
+                type="text"
+                id="neighborhood"
+                name="neighborhood"
+                class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                placeholder="Entrez le quartier"
+                required
+              />
             </div>
-            <p class="text-gray-600">
-              Configurez votre profil et vos préférences.
-            </p>
-            <button
-              class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition"
-            >
-              Voir
-            </button>
-          </div>
+
+            <!-- Champ pour le département -->
+            <div class="mb-4">
+              <label
+                for="department"
+                class="block text-sm font-medium text-gray-700"
+                >Département</label
+              >
+              <select
+                id="department"
+                name="department"
+                class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                required
+              >
+                <option value="" disabled selected>
+                  Choisir le département
+                </option>
+                <option value="oueme">Ouémé</option>
+                <option value="atlantic">Atlantique</option>
+                <option value="donga">Donga</option>
+                <option value="collines">Collines</option>
+                <option value="borgou">Borgou</option>
+              </select>
+            </div>
+
+            <!-- Sélectionner la catégorie du logement -->
+            <div class="mb-4">
+              <label
+                for="category"
+                class="block text-sm font-medium text-gray-700"
+                >Catégorie du logement</label
+              >
+              <select
+                id="category"
+                name="category"
+                class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                required
+              >
+                <option value="">Sélectionner une catégorie</option>
+                <option value="appartement">Appartement</option>
+                <option value="maison">Maison</option>
+                <option value="studio">Studio</option>
+                <option value="chambre">Chambre</option>
+                <option value="villa">Villa</option>
+              </select>
+            </div>
+
+            <!-- Champ pour le prix de la location -->
+            <div class="mb-4">
+              <label for="price" class="block text-sm font-medium text-gray-700"
+                >Prix</label
+              >
+              <input
+                type="number"
+                id="price"
+                name="price"
+                class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                placeholder="Ex: 120"
+                required
+              />
+            </div>
+
+            <!-- Champ pour la disponibilité -->
+            <div class="mb-4">
+              <label
+                for="availability"
+                class="block text-sm font-medium text-gray-700"
+                >Disponibilité</label
+              >
+              <select
+                id="availability"
+                name="availability"
+                class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                required
+              >
+                <option value="" disabled selected>
+                  Choisir la disponibilité
+                </option>
+                <option value="disponible">Disponible</option>
+                <option value="indisponible">Indisponible</option>
+              </select>
+            </div>
+
+            <!-- Champ pour l'upload des photos de la location -->
+            <div class="mb-6">
+              <label
+                for="photos"
+                class="block text-sm font-medium text-gray-700"
+                >Photos de la location</label
+              >
+              <input
+                type="file"
+                id="photos"
+                name="photos[]"
+                accept="image/*"
+                multiple
+                class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
+              />
+            </div>
+
+            <!-- Bouton de soumission -->
+            <div class="flex justify-center">
+              <button
+                type="submit"
+                class="bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700 transition"
+              >
+                Enregistrer la location
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -204,5 +294,6 @@
         sidebar.classList.toggle("hidden");
       });
     </script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   </body>
 </html>
