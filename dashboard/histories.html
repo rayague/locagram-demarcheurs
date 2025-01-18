@@ -40,8 +40,8 @@
               href="#"
               class="flex items-center p-3 rounded-lg bg-green-500 transition"
             >
-              <i class="fas fa-history text-2xl mr-3"></i>
-              <span class="text-lg">Historique</span>
+              <i class="fas fa-file-alt text-2xl mr-3"></i>
+              <span class="text-lg">Publications</span>
             </a>
             <!-- Profil -->
             <a
@@ -72,114 +72,263 @@
           </h1>
         </div>
 
-        <!-- Action Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Card 1: Ajouter un utilisateur -->
+          <!-- Publication 1 -->
           <div
-            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
           >
-            <div class="flex items-center mb-4">
-              <i class="fas fa-user-plus text-3xl text-green-600 mr-4"></i>
-              <h3 class="text-xl font-semibold">Ajouter un utilisateur</h3>
+            <div class="relative mb-4">
+              <img
+                src="https://via.placeholder.com/300"
+                alt="Location image"
+                class="w-full h-40 object-cover rounded-lg"
+              />
+              <div
+                class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-lg text-sm"
+              >
+                Disponible
+              </div>
             </div>
-            <p class="text-gray-600">
-              Ajoutez un nouvel utilisateur à la plateforme.
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              Location de Maison à Cotonou
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Publié le: <strong>12 Jan 2025</strong>
             </p>
-            <button
-              class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition"
-            >
-              Ajouter
-            </button>
+            <p class="text-gray-700 mt-2">
+              Localisation: <span class="font-semibold">Cotonou</span>, Quartier
+              X, Département Y
+            </p>
+            <div class="mt-4">
+              <p class="text-gray-700 text-sm">Type de bien: Maison</p>
+              <p class="text-gray-600 text-sm">Surface: 120 m²</p>
+            </div>
           </div>
 
-          <!-- Card 2: Gestion des utilisateurs -->
+          <!-- Publication 2 -->
           <div
-            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
           >
-            <div class="flex items-center mb-4">
-              <i class="fas fa-user-edit text-3xl text-green-600 mr-4"></i>
-              <h3 class="text-xl font-semibold">Gérer les utilisateurs</h3>
+            <div class="relative mb-4">
+              <img
+                src="https://via.placeholder.com/300"
+                alt="Location image"
+                class="w-full h-40 object-cover rounded-lg"
+              />
+              <div
+                class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-lg text-sm"
+              >
+                Indisponible
+              </div>
             </div>
-            <p class="text-gray-600">
-              Modifiez ou supprimez les utilisateurs existants.
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              Appartement à louer à Abomey-Calavi
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Publié le: <strong>15 Jan 2025</strong>
             </p>
-            <button
-              class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition"
-            >
-              Gérer
-            </button>
+            <p class="text-gray-700 mt-2">
+              Localisation: <span class="font-semibold">Abomey-Calavi</span>,
+              Quartier Z, Département A
+            </p>
+            <div class="mt-4">
+              <p class="text-gray-700 text-sm">Type de bien: Appartement</p>
+              <p class="text-gray-600 text-sm">Surface: 75 m²</p>
+            </div>
           </div>
 
-          <!-- Card 3: Suivi des démarches -->
+          <!-- Publication 3 -->
           <div
-            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
           >
-            <div class="flex items-center mb-4">
-              <i
-                class="fas fa-clipboard-check text-3xl text-green-600 mr-4"
-              ></i>
-              <h3 class="text-xl font-semibold">Suivi des démarches</h3>
+            <div class="relative mb-4">
+              <img
+                src="https://via.placeholder.com/300"
+                alt="Location image"
+                class="w-full h-40 object-cover rounded-lg"
+              />
+              <div
+                class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-lg text-sm"
+              >
+                Disponible
+              </div>
             </div>
-            <p class="text-gray-600">Consultez les démarches en cours.</p>
-            <button
-              class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition"
-            >
-              Voir
-            </button>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              Studio à louer à Cotonou
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Publié le: <strong>10 Jan 2025</strong>
+            </p>
+            <p class="text-gray-700 mt-2">
+              Localisation: <span class="font-semibold">Cotonou</span>, Quartier
+              Y, Département X
+            </p>
+            <div class="mt-4">
+              <p class="text-gray-700 text-sm">Type de bien: Studio</p>
+              <p class="text-gray-600 text-sm">Surface: 50 m²</p>
+            </div>
           </div>
 
-          <!-- Card 4: Statistiques -->
+          <!-- Publication 4 -->
           <div
-            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
           >
-            <div class="flex items-center mb-4">
-              <i class="fas fa-chart-line text-3xl text-green-600 mr-4"></i>
-              <h3 class="text-xl font-semibold">Statistiques</h3>
+            <div class="relative mb-4">
+              <img
+                src="https://via.placeholder.com/300"
+                alt="Location image"
+                class="w-full h-40 object-cover rounded-lg"
+              />
+              <div
+                class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-lg text-sm"
+              >
+                Disponible
+              </div>
             </div>
-            <p class="text-gray-600">
-              Consultez les performances des démarches.
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              Appartement de luxe à Ouidah
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Publié le: <strong>18 Déc 2024</strong>
             </p>
-            <button
-              class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition"
-            >
-              Voir
-            </button>
+            <p class="text-gray-700 mt-2">
+              Localisation: <span class="font-semibold">Ouidah</span>, Quartier
+              A, Département Z
+            </p>
+            <div class="mt-4">
+              <p class="text-gray-700 text-sm">
+                Type de bien: Appartement de luxe
+              </p>
+              <p class="text-gray-600 text-sm">Surface: 150 m²</p>
+            </div>
           </div>
 
-          <!-- Card 5: Sécurité -->
+          <!-- Publication 5 -->
           <div
-            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
           >
-            <div class="flex items-center mb-4">
-              <i class="fas fa-shield-alt text-3xl text-green-600 mr-4"></i>
-              <h3 class="text-xl font-semibold">Sécurité</h3>
+            <div class="relative mb-4">
+              <img
+                src="https://via.placeholder.com/300"
+                alt="Location image"
+                class="w-full h-40 object-cover rounded-lg"
+              />
+              <div
+                class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-lg text-sm"
+              >
+                Indisponible
+              </div>
             </div>
-            <p class="text-gray-600">
-              Gérez les paramètres de sécurité de votre compte.
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              Maison familiale à Djougou
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Publié le: <strong>5 Jan 2025</strong>
             </p>
-            <button
-              class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition"
-            >
-              Gérer
-            </button>
+            <p class="text-gray-700 mt-2">
+              Localisation: <span class="font-semibold">Djougou</span>, Quartier
+              B, Département W
+            </p>
+            <div class="mt-4">
+              <p class="text-gray-700 text-sm">Type de bien: Maison</p>
+              <p class="text-gray-600 text-sm">Surface: 200 m²</p>
+            </div>
           </div>
 
-          <!-- Card 6: Paramètres -->
+          <!-- Publication 6 -->
           <div
-            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
           >
-            <div class="flex items-center mb-4">
-              <i class="fas fa-cogs text-3xl text-green-600 mr-4"></i>
-              <h3 class="text-xl font-semibold">Paramètres</h3>
+            <div class="relative mb-4">
+              <img
+                src="https://via.placeholder.com/300"
+                alt="Location image"
+                class="w-full h-40 object-cover rounded-lg"
+              />
+              <div
+                class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-lg text-sm"
+              >
+                Disponible
+              </div>
             </div>
-            <p class="text-gray-600">
-              Configurez votre profil et vos préférences.
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              Appartement à louer à Porto-Novo
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Publié le: <strong>20 Déc 2024</strong>
             </p>
-            <button
-              class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition"
-            >
-              Voir
-            </button>
+            <p class="text-gray-700 mt-2">
+              Localisation: <span class="font-semibold">Porto-Novo</span>,
+              Quartier C, Département P
+            </p>
+            <div class="mt-4">
+              <p class="text-gray-700 text-sm">Type de bien: Appartement</p>
+              <p class="text-gray-600 text-sm">Surface: 85 m²</p>
+            </div>
+          </div>
+
+          <!-- Publication 7 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
+          >
+            <div class="relative mb-4">
+              <img
+                src="https://via.placeholder.com/300"
+                alt="Location image"
+                class="w-full h-40 object-cover rounded-lg"
+              />
+              <div
+                class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-lg text-sm"
+              >
+                Disponible
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              Villa à louer à Parakou
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Publié le: <strong>1 Jan 2025</strong>
+            </p>
+            <p class="text-gray-700 mt-2">
+              Localisation: <span class="font-semibold">Parakou</span>, Quartier
+              D, Département Q
+            </p>
+            <div class="mt-4">
+              <p class="text-gray-700 text-sm">Type de bien: Villa</p>
+              <p class="text-gray-600 text-sm">Surface: 250 m²</p>
+            </div>
+          </div>
+
+          <!-- Publication 8 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
+          >
+            <div class="relative mb-4">
+              <img
+                src="https://via.placeholder.com/300"
+                alt="Location image"
+                class="w-full h-40 object-cover rounded-lg"
+              />
+              <div
+                class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-lg text-sm"
+              >
+                Indisponible
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              Bungalow à louer à Bohicon
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Publié le: <strong>25 Déc 2024</strong>
+            </p>
+            <p class="text-gray-700 mt-2">
+              Localisation: <span class="font-semibold">Bohicon</span>, Quartier
+              E, Département R
+            </p>
+            <div class="mt-4">
+              <p class="text-gray-700 text-sm">Type de bien: Bungalow</p>
+              <p class="text-gray-600 text-sm">Surface: 100 m²</p>
+            </div>
           </div>
         </div>
       </div>
