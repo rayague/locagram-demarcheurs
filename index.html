@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+
     <title>Locagram | Connexion des Démarcheurs</title>
   </head>
   <body>
     <div
-      class="min-h-screen bg-slate-600 py-6 flex flex-col justify-center sm:py-12"
+      class="min-h-screen bg-slate-950 py-6 flex flex-col justify-center sm:py-12"
     >
       <div class="relative py-3 sm:max-w-xl sm:mx-auto">
         <div
@@ -19,14 +20,16 @@
         >
           <div class="max-w-md mx-auto">
             <div>
-              <h1 class="text-2xl font-semibold">Connexion des Démarcheurs</h1>
+              <h1 class="text-3xl font-black tracking-tighter text-green-500">
+                Connexion des Démarcheurs
+              </h1>
               <p class="text-sm text-gray-600 mt-2">
                 Connectez-vous pour accéder à votre compte Locagram.
               </p>
             </div>
             <div class="divide-y divide-gray-200">
-              <div
-                class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7"
+              <form
+                class="py-8 text-base flex flex-col leading-6 space-y-8 text-gray-700 sm:text-lg sm:leading-7"
               >
                 <!-- Numéro de la carte CIP -->
                 <div class="relative">
@@ -63,30 +66,31 @@
                 </div>
 
                 <!-- Submit Button -->
-                <div class="relative">
+                <div class="flex text-center relative">
                   <a
-                    href="dashboard/index.html"
-                    class="bg-green-500 text-white rounded-md px-2 py-1 w-full"
+                    href="dashboard/utilisateurs/index.html"
+                    class="bg-green-500 text-white rounded-md font-bold text-center px-4 py-2 w-full"
                   >
                     Se connecter
                   </a>
                 </div>
 
                 <!-- Lien vers l'inscription -->
-                <a
-                  href="register.html"
-                  class="text-sky-600 underline underline-offset-2 text-sm"
-                >
-                  S'inscrire
-                </a>
-                <br />
-                <a
-                  href=""
-                  class="text-sky-600 underline underline-offset-2 text-sm"
-                >
-                  Mot de passe oublié
-                </a>
-              </div>
+              </form>
+              <a
+                href="register.html"
+                class="text-sky-600 underline underline-offset-2 text-md font-bold"
+              >
+                S'inscrire
+              </a>
+              <br />
+              <br />
+              <a
+                href=""
+                class="text-sky-600 underline underline-offset-2 text-md font-bold"
+              >
+                Mot de passe oublié
+              </a>
             </div>
           </div>
         </div>
