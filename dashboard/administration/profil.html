@@ -60,11 +60,10 @@
         <!-- Divider -->
         <hr class="sidebar-divider" />
 
-        <!-- Barre de navigation -->
         <ul class="navbar-nav">
           <!-- Nav Item - Accueil -->
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">
+            <a class="nav-link" href="index.html">
               <i class="fas fa-fw fa-home"></i>
               <span>Accueil</span>
             </a>
@@ -112,7 +111,7 @@
 
           <!-- Nav Item - Profil -->
           <li class="nav-item">
-            <a class="nav-link" href="profil.html">
+            <a class="nav-link active" href="profil.html">
               <i class="fas fa-fw fa-user"></i>
               <span>Profil</span>
             </a>
@@ -232,130 +231,193 @@
           </nav>
           <!-- End of Topbar -->
 
-          <!-- Begin Page Content -->
-          <div class="container-fluid">
-            <!-- Page Heading -->
-            <div
-              class="d-sm-flex align-items-center justify-content-between mb-4"
-            >
-              <h1 class="h3 mb-0 text-gray-800">Tableau de board</h1>
-            </div>
-
-            <!-- Content Row -->
-            <div class="row">
-              <!-- Earnings (Monthly) Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-primary shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div
-                          class="text-xs font-weight-bold text-primary text-uppercase mb-1"
-                        >
-                          Earnings (Monthly)
-                        </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          $40,000
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                      </div>
+          <!-- Sidebar (SB Admin) -->
+          <div id="wrapper">
+            <!-- Profile Section -->
+            <div class="container-fluid mt-5">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Mon Profil</h6>
+                </div>
+                <div class="card-body">
+                  <!-- Profile Information -->
+                  <div class="row">
+                    <div class="col-md-4 text-center">
+                      <img
+                        src="./img/avatar.png"
+                        class="rounded-circle img-fluid h-25 mb-3"
+                        alt="Profile Picture"
+                      />
+                      <h4>John Doe</h4>
+                      <p class="text-muted">Administrateur</p>
+                    </div>
+                    <div class="col-md-8">
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <td><i class="fas fa-user-circle"></i></td>
+                            <td><strong>Nom complet :</strong> John Doe</td>
+                          </tr>
+                          <tr>
+                            <td><i class="fas fa-envelope"></i></td>
+                            <td>
+                              <strong>Email :</strong> john.doe@example.com
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><i class="fas fa-phone-alt"></i></td>
+                            <td><strong>Téléphone :</strong> +1 555-1234</td>
+                          </tr>
+                          <tr>
+                            <td><i class="fas fa-id-card"></i></td>
+                            <td><strong>Numéro IFU :</strong> 123456789</td>
+                          </tr>
+                          <tr>
+                            <td><i class="fas fa-credit-card"></i></td>
+                            <td><strong>Numéro CIP :</strong> 987654321</td>
+                          </tr>
+                          <!-- Nouveau statut Forfait -->
+                          <tr>
+                            <td><i class="fas fa-calendar-check"></i></td>
+                            <td>
+                              <strong>Statut Forfait :</strong>
+                              <span
+                                id="forfait-status"
+                                class="badge badge-success p-2"
+                                >Illimité</span
+                              >
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
-                </div>
-              </div>
 
-              <!-- Earnings (Monthly) Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-success shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div
-                          class="text-xs font-weight-bold text-success text-uppercase mb-1"
-                        >
-                          Earnings (Annual)
-                        </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          $215,000
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Earnings (Monthly) Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-info shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div
-                          class="text-xs font-weight-bold text-info text-uppercase mb-1"
-                        >
-                          Tasks
-                        </div>
-                        <div class="row no-gutters align-items-center">
-                          <div class="col-auto">
-                            <div
-                              class="h5 mb-0 mr-3 font-weight-bold text-gray-800"
-                            >
-                              50%
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="progress progress-sm mr-2">
-                              <div
-                                class="progress-bar bg-info"
-                                role="progressbar"
-                                style="width: 50%"
-                                aria-valuenow="50"
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                              ></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i
-                          class="fas fa-clipboard-list fa-2x text-gray-300"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Pending Requests Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-warning shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div
-                          class="text-xs font-weight-bold text-warning text-uppercase mb-1"
-                        >
-                          Pending Requests
-                        </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          18
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-comments fa-2x text-gray-300"></i>
-                      </div>
-                    </div>
+                  <!-- Action Buttons -->
+                  <div
+                    class="d-flex justify-content-between mt-4 hover:d-column"
+                  >
+                    <button
+                      class="btn btn-warning"
+                      data-toggle="modal"
+                      data-target="#editProfileModal"
+                    >
+                      <i class="fas fa-edit"></i> Modifier mon profil
+                    </button>
+                    <button class="btn btn-danger" onclick="logout()">
+                      <i class="fas fa-sign-out-alt"></i> Se déconnecter
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Modal Modifier Profil -->
+          <div
+            class="modal fade"
+            id="editProfileModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="editProfileModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="editProfileModalLabel">
+                    Modifier mon profil
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <!-- Formulaire de modification de profil -->
+                  <form id="editProfileForm">
+                    <div class="form-group">
+                      <label for="fullName">Nom complet</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="fullName"
+                        value="John Doe"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        value="john.doe@example.com"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="phone">Numéro de téléphone</label>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="phone"
+                        value="+1 555-1234"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="ifu">Numéro IFU</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="ifu"
+                        value="123456789"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="cip">Numéro CIP</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="cip"
+                        value="987654321"
+                      />
+                    </div>
+                    <!-- Option Forfait -->
+                    <div class="form-group">
+                      <label for="forfait">Statut Forfait</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="forfait"
+                        value="Illimité"
+                        disabled
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Fermer
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="saveProfileBtn"
+                  >
+                    Sauvegarder les modifications
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- /.container-fluid -->
         </div>
         <!-- End of Main Content -->
@@ -434,5 +496,29 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
+    <script>
+      // Fonction de déconnexion
+      function logout() {
+        // Pour l'instant, affichons une alerte, on peut rediriger vers la page de déconnexion réelle
+        alert("Vous avez été déconnecté.");
+        // Par exemple, rediriger vers la page de login
+        // window.location.href = "login.html";
+      }
+
+      // Sauvegarder les modifications du profil
+      document
+        .getElementById("saveProfileBtn")
+        .addEventListener("click", function () {
+          const fullName = document.getElementById("fullName").value;
+          const email = document.getElementById("email").value;
+          const phone = document.getElementById("phone").value;
+          const ifu = document.getElementById("ifu").value;
+          const cip = document.getElementById("cip").value;
+
+          // Ici, vous pouvez effectuer des validations et soumettre les données à un serveur
+          alert("Profil mis à jour avec succès!");
+          $("#editProfileModal").modal("hide");
+        });
+    </script>
   </body>
 </html>
