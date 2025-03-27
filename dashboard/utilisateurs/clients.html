@@ -230,227 +230,20 @@
           </nav>
           <!-- End of Topbar -->
 
-          <!-- Wrapper -->
-          <div class="container-fluid mt-5">
-            <div class="card shadow mb-4">
-              <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">
-                  Choisissez Votre Forfait
-                </h6>
-              </div>
-              <div class="card-body">
-                <div class="row">
-                  <!-- Forfait 1 mois -->
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-                    <div class="card bg-dark text-white">
-                      <div class="card-body text-center">
-                        <h5 class="card-title">
-                          <i class="fas fa-calendar-alt"></i> Forfait 1 Mois
-                        </h5>
-                        <p class="card-text">Payez pour 1 mois d'abonnement.</p>
-                        <p><strong>2000 FCFA</strong></p>
-                        <button
-                          class="btn btn-light"
-                          data-toggle="modal"
-                          data-target="#confirmModal"
-                          onclick="setForfait('1 Mois', 2000)"
-                        >
-                          Activer
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+          <div class="container-fluid">
+            <!-- Titre de la page -->
+            <h1 class="h3 mb-4 text-gray-800 text-center">Page Client</h1>
 
-                  <!-- Forfait 2 mois -->
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-                    <div class="card bg-dark text-white">
-                      <div class="card-body text-center">
-                        <h5 class="card-title">
-                          <i class="fas fa-calendar-alt"></i> Forfait 2 Mois
-                        </h5>
-                        <p class="card-text">Payez pour 2 mois d'abonnement.</p>
-                        <p><strong>4000 FCFA</strong></p>
-                        <button
-                          class="btn btn-light"
-                          data-toggle="modal"
-                          data-target="#confirmModal"
-                          onclick="setForfait('2 Mois', 4000)"
-                        >
-                          Activer
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+            <!-- Section Notifications -->
+            <div id="notifications-container">
+              <!-- Notifications seront ajoutées ici dynamiquement -->
+            </div>
 
-                  <!-- Forfait 3 mois -->
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-                    <div class="card bg-dark text-white">
-                      <div class="card-body text-center">
-                        <h5 class="card-title">
-                          <i class="fas fa-calendar-alt"></i> Forfait 3 Mois
-                        </h5>
-                        <p class="card-text">Payez pour 3 mois d'abonnement.</p>
-                        <p><strong>6000 FCFA</strong></p>
-                        <button
-                          class="btn btn-light"
-                          data-toggle="modal"
-                          data-target="#confirmModal"
-                          onclick="setForfait('3 Mois', 6000)"
-                        >
-                          Activer
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Forfait 6 mois -->
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-                    <div class="card bg-dark text-white">
-                      <div class="card-body text-center">
-                        <h5 class="card-title">
-                          <i class="fas fa-calendar-alt"></i> Forfait 6 Mois
-                        </h5>
-                        <p class="card-text">Payez pour 6 mois d'abonnement.</p>
-                        <p><strong>12000 FCFA</strong></p>
-                        <button
-                          class="btn btn-light"
-                          data-toggle="modal"
-                          data-target="#confirmModal"
-                          onclick="setForfait('6 Mois', 12000)"
-                        >
-                          Activer
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Forfait 8 mois -->
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-                    <div class="card bg-dark text-white">
-                      <div class="card-body text-center">
-                        <h5 class="card-title">
-                          <i class="fas fa-calendar-alt"></i> Forfait 8 Mois
-                        </h5>
-                        <p class="card-text">Payez pour 8 mois d'abonnement.</p>
-                        <p><strong>16000 FCFA</strong></p>
-                        <p class="text-success">
-                          <strong>Réduction: 1000 FCFA</strong>
-                        </p>
-                        <button
-                          class="btn btn-light"
-                          data-toggle="modal"
-                          data-target="#confirmModal"
-                          onclick="setForfait('8 Mois', 15000)"
-                        >
-                          Activer
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Forfait 9 mois -->
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-                    <div class="card bg-dark text-white">
-                      <div class="card-body text-center">
-                        <h5 class="card-title">
-                          <i class="fas fa-calendar-alt"></i> Forfait 9 Mois
-                        </h5>
-                        <p class="card-text">Payez pour 9 mois d'abonnement.</p>
-                        <p><strong>18000 FCFA</strong></p>
-                        <p class="text-success">
-                          <strong>Réduction: 1000 FCFA</strong>
-                        </p>
-                        <button
-                          class="btn btn-light"
-                          data-toggle="modal"
-                          data-target="#confirmModal"
-                          onclick="setForfait('9 Mois', 17000)"
-                        >
-                          Activer
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Forfait 10 mois -->
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-                    <div class="card bg-dark text-white">
-                      <div class="card-body text-center">
-                        <h5 class="card-title">
-                          <i class="fas fa-calendar-alt"></i> Forfait 10 Mois
-                        </h5>
-                        <p class="card-text">
-                          Payez pour 10 mois d'abonnement.
-                        </p>
-                        <p><strong>20000 FCFA</strong></p>
-                        <p class="text-success">
-                          <strong>Réduction: 1000 FCFA</strong>
-                        </p>
-                        <button
-                          class="btn btn-light"
-                          data-toggle="modal"
-                          data-target="#confirmModal"
-                          onclick="setForfait('10 Mois', 19000)"
-                        >
-                          Activer
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Forfait 11 mois -->
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-                    <div class="card bg-dark text-white">
-                      <div class="card-body text-center">
-                        <h5 class="card-title">
-                          <i class="fas fa-calendar-alt"></i> Forfait 11 Mois
-                        </h5>
-                        <p class="card-text">
-                          Payez pour 11 mois d'abonnement.
-                        </p>
-                        <p><strong>22000 FCFA</strong></p>
-                        <p class="text-success">
-                          <strong>Réduction: 1000 FCFA</strong>
-                        </p>
-                        <button
-                          class="btn btn-light"
-                          data-toggle="modal"
-                          data-target="#confirmModal"
-                          onclick="setForfait('11 Mois', 21000)"
-                        >
-                          Activer
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Forfait 12 mois -->
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-                    <div class="card bg-dark text-white">
-                      <div class="card-body text-center">
-                        <h5 class="card-title">
-                          <i class="fas fa-calendar-alt"></i> Forfait 12 Mois
-                        </h5>
-                        <p class="card-text">
-                          Payez pour 12 mois d'abonnement.
-                        </p>
-                        <p><strong>24000 FCFA</strong></p>
-                        <p class="text-danger">
-                          <strong>Réduction: 2000 FCFA</strong>
-                        </p>
-                        <button
-                          class="btn btn-light"
-                          data-toggle="modal"
-                          data-target="#confirmModal"
-                          onclick="setForfait('12 Mois', 22000)"
-                        >
-                          Activer
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <!-- Bouton WhatsApp -->
+            <div id="whatsapp-contact" class="mt-4">
+              <button id="whatsapp-btn" class="btn btn-success btn-block">
+                <i class="fab fa-whatsapp"></i> Contacter par WhatsApp
+              </button>
             </div>
           </div>
 
@@ -632,65 +425,55 @@
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
     <script>
-      let forfaitName = "";
-      let forfaitPrice = 0;
-      let forfaitDuration = 0;
-
-      // Fonction pour calculer le prix avec réduction si applicable
-      function getForfaitPrice(duration) {
-        const pricePerMonth = 2000; // Prix par mois
-
-        if (duration === 6) {
-          return pricePerMonth * duration - 1000; // Réduction de 1000 pour 6 mois
-        } else if (duration === 12) {
-          return pricePerMonth * duration - 2000; // Réduction de 2000 pour 12 mois
-        } else {
-          return pricePerMonth * duration; // Pas de réduction pour les autres mois
-        }
-      }
-
-      // Générer le HTML pour chaque forfait (de 1 à 12 mois)
-      for (let i = 1; i <= 12; i++) {
-        const price = getForfaitPrice(i); // Calcul du prix pour chaque forfait
-        const discountText =
-          i === 6 ? " (-1000 FCFA)" : i === 12 ? " (-2000 FCFA)" : ""; // Affichage des réductions
-
-        // Ajouter un forfait pour chaque durée (1 à 12 mois)
-        const forfaitHTML = `
-          <div class="card">
-            <div class="card-body text-center">
-              <h5 class="card-title"><i class="fas fa-calendar-alt"></i> Forfait ${i} Mois</h5>
-              <p class="card-text">Payez pour ${i} mois d'abonnement.</p>
-              <p><strong>${price} FCFA ${discountText}</strong></p>
-              <button class="btn btn-primary" data-toggle="modal" data-target="#confirmModal" onclick="setForfait('${i} Mois', ${price}, ${i})">Activer</button>
-            </div>
-          </div>
-        `;
-
-        // Insérer chaque forfait dans la section
-        document
-          .getElementById("forfait-container")
-          .insertAdjacentHTML("beforeend", forfaitHTML);
-      }
-
-      // Set forfait data to modal
-      function setForfait(name, price, duration) {
-        forfaitName = name;
-        forfaitPrice = price;
-        forfaitDuration = duration;
-        document.getElementById("forfait-name").textContent = name;
-        document.getElementById(
-          "forfait-price"
-        ).textContent = `${price} FCFA pour ${duration} mois`;
-      }
-
-      // Fonction pour activer le forfait
-      function activateForfait() {
-        alert(
-          `Forfait ${forfaitName} activé avec succès pour ${forfaitPrice} FCFA.`
+      // Fonction pour afficher une notification
+      function showNotification(message) {
+        const notificationContainer = document.getElementById(
+          "notifications-container"
         );
-        $("#confirmModal").modal("hide");
+
+        // Créer une nouvelle notification
+        const notification = document.createElement("div");
+        notification.classList.add(
+          "alert",
+          "alert-info",
+          "alert-dismissible",
+          "fade",
+          "show"
+        );
+        notification.role = "alert";
+        notification.innerHTML = `
+            <strong>Nouvelle demande :</strong> ${message}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          `;
+
+        // Ajouter la notification au conteneur
+        notificationContainer.appendChild(notification);
+
+        // Optionnel : Après 5 secondes, fermer automatiquement la notification
+        setTimeout(() => {
+          notification.remove();
+        }, 5000);
       }
+
+      // Simulation d'une notification pour "un utilisateur veut en savoir plus"
+      setTimeout(() => {
+        showNotification(
+          "Un utilisateur souhaite en savoir plus sur votre offre !"
+        );
+      }, 2000); // Affiche la notification après 2 secondes
+
+      // Lien pour contacter via WhatsApp
+      document.getElementById("whatsapp-btn").onclick = function () {
+        // Remplacer 'NUMERO_WHATSAPP' par le numéro du client à contacter
+        const phoneNumber = "NUMERO_WHATSAPP";
+        const message = encodeURIComponent(
+          "Bonjour, j'aimerais en savoir plus."
+        );
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+        window.open(whatsappUrl, "_blank");
+      };
     </script>
   </body>
 </html>
