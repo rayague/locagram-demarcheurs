@@ -239,19 +239,26 @@
               <h1 class="h3 mb-0 text-gray-800">Postes</h1>
             </div>
 
+            <!-- Bouton pour ouvrir le modal des Appartements -->
+            <button
+              class="btn btn-success mb-4"
+              data-toggle="modal"
+              data-target="#appartementModal"
+            >
+              <i class="fas fa-plus"></i> Ajouter un appartement
+            </button>
+
             <!-- Content Row -->
           </div>
           <!-- /.container-fluid -->
 
           <!-- Begin Page Content -->
           <div class="container-fluid">
-            <!-- Page Heading -->
-
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
               <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">
-                  Tous les postes
+                  Tous les appartements
                 </h6>
               </div>
               <div class="card-body">
@@ -264,89 +271,210 @@
                   >
                     <thead>
                       <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
+                        <th>Nom</th>
+                        <th>Ville</th>
+                        <th>Quartier</th>
+                        <th>Adresse</th>
+                        <th>Prix</th>
+                        <th>Pièces</th>
+                        <th>Chambres</th>
+                        <th>Équipements</th>
+                        <th>Images</th>
+                        <th>Autres détails</th>
+                        <th>Disponibilité</th>
                       </tr>
                     </thead>
-                    <tfoot>
-                      <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                      </tr>
-                    </tfoot>
                     <tbody>
                       <tr>
-                        <td>Thor Walton</td>
-                        <td>Developer</td>
-                        <td>New York</td>
-                        <td>61</td>
-                        <td>2013/08/11</td>
-                        <td>$98,540</td>
+                        <td>Résidence Soleil</td>
+                        <td>Cotonou</td>
+                        <td>Fidjrossè</td>
+                        <td>Rue des Cocotiers, Cotonou</td>
+                        <td>150000</td>
+                        <td>4</td>
+                        <td>2</td>
+                        <td>WiFi, Climatisation</td>
+                        <td>img1.jpg, img2.jpg</td>
+                        <td>Près de la plage</td>
+                        <td>Oui</td>
                       </tr>
                       <tr>
-                        <td>Finn Camacho</td>
-                        <td>Support Engineer</td>
-                        <td>San Francisco</td>
-                        <td>47</td>
-                        <td>2009/07/07</td>
-                        <td>$87,500</td>
+                        <td>Villa Azur</td>
+                        <td>Porto-Novo</td>
+                        <td>Ouando</td>
+                        <td>Av. Jean Paul II</td>
+                        <td>100000</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>Parking, Cuisine équipée</td>
+                        <td>villa.jpg</td>
+                        <td>Vue sur jardin</td>
+                        <td>Non</td>
                       </tr>
-                      <tr>
-                        <td>Serge Baldwin</td>
-                        <td>Data Coordinator</td>
-                        <td>Singapore</td>
-                        <td>64</td>
-                        <td>2012/04/09</td>
-                        <td>$138,575</td>
-                      </tr>
-
-                      <tr>
-                        <td>Shad Decker</td>
-                        <td>Regional Director</td>
-                        <td>Edinburgh</td>
-                        <td>51</td>
-                        <td>2008/11/13</td>
-                        <td>$183,000</td>
-                      </tr>
-                      <tr>
-                        <td>Michael Bruce</td>
-                        <td>Javascript Developer</td>
-                        <td>Singapore</td>
-                        <td>29</td>
-                        <td>2011/06/27</td>
-                        <td>$183,000</td>
-                      </tr>
-                      <tr>
-                        <td>Donna Snider</td>
-                        <td>Customer Support</td>
-                        <td>New York</td>
-                        <td>27</td>
-                        <td>2011/01/25</td>
-                        <td>$112,000</td>
-                      </tr>
+                      <!-- Tu peux ajouter d'autres lignes dynamiquement -->
                     </tbody>
                   </table>
                 </div>
               </div>
             </div>
           </div>
+
           <!-- /.container-fluid -->
         </div>
+
+        <!-- Modal pour ajouter/modifier un appartement -->
+        <div
+          class="modal fade"
+          id="appartementModal"
+          tabindex="-1"
+          aria-labelledby="appartementModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="appartementModalLabel">
+                  Ajouter un appartement
+                </h5>
+                <button
+                  type="button"
+                  class="close text-white"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form id="formAppartement" enctype="multipart/form-data">
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="appartementNom">Nom</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="appartementNom"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="appartementVille">Ville</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="appartementVille"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="appartementQuartier">Quartier</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="appartementQuartier"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="appartementAdresse">Adresse complète</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="appartementAdresse"
+                      required
+                    />
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-4">
+                      <label for="appartementPrix">Prix</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="appartementPrix"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="appartementPieces">Nombre de pièces</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="appartementPieces"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="appartementChambres"
+                        >Nombre de chambres</label
+                      >
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="appartementChambres"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="appartementEquipements">Équipements</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="appartementEquipements"
+                      placeholder="Ex: WiFi, Cuisine équipée..."
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="appartementImages">Images</label>
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="appartementImages"
+                      multiple
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="appartementAutres">Autres détails</label>
+                    <textarea
+                      class="form-control"
+                      id="appartementAutres"
+                      rows="3"
+                      placeholder="Ajoutez ici toute autre information utile..."
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="appartementDisponibilite">Disponibilité</label>
+                    <select class="form-control" id="appartementDisponibilite">
+                      <option>Oui</option>
+                      <option>Non</option>
+                    </select>
+                  </div>
+                  <button type="submit" class="btn btn-success">
+                    Enregistrer
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- End of Main Content -->
 
         <!-- Footer -->
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Locagram 2021</span>
+              <span
+                >Copyright &copy; Locagram
+                <a
+                  href="https://portfolio-cnkp.vercel.app"
+                  target="_blank"
+                  class="text-success"
+                  >Ray Ague</a
+                >
+                2025</span
+              >
             </div>
           </div>
         </footer>
@@ -399,6 +527,35 @@
         </div>
       </div>
     </div>
+
+    <script>
+      function editAppartement(button) {
+        var row = button.closest("tr");
+        var cells = row.getElementsByTagName("td");
+
+        document.getElementById("appartementNom").value =
+          cells[0].innerText.trim();
+        document.getElementById("appartementVille").value =
+          cells[1].innerText.trim();
+        document.getElementById("appartementAdresse").value =
+          cells[2].innerText.trim();
+        document.getElementById("appartementPrix").value =
+          cells[3].innerText.trim();
+        document.getElementById("appartementPieces").value =
+          cells[4].innerText.trim();
+        document.getElementById("appartementSurface").value =
+          cells[5].innerText.trim();
+        document.getElementById("appartementEquipements").value =
+          cells[6].innerText.trim();
+        document.getElementById("appartementDisponibilite").value =
+          cells[7].innerText.trim();
+
+        const modal = new bootstrap.Modal(
+          document.getElementById("appartementModal")
+        );
+        modal.show();
+      }
+    </script>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>

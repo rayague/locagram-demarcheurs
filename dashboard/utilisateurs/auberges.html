@@ -245,15 +245,24 @@
 
           <!-- Begin Page Content -->
           <div class="container-fluid">
-            <!-- Page Heading -->
-
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
-              <div class="card-header py-3">
+              <div
+                class="card-header py-3 d-flex justify-content-between align-items-center"
+              >
                 <h6 class="m-0 font-weight-bold text-primary">
-                  Tous les postes
+                  Liste des auberges
                 </h6>
+                <!-- Bouton pour ouvrir le modal -->
+                <button
+                  class="btn btn-warning"
+                  data-toggle="modal"
+                  data-target="#aubergeModal"
+                >
+                  <i class="fas fa-plus"></i> Ajouter une auberge
+                </button>
               </div>
+
               <div class="card-body">
                 <div class="table-responsive">
                   <table
@@ -262,82 +271,385 @@
                     width="100%"
                     cellspacing="0"
                   >
-                    <thead>
+                    <thead class="bg-light text-center">
                       <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
+                        <th>Nom</th>
+                        <th>Ville</th>
+                        <th>Quartier</th>
+                        <th>Adresse</th>
+                        <th>Capacité</th>
+                        <th>Type chambre</th>
+                        <th>Confort</th>
+                        <th>Prix (FCFA)</th>
+                        <th>Disponibilité</th>
+                        <th>Équipements</th>
+                        <th>Actions</th>
                       </tr>
                     </thead>
-                    <tfoot>
-                      <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                      </tr>
-                    </tfoot>
-                    <tbody>
-                      <tr>
-                        <td>Thor Walton</td>
-                        <td>Developer</td>
-                        <td>New York</td>
-                        <td>61</td>
-                        <td>2013/08/11</td>
-                        <td>$98,540</td>
-                      </tr>
-                      <tr>
-                        <td>Finn Camacho</td>
-                        <td>Support Engineer</td>
-                        <td>San Francisco</td>
-                        <td>47</td>
-                        <td>2009/07/07</td>
-                        <td>$87,500</td>
-                      </tr>
-                      <tr>
-                        <td>Serge Baldwin</td>
-                        <td>Data Coordinator</td>
-                        <td>Singapore</td>
-                        <td>64</td>
-                        <td>2012/04/09</td>
-                        <td>$138,575</td>
-                      </tr>
 
+                    <tbody>
+                      <!-- Exemple de données -->
                       <tr>
-                        <td>Shad Decker</td>
-                        <td>Regional Director</td>
-                        <td>Edinburgh</td>
-                        <td>51</td>
-                        <td>2008/11/13</td>
-                        <td>$183,000</td>
+                        <td>Auberge Soleil</td>
+                        <td>Cotonou</td>
+                        <td>Zogbo</td>
+                        <td>Rue 345, face dépôt de ciment</td>
+                        <td>8</td>
+                        <td>Chambre double</td>
+                        <td>Haut standing</td>
+                        <td>15000</td>
+                        <td>Disponible</td>
+                        <td>Wi-Fi, Clim, TV</td>
+                        <td class="text-center">
+                          <button
+                            class="btn btn-sm btn-info"
+                            onclick="editAuberge(this)"
+                          >
+                            Modifier
+                          </button>
+                          <button class="btn btn-sm btn-danger">
+                            Supprimer
+                          </button>
+                        </td>
                       </tr>
-                      <tr>
-                        <td>Michael Bruce</td>
-                        <td>Javascript Developer</td>
-                        <td>Singapore</td>
-                        <td>29</td>
-                        <td>2011/06/27</td>
-                        <td>$183,000</td>
-                      </tr>
-                      <tr>
-                        <td>Donna Snider</td>
-                        <td>Customer Support</td>
-                        <td>New York</td>
-                        <td>27</td>
-                        <td>2011/01/25</td>
-                        <td>$112,000</td>
-                      </tr>
+                      <!-- Ajouter dynamiquement d'autres lignes ici -->
                     </tbody>
                   </table>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="aubergeModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="aubergeModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-xl" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="aubergeModalLabel">
+                    Ajouter une auberge
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Fermer"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+
+                <!-- Formulaire -->
+                <form id="aubergeForm">
+                  <div class="modal-body row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="nomAuberge">Nom de l’auberge *</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="nomAuberge"
+                          required
+                        />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="ville">Ville *</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="ville"
+                          required
+                        />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="quartier">Quartier *</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="quartier"
+                          required
+                        />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="adresseDetail">Adresse détaillée</label>
+                        <textarea
+                          class="form-control"
+                          id="adresseDetail"
+                          rows="2"
+                        ></textarea>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="prix">Prix par nuit (FCFA) *</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="prix"
+                          required
+                        />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="disponibilite">Disponibilité *</label>
+                        <select
+                          class="form-control"
+                          id="disponibilite"
+                          required
+                        >
+                          <option value="Disponible">Disponible</option>
+                          <option value="Complet">Complet</option>
+                          <option value="Réservé">Réservé</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="capacite"
+                          >Capacité d’accueil (nombre de personnes) *</label
+                        >
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="capacite"
+                          required
+                        />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="typeChambre">Type de chambre *</label>
+                        <select class="form-control" id="typeChambre" required>
+                          <option>Chambre simple</option>
+                          <option>Chambre double</option>
+                          <option>Chambre familiale</option>
+                          <option>Suite</option>
+                        </select>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="confort">Niveau de confort *</label>
+                        <select class="form-control" id="confort" required>
+                          <option>Basique</option>
+                          <option>Moyen</option>
+                          <option>Haut standing</option>
+                        </select>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="equipements"
+                          >Équipements (Wi-Fi, Climatisation, etc.)</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="equipements"
+                          placeholder="Ex : Wi-Fi, TV, Climatisation..."
+                        />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="description">Description complète</label>
+                        <textarea
+                          class="form-control"
+                          id="description"
+                          rows="3"
+                        ></textarea>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="images">Photos de l’auberge</label>
+                        <input
+                          type="file"
+                          class="form-control-file"
+                          id="images"
+                          multiple
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Annuler
+                    </button>
+                    <button type="submit" class="btn btn-success">
+                      Enregistrer
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal de modification d’auberge -->
+          <div
+            class="modal fade"
+            id="editAubergeModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="editAubergeModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                  <h5 class="modal-title" id="editAubergeModalLabel">
+                    Modifier l'auberge
+                  </h5>
+                  <button
+                    type="button"
+                    class="close text-white"
+                    data-dismiss="modal"
+                  >
+                    <span>&times;</span>
+                  </button>
+                </div>
+
+                <div class="modal-body">
+                  <form id="editAubergeForm">
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="editNomAuberge">Nom de l'auberge</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="editNomAuberge"
+                          name="nomAuberge"
+                          required
+                        />
+                      </div>
+
+                      <div class="form-group col-md-6">
+                        <label for="editTypeChambre">Type de chambre</label>
+                        <select
+                          class="form-control"
+                          id="editTypeChambre"
+                          name="typeChambre"
+                        >
+                          <option>Simple</option>
+                          <option>Double</option>
+                          <option>Suite</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-group col-md-4">
+                        <label for="editVille">Ville</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="editVille"
+                          name="ville"
+                          required
+                        />
+                      </div>
+
+                      <div class="form-group col-md-4">
+                        <label for="editQuartier">Quartier</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="editQuartier"
+                          name="quartier"
+                        />
+                      </div>
+
+                      <div class="form-group col-md-4">
+                        <label for="editAdresseDetail">Adresse détaillée</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="editAdresseDetail"
+                          name="adresseDetail"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-group col-md-4">
+                        <label for="editCapacite">Capacité</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="editCapacite"
+                          name="capacite"
+                        />
+                      </div>
+
+                      <div class="form-group col-md-4">
+                        <label for="editConfort">Confort</label>
+                        <select
+                          class="form-control"
+                          id="editConfort"
+                          name="confort"
+                        >
+                          <option>Basique</option>
+                          <option>Moyen</option>
+                          <option>Haut standing</option>
+                        </select>
+                      </div>
+
+                      <div class="form-group col-md-4">
+                        <label for="editPrix">Prix (FCFA)</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="editPrix"
+                          name="prix"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="editDisponibilite">Disponibilité</label>
+                        <select
+                          class="form-control"
+                          id="editDisponibilite"
+                          name="disponibilite"
+                        >
+                          <option>Disponible</option>
+                          <option>Indisponible</option>
+                        </select>
+                      </div>
+
+                      <div class="form-group col-md-6">
+                        <label for="editEquipements">Équipements</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="editEquipements"
+                          name="equipements"
+                          placeholder="Ex: Wi-Fi, Clim, TV"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="text-right">
+                      <button type="submit" class="btn btn-warning">
+                        Enregistrer les modifications
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- /.container-fluid -->
         </div>
         <!-- End of Main Content -->
@@ -346,7 +658,16 @@
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Locagram 2021</span>
+              <span
+                >Copyright &copy; Locagram
+                <a
+                  href="https://portfolio-cnkp.vercel.app"
+                  target="_blank"
+                  class="text-success"
+                  >Ray Ague</a
+                >
+                2025</span
+              >
             </div>
           </div>
         </footer>
@@ -399,6 +720,66 @@
         </div>
       </div>
     </div>
+
+    <script>
+      document
+        .getElementById("aubergeForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const nom = document.getElementById("nomAuberge").value;
+          const emplacement = document.getElementById("emplacement").value;
+          const prix = document.getElementById("prix").value;
+          const description = document.getElementById("description").value;
+          const images = document.getElementById("images").files;
+
+          // Pour test : afficher les infos dans la console
+          console.log({ nom, emplacement, prix, description, images });
+
+          // Fermer le modal
+          $("#aubergeModal").modal("hide");
+
+          // Afficher une notification ou envoyer à un backend ici
+          alert("Auberge enregistrée avec succès !");
+        });
+    </script>
+    <script>
+      function editAuberge(button) {
+        // Récupère la ligne parente du bouton
+        var row = button.closest("tr");
+        var cells = row.getElementsByTagName("td");
+
+        // Récupère les valeurs depuis les cellules
+        var nom = cells[0].innerText.trim();
+        var ville = cells[1].innerText.trim();
+        var quartier = cells[2].innerText.trim();
+        var adresse = cells[3].innerText.trim();
+        var prix = cells[4].innerText.trim();
+        var capacite = cells[5].innerText.trim();
+        var typeChambre = cells[6].innerText.trim();
+        var confort = cells[7].innerText.trim();
+        var equipements = cells[8].innerText.trim();
+        var disponibilite = cells[9].innerText.trim();
+
+        // Remplir le formulaire dans le modal
+        document.getElementById("editNomAuberge").value = nom;
+        document.getElementById("editVille").value = ville;
+        document.getElementById("editQuartier").value = quartier;
+        document.getElementById("editAdresseDetail").value = adresse;
+        document.getElementById("editPrix").value = prix;
+        document.getElementById("editCapacite").value = capacite;
+        document.getElementById("editTypeChambre").value = typeChambre;
+        document.getElementById("editConfort").value = confort;
+        document.getElementById("editEquipements").value = equipements;
+        document.getElementById("editDisponibilite").value = disponibilite;
+
+        // Ouvre le modal
+        const modal = new bootstrap.Modal(
+          document.getElementById("editAubergeModal")
+        );
+        modal.show();
+      }
+    </script>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>

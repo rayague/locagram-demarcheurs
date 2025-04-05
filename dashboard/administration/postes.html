@@ -116,6 +116,14 @@
               <span>Profil</span>
             </a>
           </li>
+
+          <!-- Nav Item - Profil -->
+          <li class="nav-item">
+            <a class="nav-link bg-danger" href="profil.html">
+              <i class="fas fa-fw fa-sign-out-alt"></i>
+              <span>Déconnexion</span>
+            </a>
+          </li>
         </ul>
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block" />
@@ -253,6 +261,9 @@
                 <h6 class="m-0 font-weight-bold text-primary">
                   Tous les postes
                 </h6>
+                <a href="./postesDesactives.html" class="btn btn-success mt-4"
+                  >Postes désactivés</a
+                >
               </div>
               <div class="card-body">
                 <div class="table-responsive">
@@ -264,24 +275,19 @@
                   >
                     <thead>
                       <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
+                        <th>Numéro</th>
+                        <th>Catégorie</th>
+                        <th>Titre</th>
+                        <th>Description</th>
+                        <th>Auteur</th>
+                        <th>Date publication</th>
+                        <th>Auteur</th>
+                        <th>Type de logement</th>
+                        <th>Prix</th>
+                        <th>Images</th>
+                        <th>Action</th>
                       </tr>
                     </thead>
-                    <tfoot>
-                      <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                      </tr>
-                    </tfoot>
                     <tbody>
                       <tr>
                         <td>Thor Walton</td>
@@ -290,6 +296,18 @@
                         <td>61</td>
                         <td>2013/08/11</td>
                         <td>$98,540</td>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Age</th>
+                        <th>Start date</th>
+                        <th>
+                          <button
+                            class="btn btn-danger btn-sm"
+                            onclick="openConfirmModal(1)"
+                          >
+                            Désactiver
+                          </button>
+                        </th>
                       </tr>
                       <tr>
                         <td>Finn Camacho</td>
@@ -298,39 +316,18 @@
                         <td>47</td>
                         <td>2009/07/07</td>
                         <td>$87,500</td>
-                      </tr>
-                      <tr>
-                        <td>Serge Baldwin</td>
-                        <td>Data Coordinator</td>
-                        <td>Singapore</td>
-                        <td>64</td>
-                        <td>2012/04/09</td>
-                        <td>$138,575</td>
-                      </tr>
-
-                      <tr>
-                        <td>Shad Decker</td>
-                        <td>Regional Director</td>
-                        <td>Edinburgh</td>
-                        <td>51</td>
-                        <td>2008/11/13</td>
-                        <td>$183,000</td>
-                      </tr>
-                      <tr>
-                        <td>Michael Bruce</td>
-                        <td>Javascript Developer</td>
-                        <td>Singapore</td>
-                        <td>29</td>
-                        <td>2011/06/27</td>
-                        <td>$183,000</td>
-                      </tr>
-                      <tr>
-                        <td>Donna Snider</td>
-                        <td>Customer Support</td>
-                        <td>New York</td>
-                        <td>27</td>
-                        <td>2011/01/25</td>
-                        <td>$112,000</td>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Age</th>
+                        <th>Start date</th>
+                        <th>
+                          <button
+                            class="btn btn-danger btn-sm"
+                            onclick="openConfirmModal(1)"
+                          >
+                            Désactiver
+                          </button>
+                        </th>
                       </tr>
                     </tbody>
                   </table>
@@ -339,6 +336,52 @@
             </div>
           </div>
           <!-- /.container-fluid -->
+          <!-- Modal de confirmation de désactivation -->
+          <div
+            class="modal fade"
+            id="disableConfirmModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="disableConfirmModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="disableConfirmModalLabel">
+                    Confirmer la désactivation
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Êtes-vous sûr de vouloir désactiver ce poste ?</p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Annuler
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    id="confirmDisableButton"
+                  >
+                    Confirmer
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- End of Main Content -->
 
@@ -346,7 +389,16 @@
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Locagram 2021</span>
+              <span
+                >Copyright &copy; Locagram
+                <a
+                  href="https://portfolio-cnkp.vercel.app"
+                  target="_blank"
+                  class="text-success"
+                  >Ray Ague</a
+                >
+                2025</span
+              >
             </div>
           </div>
         </footer>
@@ -399,6 +451,29 @@
         </div>
       </div>
     </div>
+
+    <script>
+      let postIdToDisable = null;
+
+      function openConfirmModal(postId) {
+        postIdToDisable = postId; // Stocker l'ID du poste
+        $("#disableConfirmModal").modal("show"); // Afficher le modal
+      }
+
+      document
+        .getElementById("confirmDisableButton")
+        .addEventListener("click", function () {
+          if (postIdToDisable !== null) {
+            disablePost(postIdToDisable);
+            $("#disableConfirmModal").modal("hide"); // Fermer le modal après confirmation
+          }
+        });
+
+      function disablePost(postId) {
+        console.log("Poste désactivé avec l'ID :", postId);
+        // Ici, ajoute une requête AJAX pour désactiver le poste côté serveur
+      }
+    </script>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>

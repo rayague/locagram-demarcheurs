@@ -116,6 +116,13 @@
               <span>Profil</span>
             </a>
           </li>
+          <!-- Nav Item - Profil -->
+          <li class="nav-item">
+            <a class="nav-link bg-danger" href="profil.html">
+              <i class="fas fa-fw fa-sign-out-alt"></i>
+              <span>Déconnexion</span>
+            </a>
+          </li>
         </ul>
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block" />
@@ -290,7 +297,52 @@
                           <i class="fas fa-calendar-alt"></i> Forfait 3 Mois
                         </h5>
                         <p class="card-text">Payez pour 3 mois d'abonnement.</p>
-                        <p><strong>6000 FCFA</strong></p>
+                        <p><strong>5000 FCFA</strong></p>
+                        <p class="text-success">
+                          <strong>Réduction: 1000 FCFA</strong>
+                        </p>
+                        <button
+                          class="btn btn-light"
+                          data-toggle="modal"
+                          data-target="#confirmModal"
+                          onclick="setForfait('3 Mois', 6000)"
+                        >
+                          Activer
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Forfait 3 mois -->
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+                    <div class="card bg-dark text-white">
+                      <div class="card-body text-center">
+                        <h5 class="card-title">
+                          <i class="fas fa-calendar-alt"></i> Forfait 4 Mois
+                        </h5>
+                        <p class="card-text">Payez pour 4 mois d'abonnement.</p>
+                        <p><strong> 8000 FCFA</strong></p>
+                        <button
+                          class="btn btn-light"
+                          data-toggle="modal"
+                          data-target="#confirmModal"
+                          onclick="setForfait('3 Mois', 6000)"
+                        >
+                          Activer
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Forfait 5 mois -->
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+                    <div class="card bg-dark text-white">
+                      <div class="card-body text-center">
+                        <h5 class="card-title">
+                          <i class="fas fa-calendar-alt"></i> Forfait 5 Mois
+                        </h5>
+                        <p class="card-text">Payez pour 5 mois d'abonnement.</p>
+                        <p><strong>10000 FCFA</strong></p>
                         <button
                           class="btn btn-light"
                           data-toggle="modal"
@@ -561,7 +613,16 @@
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Locagram 2021</span>
+              <span
+                >Copyright &copy; Locagram
+                <a
+                  href="https://portfolio-cnkp.vercel.app"
+                  target="_blank"
+                  class="text-success"
+                  >Ray Ague</a
+                >
+                2025</span
+              >
             </div>
           </div>
         </footer>
@@ -690,6 +751,56 @@
           `Forfait ${forfaitName} activé avec succès pour ${forfaitPrice} FCFA.`
         );
         $("#confirmModal").modal("hide");
+      }
+    </script>
+    <script>
+      let selectedUser = null;
+
+      function setUserForfait(userName) {
+        // Mettre à jour la variable avec le nom de l'utilisateur sélectionné
+        selectedUser = userName;
+
+        // Mettre en surbrillance l'utilisateur sélectionné
+        document
+          .querySelectorAll("#userList .list-group-item")
+          .forEach((item) => {
+            item.classList.remove("active"); // Retirer la sélection des autres
+            item.querySelector("button").disabled = false; // Réactiver les boutons
+          });
+
+        // Ajouter la classe active et désactiver le bouton sélectionné
+        const selectedItem = Array.from(
+          document.querySelectorAll("#userList .list-group-item")
+        ).find((item) => item.textContent.includes(userName));
+
+        if (selectedItem) {
+          selectedItem.classList.add("active");
+          selectedItem.querySelector("button").disabled = true;
+        }
+
+        // Afficher un message de confirmation
+        document.getElementById(
+          "confirmationMessage"
+        ).innerHTML = `<strong>${userName}</strong> a été sélectionné.`;
+      }
+
+      function confirmForfait() {
+        if (selectedUser) {
+          alert(`Forfait activé pour : ${selectedUser}`);
+          $("#confirmModal").modal("hide"); // Fermer le modal après confirmation
+        } else {
+          alert("Veuillez sélectionner un utilisateur avant de confirmer.");
+        }
+      }
+
+      function searchUser() {
+        let input = document.getElementById("userSearch").value.toLowerCase();
+        let users = document.querySelectorAll("#userList .list-group-item");
+
+        users.forEach((user) => {
+          let userName = user.textContent.toLowerCase();
+          user.style.display = userName.includes(input) ? "" : "none";
+        });
       }
     </script>
   </body>
