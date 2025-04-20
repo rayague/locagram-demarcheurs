@@ -7,6 +7,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link rel="icon" type="image/png" href="./img/locagram1.png" />
+
     <meta name="description" content="" />
     <meta name="author" content="" />
 
@@ -43,11 +45,11 @@
           <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
           </div>
-          <div class="sidebar-brand-text mx-3">Locagram</div>
+          <div class="mx-3 sidebar-brand-text">Locagram</div>
         </a>
 
         <!-- Divider -->
-        <hr class="sidebar-divider my-0" />
+        <hr class="my-0 sidebar-divider" />
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
@@ -78,12 +80,12 @@
           </li>
 
           <!-- Nav Item - Catégories -->
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link active" href="clients.html">
               <i class="fas fa-fw fa-users"></i>
               <span>Mes Clients</span>
             </a>
-          </li>
+          </li> -->
 
           <!-- Nav Item - Notifications -->
           <li class="nav-item">
@@ -109,9 +111,14 @@
             </a>
           </li>
 
-          <!-- Nav Item - Profil -->
+          <!-- Nav Item - Déconnexion avec Modal -->
           <li class="nav-item">
-            <a class="nav-link bg-danger" href="profil.html">
+            <a
+              class="text-white nav-link bg-danger"
+              href="#"
+              data-toggle="modal"
+              data-target="#logoutModal"
+            >
               <i class="fas fa-fw fa-sign-out-alt"></i>
               <span>Déconnexion</span>
             </a>
@@ -122,7 +129,7 @@
 
         <!-- Sidebar Toggler (Sidebar) -->
         <div class="text-center d-none d-md-inline">
-          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+          <button class="border-0 rounded-circle" id="sidebarToggle"></button>
         </div>
       </ul>
       <!-- End of Sidebar -->
@@ -133,106 +140,21 @@
         <div id="content">
           <!-- Topbar -->
           <nav
-            class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
+            class="mb-4 bg-white shadow navbar navbar-expand navbar-light topbar static-top"
           >
             <!-- Sidebar Toggle (Topbar) -->
             <button
               id="sidebarToggleTop"
-              class="btn btn-link d-md-none rounded-circle mr-3"
+              class="mr-3 btn btn-link d-md-none rounded-circle"
             >
               <i class="fa fa-bars"></i>
             </button>
-
-            <!-- Topbar Navbar -->
-            <ul class="navbar-nav ml-auto">
-              <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-              <li class="nav-item dropdown no-arrow d-sm-none">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="searchDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <i class="fas fa-search fa-fw"></i>
-                </a>
-                <!-- Dropdown - Messages -->
-                <div
-                  class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                  aria-labelledby="searchDropdown"
-                >
-                  <form class="form-inline mr-auto w-100 navbar-search">
-                    <div class="input-group">
-                      <input
-                        type="text"
-                        class="form-control bg-light border-0 small"
-                        placeholder="Search for..."
-                        aria-label="Search"
-                        aria-describedby="basic-addon2"
-                      />
-                      <div class="input-group-append">
-                        <button class="btn btn-primary" type="button">
-                          <i class="fas fa-search fa-sm"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </li>
-
-              <div class="topbar-divider d-none d-sm-block"></div>
-
-              <!-- Nav Item - User Information -->
-              <li class="nav-item dropdown no-arrow">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="userDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <span class="mr-2 d-none d-lg-inline text-gray-600 small"
-                    >Douglas McGee</span
-                  >
-                  <img
-                    class="img-profile rounded-circle"
-                    src="img/undraw_profile.svg"
-                  />
-                </a>
-                <!-- Dropdown - User Information -->
-                <div
-                  class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                  aria-labelledby="userDropdown"
-                >
-                  <a class="dropdown-item" href="#">
-                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Profil
-                  </a>
-
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#logoutModal"
-                  >
-                    <i
-                      class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
-                    ></i>
-                    Déconnexion
-                  </a>
-                </div>
-              </li>
-            </ul>
           </nav>
           <!-- End of Topbar -->
 
           <div class="container-fluid">
             <!-- Titre de la page -->
-            <h1 class="h3 mb-4 text-gray-800 text-center">Page Client</h1>
+            <h1 class="mb-4 text-center text-gray-800 h3">Page Client</h1>
 
             <!-- Section Notifications -->
             <div id="notifications-container">
@@ -351,9 +273,9 @@
         <!-- End of Main Content -->
 
         <!-- Footer -->
-        <footer class="sticky-footer bg-white">
+        <footer class="bg-white sticky-footer">
           <div class="container my-auto">
-            <div class="copyright text-center my-auto">
+            <div class="my-auto text-center copyright">
               <span
                 >Copyright &copy; Locagram
                 <a
@@ -374,34 +296,35 @@
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
+    <a class="rounded scroll-to-top" href="#page-top">
       <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
+    <!-- Fenêtre modale de confirmation pour la déconnexion -->
     <div
       class="modal fade"
       id="logoutModal"
       tabindex="-1"
       role="dialog"
-      aria-labelledby="exampleModalLabel"
+      aria-labelledby="logoutModalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <h5 class="modal-title" id="logoutModalLabel">Prêt à quitter ?</h5>
             <button
               class="close"
               type="button"
               data-dismiss="modal"
-              aria-label="Close"
+              aria-label="Fermer"
             >
               <span aria-hidden="true">×</span>
             </button>
           </div>
           <div class="modal-body">
-            Select "Logout" below if you are ready to end your current session.
+            Sélectionnez « Déconnexion » ci-dessous si vous êtes prêt(e) à
+            mettre fin à votre session actuelle.
           </div>
           <div class="modal-footer">
             <button
@@ -409,11 +332,34 @@
               type="button"
               data-dismiss="modal"
             >
-              Cancel
+              Annuler
             </button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
+            <!-- Remplacez href par un appel à votre fonction logout si nécessaire -->
+            <a class="btn btn-primary" href="login.html">Déconnexion</a>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Loader SB Admin 2 -->
+    <div
+      id="pageLoader"
+      class="bg-white d-flex justify-content-center align-items-center"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1050;
+      "
+    >
+      <div
+        class="spinner-border text-success"
+        role="status"
+        style="width: 3rem; height: 3rem"
+      >
+        <span class="sr-only">Chargement...</span>
       </div>
     </div>
 

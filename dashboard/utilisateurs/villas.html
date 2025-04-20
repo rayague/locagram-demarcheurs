@@ -7,6 +7,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link rel="icon" type="image/png" href="./img/locagram1.png" />
+
     <meta name="description" content="" />
     <meta name="author" content="" />
 
@@ -43,11 +45,11 @@
           <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
           </div>
-          <div class="sidebar-brand-text mx-3">Locagram</div>
+          <div class="mx-3 sidebar-brand-text">Locagram</div>
         </a>
 
         <!-- Divider -->
-        <hr class="sidebar-divider my-0" />
+        <hr class="my-0 sidebar-divider" />
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
@@ -78,12 +80,12 @@
           </li>
 
           <!-- Nav Item - Catégories -->
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="clients.html">
               <i class="fas fa-fw fa-users"></i>
               <span>Mes Clients</span>
             </a>
-          </li>
+          </li> -->
 
           <!-- Nav Item - Notifications -->
           <li class="nav-item">
@@ -109,9 +111,14 @@
             </a>
           </li>
 
-          <!-- Nav Item - Profil -->
+          <!-- Nav Item - Déconnexion avec Modal -->
           <li class="nav-item">
-            <a class="nav-link bg-danger" href="profil.html">
+            <a
+              class="text-white nav-link bg-danger"
+              href="#"
+              data-toggle="modal"
+              data-target="#logoutModal"
+            >
               <i class="fas fa-fw fa-sign-out-alt"></i>
               <span>Déconnexion</span>
             </a>
@@ -122,7 +129,7 @@
 
         <!-- Sidebar Toggler (Sidebar) -->
         <div class="text-center d-none d-md-inline">
-          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+          <button class="border-0 rounded-circle" id="sidebarToggle"></button>
         </div>
       </ul>
       <!-- End of Sidebar -->
@@ -133,110 +140,24 @@
         <div id="content">
           <!-- Topbar -->
           <nav
-            class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
+            class="mb-4 bg-white shadow navbar navbar-expand navbar-light topbar static-top"
           >
             <!-- Sidebar Toggle (Topbar) -->
             <button
               id="sidebarToggleTop"
-              class="btn btn-link d-md-none rounded-circle mr-3"
+              class="mr-3 btn btn-link d-md-none rounded-circle"
             >
               <i class="fa fa-bars"></i>
             </button>
-
-            <!-- Topbar Navbar -->
-            <ul class="navbar-nav ml-auto">
-              <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-              <li class="nav-item dropdown no-arrow d-sm-none">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="searchDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <i class="fas fa-search fa-fw"></i>
-                </a>
-                <!-- Dropdown - Messages -->
-                <div
-                  class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                  aria-labelledby="searchDropdown"
-                >
-                  <form class="form-inline mr-auto w-100 navbar-search">
-                    <div class="input-group">
-                      <input
-                        type="text"
-                        class="form-control bg-light border-0 small"
-                        placeholder="Search for..."
-                        aria-label="Search"
-                        aria-describedby="basic-addon2"
-                      />
-                      <div class="input-group-append">
-                        <button class="btn btn-primary" type="button">
-                          <i class="fas fa-search fa-sm"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </li>
-
-              <div class="topbar-divider d-none d-sm-block"></div>
-
-              <!-- Nav Item - User Information -->
-              <li class="nav-item dropdown no-arrow">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="userDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <span class="mr-2 d-none d-lg-inline text-gray-600 small"
-                    >Douglas McGee</span
-                  >
-                  <img
-                    class="img-profile rounded-circle"
-                    src="img/undraw_profile.svg"
-                  />
-                </a>
-                <!-- Dropdown - User Information -->
-                <div
-                  class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                  aria-labelledby="userDropdown"
-                >
-                  <a class="dropdown-item" href="#">
-                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Profil
-                  </a>
-
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#logoutModal"
-                  >
-                    <i
-                      class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
-                    ></i>
-                    Déconnexion
-                  </a>
-                </div>
-              </li>
-            </ul>
           </nav>
           <!-- End of Topbar -->
-
           <!-- Begin Page Content -->
           <div class="container-fluid">
             <!-- Page Heading -->
             <div
-              class="d-sm-flex align-items-center justify-content-between mb-4"
+              class="mb-4 d-sm-flex align-items-center justify-content-between"
             >
-              <h1 class="h3 mb-0 text-gray-800">Villas</h1>
+              <h1 class="mb-0 text-gray-800 h3">Villas</h1>
             </div>
 
             <!-- Content Row -->
@@ -245,20 +166,32 @@
 
           <!-- Begin Page Content -->
           <div class="container-fluid">
-            <!-- Page Heading -->
-
-            <!-- Bouton Retour a la page de poste -->
-            <a href="./postes.html" type="button" class="btn btn-success my-2">
+            <!-- Bouton Retour à la page de poste -->
+            <a href="./postes.html" type="button" class="my-2 btn btn-success">
               Retour
             </a>
+          </div>
+          <!-- /.container-fluid -->
 
+          <!-- ====================================== -->
+          <!-- Partie HTML pour la gestion des Villas -->
+          <!-- ====================================== -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <!-- Page Heading -->
+          </div>
+          <!-- /.container-fluid -->
+
+          <div class="container-fluid">
             <!-- DataTales Example -->
-            <div class="card shadow mb-4">
-              <div class="card-header py-3">
+            <div class="mb-4 shadow card">
+              <div
+                class="py-3 card-header d-flex justify-content-between align-items-center"
+              >
                 <h6 class="m-0 font-weight-bold text-primary">
                   Toutes les villas
                 </h6>
-
                 <button
                   class="btn btn-success"
                   data-toggle="modal"
@@ -271,115 +204,189 @@
                 <div class="table-responsive">
                   <table
                     class="table table-bordered"
-                    id="dataTable"
+                    id="villasTable"
                     width="100%"
                     cellspacing="0"
                   >
                     <thead>
                       <tr>
                         <th>Nom de la Villa</th>
-                        <th>Emplacement</th>
+                        <th>Quartier</th>
+                        <th>Ville</th>
                         <th>Prix</th>
                         <th>Chambres</th>
+                        <th>Salons</th>
+                        <th>Confort</th>
                         <th>Équipements</th>
                         <th>Disponibilité</th>
+                        <th>Images</th>
                         <th>Actions</th>
                       </tr>
                     </thead>
-                    <tfoot>
-                      <tr>
-                        <th>Nom de la Villa</th>
-                        <th>Emplacement</th>
-                        <th>Prix</th>
-                        <th>Chambres</th>
-                        <th>Équipements</th>
-                        <th>Disponibilité</th>
-                        <th>Actions</th>
-                      </tr>
-                    </tfoot>
+
                     <tbody>
-                      <tr>
-                        <td>Villa Belle Vue</td>
-                        <td>Paris</td>
-                        <td>$250,000</td>
-                        <td>5</td>
-                        <td>WiFi, Piscine, Climatisation</td>
-                        <td>Disponible</td>
-                        <td>
-                          <button
-                            class="btn btn-info btn-sm"
-                            data-toggle="modal"
-                            data-target="#editVillaModal"
-                            onclick="loadVillaDetails(1)"
-                          >
-                            Modifier
-                          </button>
-                          <button
-                            class="btn btn-danger btn-sm"
-                            onclick="deleteVilla(1)"
-                          >
-                            Supprimer
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Villa Horizon</td>
-                        <td>Nice</td>
-                        <td>$350,000</td>
-                        <td>4</td>
-                        <td>WiFi, Sauna, Garage</td>
-                        <td>Non disponible</td>
-                        <td>
-                          <button
-                            class="btn btn-info btn-sm"
-                            data-toggle="modal"
-                            data-target="#editVillaModal"
-                            onclick="loadVillaDetails(2)"
-                          >
-                            Modifier
-                          </button>
-                          <button
-                            class="btn btn-danger btn-sm"
-                            onclick="deleteVilla(2)"
-                          >
-                            Supprimer
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Villa Calme</td>
-                        <td>Marseille</td>
-                        <td>$420,000</td>
-                        <td>6</td>
-                        <td>WiFi, Terrasse, Jacuzzi</td>
-                        <td>Disponible</td>
-                        <td>
-                          <button
-                            class="btn btn-info btn-sm"
-                            data-toggle="modal"
-                            data-target="#editVillaModal"
-                            onclick="loadVillaDetails(3)"
-                          >
-                            Modifier
-                          </button>
-                          <button
-                            class="btn btn-danger btn-sm"
-                            onclick="deleteVilla(3)"
-                          >
-                            Supprimer
-                          </button>
-                        </td>
-                      </tr>
-                      <!-- Ajouter d'autres villas ici -->
+                      <!-- Les données seront insérées dynamiquement -->
                     </tbody>
                   </table>
                 </div>
               </div>
             </div>
           </div>
-          <!-- /.container-fluid -->
 
-          <!-- Modal Modifier Villa -->
+          <!-- Modal pour ajouter une villa -->
+          <div
+            class="modal fade"
+            id="addVillaModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="addVillaModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-xl" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="addVillaModalLabel">
+                    Ajouter une villa
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Fermer"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <!-- Formulaire d'ajout -->
+                <form id="villaForm">
+                  <div class="modal-body">
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="villaName">Nom de la Villa *</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="villaName"
+                          required
+                        />
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="villaQuartier">Quartier *</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="villaQuartier"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="villaVille">Ville *</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="villaVille"
+                          required
+                        />
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="villaPrice">Prix *</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="villaPrice"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-4">
+                        <label for="villaRooms">Nombre de chambres *</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="villaRooms"
+                          required
+                        />
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label for="villaSalons">Nombre de salons *</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="villaSalons"
+                          required
+                        />
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label for="villaComfort">Confort *</label>
+                        <select class="form-control" id="villaComfort" required>
+                          <option value="Basique">Basique</option>
+                          <option value="Moyen">Moyen</option>
+                          <option value="Haut de gamme">Haut de gamme</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="villaDescription">Description *</label>
+                      <textarea
+                        class="form-control"
+                        id="villaDescription"
+                        rows="3"
+                        required
+                      ></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="villaAmenities">Équipements *</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="villaAmenities"
+                        placeholder="Ex : Piscine, WiFi, Sauna..."
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="villaAvailability">Disponibilité *</label>
+                      <select
+                        class="form-control"
+                        id="villaAvailability"
+                        required
+                      >
+                        <option value="Disponible">Disponible</option>
+                        <option value="Non disponible">Non disponible</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="villaImages">Images (max. 5)</label>
+                      <input
+                        type="file"
+                        class="form-control"
+                        id="villaImages"
+                        multiple
+                        accept="image/*"
+                      />
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Annuler
+                    </button>
+                    <button type="submit" class="btn btn-success">
+                      Enregistrer
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal pour modifier une villa -->
           <div
             class="modal fade"
             id="editVillaModal"
@@ -390,15 +397,15 @@
           >
             <div class="modal-dialog modal-lg" role="document">
               <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
+                <div class="text-white modal-header bg-primary">
                   <h5 class="modal-title" id="editVillaModalLabel">
                     Modifier la villa
                   </h5>
                   <button
                     type="button"
-                    class="close text-white"
+                    class="text-white close"
                     data-dismiss="modal"
-                    aria-label="Close"
+                    aria-label="Fermer"
                   >
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -407,7 +414,7 @@
                   <form id="editVillaForm" enctype="multipart/form-data">
                     <div class="form-row">
                       <div class="form-group col-md-6">
-                        <label for="editVillaName">Nom de la Villa</label>
+                        <label for="editVillaName">Nom de la Villa *</label>
                         <input
                           type="text"
                           class="form-control"
@@ -416,66 +423,109 @@
                         />
                       </div>
                       <div class="form-group col-md-6">
-                        <label for="editVillaLocation">Emplacement</label>
+                        <label for="editVillaQuartier">Quartier *</label>
                         <input
                           type="text"
                           class="form-control"
-                          id="editVillaLocation"
+                          id="editVillaQuartier"
                           required
                         />
                       </div>
                     </div>
-                    <div class="form-group">
-                      <label for="editVillaPrice">Prix</label>
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="editVillaPrice"
-                        required
-                      />
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="editVillaVille">Ville *</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="editVillaVille"
+                          required
+                        />
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="editVillaPrice">Prix *</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="editVillaPrice"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-4">
+                        <label for="editVillaRooms">Nombre de chambres *</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="editVillaRooms"
+                          required
+                        />
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label for="editVillaSalons">Nombre de salons *</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="editVillaSalons"
+                          required
+                        />
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label for="editVillaComfort">Confort *</label>
+                        <select
+                          class="form-control"
+                          id="editVillaComfort"
+                          required
+                        >
+                          <option value="Basique">Basique</option>
+                          <option value="Moyen">Moyen</option>
+                          <option value="Haut de gamme">Haut de gamme</option>
+                        </select>
+                      </div>
                     </div>
                     <div class="form-group">
-                      <label for="editVillaRooms">Chambres</label>
-                      <input
-                        type="number"
+                      <label for="editVillaDescription">Description *</label>
+                      <textarea
                         class="form-control"
-                        id="editVillaRooms"
+                        id="editVillaDescription"
+                        rows="3"
                         required
-                      />
+                      ></textarea>
                     </div>
                     <div class="form-group">
-                      <label for="editVillaAmenities">Équipements</label>
+                      <label for="editVillaAmenities">Équipements *</label>
                       <input
                         type="text"
                         class="form-control"
                         id="editVillaAmenities"
+                        placeholder="Ex : Piscine, WiFi, Sauna..."
                         required
                       />
                     </div>
                     <div class="form-group">
-                      <label for="editVillaImages">Images</label>
+                      <label for="editVillaAvailability">Disponibilité *</label>
+                      <select
+                        class="form-control"
+                        id="editVillaAvailability"
+                        required
+                      >
+                        <option value="Disponible">Disponible</option>
+                        <option value="Non disponible">Non disponible</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="editVillaImages"
+                        >Images (max. 5) - Laissez vide si vous ne souhaitez pas
+                        changer</label
+                      >
                       <input
                         type="file"
                         class="form-control"
                         id="editVillaImages"
                         multiple
+                        accept="image/*"
                       />
-                    </div>
-                    <div class="form-group">
-                      <label for="editVillaAvailability">Disponibilité</label>
-                      <select class="form-control" id="editVillaAvailability">
-                        <option>Disponible</option>
-                        <option>Non disponible</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label for="editVillaDetails">Autres détails</label>
-                      <textarea
-                        class="form-control"
-                        id="editVillaDetails"
-                        rows="3"
-                        placeholder="Ajoutez ici toute autre information utile..."
-                      ></textarea>
                     </div>
                   </form>
                 </div>
@@ -498,248 +548,13 @@
               </div>
             </div>
           </div>
-
-          <!-- Script pour charger les détails de la villa et supprimer -->
-          <script>
-            function loadVillaDetails(villaId) {
-              // Simuler le chargement des données d'une villa (id : villaId)
-              console.log("Chargement des détails de la villa:", villaId);
-
-              // Exemple : Remplir les champs du formulaire du modal avec les données (ici, données simulées)
-              if (villaId === 1) {
-                document.getElementById("editVillaName").value =
-                  "Villa Belle Vue";
-                document.getElementById("editVillaLocation").value = "Paris";
-                document.getElementById("editVillaPrice").value = 250000;
-                document.getElementById("editVillaRooms").value = 5;
-                document.getElementById("editVillaAmenities").value =
-                  "WiFi, Piscine, Climatisation";
-                document.getElementById("editVillaAvailability").value =
-                  "Disponible";
-              } else if (villaId === 2) {
-                document.getElementById("editVillaName").value =
-                  "Villa Horizon";
-                document.getElementById("editVillaLocation").value = "Nice";
-                document.getElementById("editVillaPrice").value = 350000;
-                document.getElementById("editVillaRooms").value = 4;
-                document.getElementById("editVillaAmenities").value =
-                  "WiFi, Sauna, Garage";
-                document.getElementById("editVillaAvailability").value =
-                  "Non disponible";
-              }
-              // Ajouter d'autres conditions pour les autres villas
-            }
-
-            function deleteVilla(villaId) {
-              if (confirm("Êtes-vous sûr de vouloir supprimer cette villa ?")) {
-                console.log("Suppression de la villa avec ID:", villaId);
-                // Logic to delete the villa
-              }
-            }
-
-            // Sauvegarder les modifications de la villa
-            document
-              .getElementById("saveVillaChanges")
-              .addEventListener("click", function () {
-                // Récupérer les nouvelles données du formulaire
-                const villaName =
-                  document.getElementById("editVillaName").value;
-                const villaLocation =
-                  document.getElementById("editVillaLocation").value;
-                const villaPrice =
-                  document.getElementById("editVillaPrice").value;
-                const villaRooms =
-                  document.getElementById("editVillaRooms").value;
-                const villaAmenities =
-                  document.getElementById("editVillaAmenities").value;
-                const villaAvailability = document.getElementById(
-                  "editVillaAvailability"
-                ).value;
-
-                // Validation et sauvegarde (par exemple, envoyer les données à un serveur)
-                console.log("Modifications sauvegardées:", {
-                  villaName,
-                  villaLocation,
-                  villaPrice,
-                  villaRooms,
-                  villaAmenities,
-                  villaAvailability,
-                });
-
-                // Fermer le modal après sauvegarde
-                $("#editVillaModal").modal("hide");
-              });
-          </script>
         </div>
         <!-- End of Main Content -->
 
-        <!-- Modal Ajouter Villa -->
-        <div
-          class="modal fade"
-          id="addVillaModal"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="addVillaModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title" id="addVillaModalLabel">
-                  Ajouter une Nouvelle Villa
-                </h5>
-                <button
-                  type="button"
-                  class="close text-white"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <form id="addVillaForm" enctype="multipart/form-data">
-                  <!-- Nom et Ville de la Villa -->
-                  <div class="form-row">
-                    <div class="form-group col-md-6">
-                      <label for="villaName">Nom de la Villa</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="villaName"
-                        required
-                      />
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="villaCity">Ville</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="villaCity"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <!-- Quartier et Adresse -->
-                  <div class="form-group">
-                    <label for="villaNeighborhood">Quartier</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="villaNeighborhood"
-                      required
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="villaAddress">Adresse Complète</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="villaAddress"
-                      required
-                    />
-                  </div>
-
-                  <!-- Nombre de Chambres, Salons et Prix -->
-                  <div class="form-row">
-                    <div class="form-group col-md-4">
-                      <label for="villaRooms">Nombre de Chambres</label>
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="villaRooms"
-                        required
-                      />
-                    </div>
-                    <div class="form-group col-md-4">
-                      <label for="villaLivingRooms">Nombre de Salons</label>
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="villaLivingRooms"
-                        required
-                      />
-                    </div>
-                    <div class="form-group col-md-4">
-                      <label for="villaPrice">Prix</label>
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="villaPrice"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <!-- Équipements et État -->
-                  <div class="form-group">
-                    <label for="villaAmenities">Équipements Disponibles</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="villaAmenities"
-                      placeholder="Ex: Piscine, Wi-Fi, Climatisation"
-                      required
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="villaCondition">État de la Villa</label>
-                    <select class="form-control" id="villaCondition" required>
-                      <option value="neuf">Neuf</option>
-                      <option value="bon">Bon état</option>
-                      <option value="à rénover">À rénover</option>
-                    </select>
-                  </div>
-
-                  <!-- Description et Images -->
-                  <div class="form-group">
-                    <label for="villaDescription">Description</label>
-                    <textarea
-                      class="form-control"
-                      id="villaDescription"
-                      rows="3"
-                      placeholder="Ajoutez une description détaillée..."
-                      required
-                    ></textarea>
-                  </div>
-                  <div class="form-group">
-                    <label for="villaImages">Images</label>
-                    <input
-                      type="file"
-                      class="form-control-file"
-                      id="villaImages"
-                      multiple
-                    />
-                  </div>
-
-                  <!-- Disponibilité -->
-                  <div class="form-group">
-                    <label for="villaAvailability">Disponibilité</label>
-                    <select
-                      class="form-control"
-                      id="villaAvailability"
-                      required
-                    >
-                      <option value="disponible">Disponible</option>
-                      <option value="non-disponible">Non Disponible</option>
-                    </select>
-                  </div>
-
-                  <!-- Soumettre le formulaire -->
-                  <button type="submit" class="btn btn-primary btn-block">
-                    Ajouter la Villa
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <!-- Footer -->
-        <footer class="sticky-footer bg-white">
+        <footer class="bg-white sticky-footer">
           <div class="container my-auto">
-            <div class="copyright text-center my-auto">
+            <div class="my-auto text-center copyright">
               <span
                 >Copyright &copy; Locagram
                 <a
@@ -760,34 +575,35 @@
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
+    <a class="rounded scroll-to-top" href="#page-top">
       <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
+    <!-- Fenêtre modale de confirmation pour la déconnexion -->
     <div
       class="modal fade"
       id="logoutModal"
       tabindex="-1"
       role="dialog"
-      aria-labelledby="exampleModalLabel"
+      aria-labelledby="logoutModalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <h5 class="modal-title" id="logoutModalLabel">Prêt à quitter ?</h5>
             <button
               class="close"
               type="button"
               data-dismiss="modal"
-              aria-label="Close"
+              aria-label="Fermer"
             >
               <span aria-hidden="true">×</span>
             </button>
           </div>
           <div class="modal-body">
-            Select "Logout" below if you are ready to end your current session.
+            Sélectionnez « Déconnexion » ci-dessous si vous êtes prêt(e) à
+            mettre fin à votre session actuelle.
           </div>
           <div class="modal-footer">
             <button
@@ -795,65 +611,378 @@
               type="button"
               data-dismiss="modal"
             >
-              Cancel
+              Annuler
             </button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
+            <!-- Remplacez href par un appel à votre fonction logout si nécessaire -->
+            <a class="btn btn-primary" href="login.html">Déconnexion</a>
           </div>
         </div>
       </div>
     </div>
 
-    <script>
-      document
-        .getElementById("saveVillaButton")
-        .addEventListener("click", function () {
-          // Récupérer les données du formulaire
-          const villaName = document.getElementById("villaName").value;
-          const villaLocation = document.getElementById("villaLocation").value;
-          const villaPrice = document.getElementById("villaPrice").value;
-          const villaRooms = document.getElementById("villaRooms").value;
-          const villaBedrooms = document.getElementById("villaBedrooms").value;
-          const villaAmenities =
-            document.getElementById("villaAmenities").value;
-          const villaImages = document.getElementById("villaImages").value;
-          const villaDetails = document.getElementById("villaDetails").value;
-          const villaAvailability =
-            document.getElementById("villaAvailability").value;
+    <!-- Loader SB Admin 2 -->
+    <div
+      id="pageLoader"
+      class="bg-white d-flex justify-content-center align-items-center"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1050;
+      "
+    >
+      <div
+        class="spinner-border text-success"
+        role="status"
+        style="width: 3rem; height: 3rem"
+      >
+        <span class="sr-only">Chargement...</span>
+      </div>
+    </div>
 
-          // Validation basique
-          if (
-            villaName &&
-            villaLocation &&
-            villaPrice &&
-            villaRooms &&
-            villaBedrooms &&
-            villaAmenities &&
-            villaImages &&
-            villaDetails &&
-            villaAvailability
-          ) {
-            // Traitement pour sauvegarder les données (par exemple, appeler une API ou les ajouter à la base de données)
-            console.log("Villa ajoutée:", {
-              villaName,
-              villaLocation,
-              villaPrice,
-              villaRooms,
-              villaBedrooms,
-              villaAmenities,
-              villaImages,
-              villaDetails,
-              villaAvailability,
+    <!-- ====================================== -->
+    <!-- Script Firebase pour la gestion des villas avec images -->
+    <!-- ====================================== -->
+
+    <script type="module">
+      // Import des modules Firebase nécessaires
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+        getDocs,
+        query,
+        where,
+        doc,
+        updateDoc,
+        deleteDoc,
+        getDoc,
+      } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
+      import {
+        getAuth,
+        onAuthStateChanged,
+      } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
+      import {
+        getStorage,
+        ref as storageRef,
+        uploadBytesResumable,
+        getDownloadURL,
+      } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-storage.js";
+
+      // Configuration Firebase (remplace par tes identifiants)
+      const firebaseConfig = {
+        apiKey: "AIzaSyCeaMAgyFWN12ktRuGSHsLdySgiZqvBIKA",
+        authDomain: "locagram-f08b9.firebaseapp.com",
+        projectId: "locagram-f08b9",
+        storageBucket: "locagram-f08b9.appspot.com",
+        messagingSenderId: "504321320981",
+        appId: "1:504321320981:web:65037b379691080972c61c",
+      };
+
+      // Initialisation de Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+      const auth = getAuth(app);
+      const storage = getStorage(app);
+
+      // Utilisateur connecté
+      let currentUser = null;
+      // Référence à la collection "villas"
+      const villasCollection = collection(db, "villas");
+
+      // Fonction pour uploader jusqu'à 5 images et retourner un tableau d'URLs
+      async function uploadImages(fileInput) {
+        const files = fileInput.files;
+        const maxFiles = 5;
+        if (files.length > maxFiles) {
+          alert("Vous ne pouvez uploader que jusqu'à 5 images.");
+          return [];
+        }
+        let urls = [];
+        for (let i = 0; i < files.length && i < maxFiles; i++) {
+          const file = files[i];
+          // Création d'un nom de fichier unique
+          const fileName = Date.now() + "-" + file.name;
+          const refPath = `villas/${currentUser.uid}/${fileName}`;
+          const fileRef = storageRef(storage, refPath);
+          // Lancer l'upload
+          const uploadTask = uploadBytesResumable(fileRef, file);
+          await uploadTask;
+          const downloadURL = await getDownloadURL(fileRef);
+          urls.push(downloadURL);
+        }
+        return urls;
+      }
+
+      // Fonction pour charger et afficher les villas de l'utilisateur connecté
+      async function chargerVillas() {
+        if (!currentUser) return;
+        const q = query(
+          villasCollection,
+          where("userId", "==", currentUser.uid)
+        );
+        const snapshot = await getDocs(q);
+        const tbody = document.querySelector("#villasTable tbody");
+        tbody.innerHTML = ""; // Réinitialiser le tableau
+
+        snapshot.forEach((docSnap) => {
+          const data = docSnap.data();
+          const tr = document.createElement("tr");
+          tr.setAttribute("data-id", docSnap.id);
+          // Affichage des images sous forme de miniatures (si disponibles)
+          let imagesHTML = "";
+          if (data.images && Array.isArray(data.images)) {
+            data.images.forEach((url) => {
+              imagesHTML += `<img src="${url}" width="50" height="50" style="object-fit: cover; margin-right: 4px;">`;
             });
+          }
+          tr.innerHTML = `
+        <td>${data.name || ""}</td>
+        <td>${data.quartier || ""}</td>
+        <td>${data.ville || ""}</td>
+        <td>${data.price ? "$" + data.price : ""}</td>
+        <td>${data.rooms || ""}</td>
+        <td>${data.salons || ""}</td>
+        <td>${data.comfort || ""}</td>
+        <td>${data.amenities || ""}</td>
+        <td>${data.availability || ""}</td>
+        <td>${imagesHTML}</td>
+        <td class="text-center">
+          <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#editVillaModal"
+            onclick="loadVillaDetails('${docSnap.id}')">Modifier</button>
+          <button class="btn btn-danger btn-sm" onclick="deleteVilla('${
+            docSnap.id
+          }')">Supprimer</button>
+        </td>
+      `;
+          tbody.appendChild(tr);
+        });
+      }
 
-            // Réinitialiser le formulaire
-            document.getElementById("addVillaForm").reset();
+      // Suivre l'état d'authentification
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          currentUser = user;
+          console.log("Connecté :", user.email);
+          chargerVillas();
+        } else {
+          currentUser = null;
+          console.log("Aucun utilisateur connecté");
+          // Vous pouvez rediriger vers la page de connexion ici
+        }
+      });
 
-            // Fermer le modal
-            $("#addVillaModal").modal("hide");
+      // Gestion du formulaire d'ajout d'une villa
+      const villaForm = document.getElementById("villaForm");
+      villaForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        if (!currentUser) {
+          alert("Veuillez vous connecter pour ajouter une villa.");
+          return;
+        }
+        // Récupération des valeurs du formulaire
+        const villa = {
+          name: document.getElementById("villaName").value,
+          quartier: document.getElementById("villaQuartier").value,
+          ville: document.getElementById("villaVille").value,
+          price: parseFloat(document.getElementById("villaPrice").value),
+          rooms: parseInt(document.getElementById("villaRooms").value),
+          salons: parseInt(document.getElementById("villaSalons").value),
+          comfort: document.getElementById("villaComfort").value,
+          description: document.getElementById("villaDescription").value,
+          amenities: document.getElementById("villaAmenities").value,
+          availability: document.getElementById("villaAvailability").value,
+          userId: currentUser.uid,
+        };
+
+        // Gestion de l'upload des images (si des fichiers sont sélectionnés)
+        const imagesInput = document.getElementById("villaImages");
+        if (imagesInput.files.length > 0) {
+          const urls = await uploadImages(imagesInput);
+          villa.images = urls;
+        }
+
+        try {
+          await addDoc(villasCollection, villa);
+          villaForm.reset();
+          $("#addVillaModal").modal("hide");
+          chargerVillas();
+        } catch (error) {
+          console.error("Erreur lors de l'ajout de la villa :", error);
+        }
+      });
+
+      // Variable globale pour l'ID de la villa en cours d'édition
+      let currentVillaId = null;
+
+      // Fonction pour charger les détails d'une villa dans le formulaire d'édition
+      window.loadVillaDetails = async function (id) {
+        if (!currentUser) return;
+        currentVillaId = id;
+        const docRef = doc(db, "villas", id);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          const villaData = docSnap.data();
+          if (villaData.userId !== currentUser.uid) {
+            alert("Vous n'êtes pas autorisé à modifier cette villa.");
+            return;
+          }
+          document.getElementById("editVillaName").value = villaData.name || "";
+          document.getElementById("editVillaQuartier").value =
+            villaData.quartier || "";
+          document.getElementById("editVillaVille").value =
+            villaData.ville || "";
+          document.getElementById("editVillaPrice").value =
+            villaData.price || "";
+          document.getElementById("editVillaRooms").value =
+            villaData.rooms || "";
+          document.getElementById("editVillaSalons").value =
+            villaData.salons || "";
+          document.getElementById("editVillaComfort").value =
+            villaData.comfort || "";
+          document.getElementById("editVillaDescription").value =
+            villaData.description || "";
+          document.getElementById("editVillaAmenities").value =
+            villaData.amenities || "";
+          document.getElementById("editVillaAvailability").value =
+            villaData.availability || "";
+          $("#editVillaModal").modal("show");
+        } else {
+          alert("Villa introuvable.");
+        }
+      };
+
+      // Gestion du formulaire d'édition d'une villa
+      const editVillaForm = document.getElementById("editVillaForm");
+      document
+        .getElementById("saveVillaChanges")
+        .addEventListener("click", async () => {
+          if (!currentUser || !currentVillaId) return;
+          const villaUpdate = {
+            name: document.getElementById("editVillaName").value,
+            quartier: document.getElementById("editVillaQuartier").value,
+            ville: document.getElementById("editVillaVille").value,
+            price: parseFloat(document.getElementById("editVillaPrice").value),
+            rooms: parseInt(document.getElementById("editVillaRooms").value),
+            salons: parseInt(document.getElementById("editVillaSalons").value),
+            comfort: document.getElementById("editVillaComfort").value,
+            description: document.getElementById("editVillaDescription").value,
+            amenities: document.getElementById("editVillaAmenities").value,
+            availability: document.getElementById("editVillaAvailability")
+              .value,
+          };
+
+          // Gestion de l'upload des images lors de l'édition (optionnel)
+          const editImagesInput = document.getElementById("editVillaImages");
+          if (editImagesInput.files.length > 0) {
+            const urls = await uploadImages(editImagesInput);
+            villaUpdate.images = urls;
+          }
+
+          const docRef = doc(db, "villas", currentVillaId);
+          const docSnap = await getDoc(docRef);
+          if (docSnap.exists() && docSnap.data().userId === currentUser.uid) {
+            try {
+              await updateDoc(docRef, villaUpdate);
+              editVillaForm.reset();
+              currentVillaId = null;
+              $("#editVillaModal").modal("hide");
+              chargerVillas();
+            } catch (error) {
+              console.error(
+                "Erreur lors de la mise à jour de la villa :",
+                error
+              );
+            }
           } else {
-            alert("Tous les champs doivent être remplis.");
+            alert("Vous n'êtes pas autorisé à modifier cette villa.");
           }
         });
+
+      // Fonction pour supprimer une villa
+      window.deleteVilla = async function (id) {
+        if (!currentUser) return;
+        if (confirm("Êtes-vous sûr de vouloir supprimer cette villa ?")) {
+          const docRef = doc(db, "villas", id);
+          const docSnap = await getDoc(docRef);
+          if (docSnap.exists() && docSnap.data().userId === currentUser.uid) {
+            try {
+              await deleteDoc(docRef);
+              chargerVillas();
+            } catch (error) {
+              console.error(
+                "Erreur lors de la suppression de la villa :",
+                error
+              );
+            }
+          } else {
+            alert("Vous n'êtes pas autorisé à supprimer cette villa.");
+          }
+        }
+      };
+      // ✅ Vérification du statut utilisateur
+      onAuthStateChanged(auth, async (user) => {
+        if (user) {
+          const usersCol = collection(db, "utilisateurs");
+          const q = query(usersCol, where("email", "==", user.email));
+          const querySnapshot = await getDocs(q);
+          if (!querySnapshot.empty) {
+            const userData = querySnapshot.docs[0].data();
+            const status = userData.status
+              ? userData.status.toLowerCase()
+              : "inactif";
+
+            if (status !== "actif") {
+              bloquerAcces();
+            }
+          } else {
+            console.warn("Utilisateur introuvable dans la base.");
+          }
+        } else {
+          // Rediriger vers la connexion si non connecté
+          window.location.href = "../../index.html";
+        }
+      });
+
+      // ✅ Fonction qui bloque l'accès à l'application
+      function bloquerAcces() {
+        const block = document.getElementById("blockedMessage");
+        const whatsapp = document.getElementById("whatsappButton");
+        const message = encodeURIComponent(
+          "Bonjour, mon compte a été bloqué car mon statut est inactif. Je souhaite renouveler mon forfait. Merci !"
+        );
+        whatsapp.href = `https://wa.me/22953444701?text=${message}`;
+        block.style.display = "block";
+
+        // Bloquer tout le reste de la page
+        document.body.style.overflow = "hidden";
+        const content = document.querySelectorAll(
+          "body > *:not(#blockedMessage)"
+        );
+        content.forEach((el) => {
+          if (el.id !== "blockedMessage") {
+            el.style.display = "none";
+          }
+        });
+      }
+    </script>
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("pageLoader");
+
+        // Ajoute une classe pour l'effet de fondu
+        loader.classList.add("fade");
+
+        // Cache totalement l’élément après la transition
+        setTimeout(() => {
+          loader.style.display = "none"; // Enlève de l'affichage
+          loader.style.pointerEvents = "none"; // Par sécurité
+          loader.style.zIndex = "-1"; // S'assure qu'il ne bloque plus rien
+        }, 500); // même durée que la transition CSS
+      });
     </script>
 
     <!-- Bootstrap core JavaScript-->

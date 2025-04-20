@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" type="image/png" href="./img/locagram1.png" />
+
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Locagram | Utilisateur</title>
+
+    <!-- Custom fonts for this template-->
+    <link
+      href="vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+  </head>
+
+  <body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul
+        class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion"
+        id="accordionSidebar"
+      >
+        <!-- Sidebar - Brand -->
+        <a
+          class="sidebar-brand d-flex align-items-center justify-content-center"
+          href="index.html"
+        >
+          <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-laugh-wink"></i>
+          </div>
+          <div class="mx-3 sidebar-brand-text">Locagram</div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="my-0 sidebar-divider" />
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Tableau de board</span></a
+          >
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
+
+        <ul class="navbar-nav">
+          <!-- Nav Item - Accueil -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="fas fa-fw fa-home"></i>
+              <span>Accueil</span>
+            </a>
+          </li>
+
+          <!-- Nav Item - Postes -->
+          <li class="nav-item">
+            <a class="nav-link active" href="postes.html">
+              <i class="fas fa-fw fa-briefcase"></i>
+              <span>Mes Postes</span>
+            </a>
+          </li>
+
+          <!-- Nav Item - Catégories -->
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="clients.html">
+              <i class="fas fa-fw fa-users"></i>
+              <span>Mes Clients</span>
+            </a>
+          </li> -->
+
+          <!-- Nav Item - Notifications -->
+          <li class="nav-item">
+            <a class="nav-link" href="notifications.html">
+              <i class="fas fa-fw fa-bell"></i>
+              <span>Mes Notifications</span>
+            </a>
+          </li>
+
+          <!-- Nav Item - Forfaits -->
+          <li class="nav-item">
+            <a class="nav-link" href="forfait.html">
+              <i class="fas fa-fw fa-credit-card"></i>
+              <span>Mon Forfaits</span>
+            </a>
+          </li>
+
+          <!-- Nav Item - Profil -->
+          <li class="nav-item">
+            <a class="nav-link" href="profil.html">
+              <i class="fas fa-fw fa-user"></i>
+              <span>Profil</span>
+            </a>
+          </li>
+
+          <!-- Nav Item - Déconnexion avec Modal -->
+          <li class="nav-item">
+            <a
+              class="text-white nav-link bg-danger"
+              href="#"
+              data-toggle="modal"
+              data-target="#logoutModal"
+            >
+              <i class="fas fa-fw fa-sign-out-alt"></i>
+              <span>Déconnexion</span>
+            </a>
+          </li>
+        </ul>
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block" />
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          <button class="border-0 rounded-circle" id="sidebarToggle"></button>
+        </div>
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav
+            class="mb-4 bg-white shadow navbar navbar-expand navbar-light topbar static-top"
+          >
+            <!-- Sidebar Toggle (Topbar) -->
+            <button
+              id="sidebarToggleTop"
+              class="mr-3 btn btn-link d-md-none rounded-circle"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+          </nav>
+          <!-- End of Topbar -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <!-- Page Heading -->
+            <div
+              class="mb-4 d-sm-flex align-items-center justify-content-between"
+            >
+              <h1 class="mb-0 text-gray-800 h3">Parcelles à Vendre</h1>
+            </div>
+
+            <!-- Content Row -->
+          </div>
+          <!-- /.container-fluid -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <!-- Page Heading -->
+
+            <!-- Bouton Retour a la page de poste -->
+            <a href="./postes.html" type="button" class="my-2 btn btn-success">
+              Retour
+            </a>
+
+            <!-- DataTales Example -->
+            <div class="mb-4 shadow card">
+              <div class="py-3 card-header">
+                <h6 class="m-0 font-weight-bold text-primary">
+                  Toutes les Parcelles à Vendre
+                </h6>
+                <!-- Bouton Ajouter Parcelle à Vendre -->
+                <button
+                  type="button"
+                  class="mt-2 btn btn-success"
+                  data-toggle="modal"
+                  data-target="#addPlotModal"
+                >
+                  Ajouter une Parcelle à Vendre
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table
+                    class="table table-bordered"
+                    id="dataTable"
+                    width="100%"
+                    cellspacing="0"
+                  >
+                    <thead>
+                      <tr>
+                        <th>Nom de la Parcelle</th>
+                        <th>Emplacement</th>
+                        <th>Ville</th>
+                        <th>Quartier</th>
+                        <th>Superficie (m²)</th>
+                        <th>Prix</th>
+                        <th>Type</th>
+                        <th>Disponibilité</th>
+                        <th>Autre détails</th>
+
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <!-- Ajouter d'autres lignes ici -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Modal Ajouter Parcelle à Vendre -->
+        <div
+          class="modal fade"
+          id="addPlotModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="addPlotModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="text-white modal-header bg-success">
+                <h5 class="modal-title" id="addPlotModalLabel">
+                  Ajouter une Parcelle à Vendre
+                </h5>
+                <button
+                  type="button"
+                  class="text-white close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form id="addHouseForm" enctype="multipart/form-data">
+                  <!-- Nom et Emplacement -->
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="plotName">Nom de la Parcelle</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="plotName"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="plotLocation">Emplacement</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="plotLocation"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Ville et Quartier -->
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="plotCity">Ville</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="plotCity"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="plotNeighborhood">Quartier</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="plotNeighborhood"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Superficie -->
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="plotSize">Superficie (en m²)</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="plotSize"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="plotPrice">Prix de la Parcelle</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="plotPrice"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Type de Parcelle -->
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="plotType">Type de Parcelle</label>
+                      <select class="form-control" id="plotType" required>
+                        <option value="résidentielle">Résidentielle</option>
+                        <option value="commerciale">Commerciale</option>
+                        <option value="agricole">Agricole</option>
+                        <option value="industrielle">Industrielle</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="plotAvailability">Disponibilité</label>
+                      <select class="form-control" id="plotAvailability">
+                        <option>Disponible</option>
+                        <option>Non disponible</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <!-- Images de la Parcelle -->
+                  <div class="form-group">
+                    <label for="plotImages">Images de la Parcelle</label>
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="plotImages"
+                      multiple
+                    />
+                  </div>
+
+                  <!-- Autres Détails -->
+                  <div class="form-group">
+                    <label for="plotDetails">Autres Détails</label>
+                    <textarea
+                      class="form-control"
+                      id="plotDetails"
+                      rows="3"
+                      placeholder="Ajoutez ici toute autre information utile..."
+                    ></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Fermer
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-success"
+                  id="savePlotChanges"
+                >
+                  Enregistrer la Parcelle
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-white sticky-footer">
+          <div class="container my-auto">
+            <div class="my-auto text-center copyright">
+              <span
+                >Copyright &copy; Locagram
+                <a
+                  href="https://portfolio-cnkp.vercel.app"
+                  target="_blank"
+                  class="text-success"
+                  >Ray Ague</a
+                >
+                2025</span
+              >
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="rounded scroll-to-top" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Loader SB Admin 2 -->
+    <div
+      id="pageLoader"
+      class="bg-white d-flex justify-content-center align-items-center"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1050;
+      "
+    >
+      <div
+        class="spinner-border text-success"
+        role="status"
+        style="width: 3rem; height: 3rem"
+      >
+        <span class="sr-only">Chargement...</span>
+      </div>
+    </div>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+        updateDoc,
+        doc,
+        getDocs,
+        query,
+        where,
+        deleteDoc,
+      } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
+      import {
+        getAuth,
+        onAuthStateChanged,
+      } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
+
+      // 🔧 Firebase config
+      const firebaseConfig = {
+        apiKey: "AIzaSyCeaMAgyFWN12ktRuGSHsLdySgiZqvBIKA",
+        authDomain: "locagram-f08b9.firebaseapp.com",
+        projectId: "locagram-f08b9",
+        storageBucket: "locagram-f08b9.appspot.com",
+        messagingSenderId: "504321320981",
+        appId: "1:504321320981:web:65037b379691080972c61c",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+      const auth = getAuth(app);
+      const parcellesCollection = collection(db, "parcelles");
+
+      let currentUser = null;
+      let editingPlotId = null; // ⚠️ Pour savoir si on modifie ou ajoute
+
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          currentUser = user;
+          chargerParcelles();
+        }
+      });
+
+      // 🔁 Fonction générique pour réinitialiser le formulaire
+      function resetForm() {
+        document.getElementById("addHouseForm").reset();
+        editingPlotId = null;
+        document.getElementById("addPlotModalLabel").textContent =
+          "Ajouter une Parcelle à Vendre";
+        document.getElementById("savePlotChanges").textContent =
+          "Enregistrer la Parcelle";
+      }
+
+      // ✅ Click sur "Enregistrer" (Ajout ou Modification)
+      document
+        .getElementById("savePlotChanges")
+        .addEventListener("click", async () => {
+          if (!currentUser) return alert("Vous devez être connecté.");
+
+          const parcelle = {
+            nom: document.getElementById("plotName").value,
+            emplacement: document.getElementById("plotLocation").value,
+            ville: document.getElementById("plotCity").value,
+            quartier: document.getElementById("plotNeighborhood").value,
+            superficie: parseFloat(document.getElementById("plotSize").value),
+            prix: parseFloat(document.getElementById("plotPrice").value),
+            type: document.getElementById("plotType").value,
+            disponibilite: document.getElementById("plotAvailability").value,
+            details: document.getElementById("plotDetails").value,
+            userId: currentUser.uid,
+            updatedAt: new Date(),
+          };
+
+          try {
+            if (editingPlotId) {
+              // 🔄 Mise à jour
+              const parcelleRef = doc(db, "parcelles", editingPlotId);
+              await updateDoc(parcelleRef, parcelle);
+            } else {
+              // ➕ Ajout
+              parcelle.createdAt = new Date();
+              await addDoc(parcellesCollection, parcelle);
+            }
+
+            $("#addPlotModal").modal("hide");
+            resetForm();
+            chargerParcelles();
+          } catch (err) {
+            console.error("Erreur lors de l'enregistrement :", err);
+            alert("Erreur lors de l'enregistrement.");
+          }
+        });
+
+      // ✅ Remplir le formulaire pour modification
+      async function modifierParcelle(id, data) {
+        editingPlotId = id;
+
+        document.getElementById("addPlotModalLabel").textContent =
+          "Modifier la Parcelle";
+        document.getElementById("savePlotChanges").textContent =
+          "Enregistrer les Modifications";
+
+        document.getElementById("plotName").value = data.nom || "";
+        document.getElementById("plotLocation").value = data.emplacement || "";
+        document.getElementById("plotCity").value = data.ville || "";
+        document.getElementById("plotNeighborhood").value = data.quartier || "";
+        document.getElementById("plotSize").value = data.superficie || 0;
+        document.getElementById("plotPrice").value = data.prix || 0;
+        document.getElementById("plotType").value =
+          data.type || "résidentielle";
+        document.getElementById("plotAvailability").value =
+          data.disponibilite || "Disponible";
+        document.getElementById("plotDetails").value = data.details || "";
+
+        $("#addPlotModal").modal("show");
+      }
+
+      // 🔁 Chargement des parcelles
+      async function chargerParcelles() {
+        const q = query(
+          parcellesCollection,
+          where("userId", "==", currentUser.uid)
+        );
+        const snapshot = await getDocs(q);
+        const tbody = document.querySelector("#dataTable tbody");
+        tbody.innerHTML = "";
+
+        snapshot.forEach((docSnap) => {
+          const data = docSnap.data();
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+                <td>${data.nom}</td>
+                <td>${data.emplacement}</td>
+                <td>${data.ville}</td>
+                <td>${data.quartier}</td>
+                <td>${data.superficie}</td>
+                <td>${data.prix.toLocaleString()} XOF</td>
+                <td>${data.type}</td>
+                <td>${data.disponibilite}</td>
+                <td>${data.details}</td>
+                <td>
+                  <button class="btn btn-warning btn-sm" data-id="${
+                    docSnap.id
+                  }">Modifier</button>
+                  <button class="btn btn-danger btn-sm">Supprimer</button>
+                </td>
+              `;
+
+          // 📦 Ajout des listeners sur le bouton Modifier
+          tr.querySelector(".btn-warning").addEventListener("click", () => {
+            modifierParcelle(docSnap.id, data);
+          });
+
+          // 📦 Ajout des listeners sur le bouton Supprimer
+          tr.querySelector(".btn-danger").addEventListener(
+            "click",
+            async () => {
+              const confirmDelete = confirm(
+                "Êtes-vous sûr de vouloir supprimer cette parcelle ?"
+              );
+              if (confirmDelete) {
+                const parcelleRef = doc(db, "parcelles", docSnap.id);
+                await deleteDoc(parcelleRef);
+                chargerParcelles(); // Recharger les parcelles après suppression
+              }
+            }
+          );
+
+          tbody.appendChild(tr);
+        });
+      }
+
+      // 🎯 Réinitialiser le formulaire à chaque ouverture du modal
+      $("#addPlotModal").on("hidden.bs.modal", resetForm);
+    </script>
+
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("pageLoader");
+
+        // Ajoute une classe pour l'effet de fondu
+        loader.classList.add("fade");
+
+        // Cache totalement l’élément après la transition
+        setTimeout(() => {
+          loader.style.display = "none"; // Enlève de l'affichage
+          loader.style.pointerEvents = "none"; // Par sécurité
+          loader.style.zIndex = "-1"; // S'assure qu'il ne bloque plus rien
+        }, 500); // même durée que la transition CSS
+      });
+
+      // ✅ Vérification du statut utilisateur
+      onAuthStateChanged(auth, async (user) => {
+        if (user) {
+          const usersCol = collection(db, "utilisateurs");
+          const q = query(usersCol, where("email", "==", user.email));
+          const querySnapshot = await getDocs(q);
+          if (!querySnapshot.empty) {
+            const userData = querySnapshot.docs[0].data();
+            const status = userData.status
+              ? userData.status.toLowerCase()
+              : "inactif";
+
+            if (status !== "actif") {
+              bloquerAcces();
+            }
+          } else {
+            console.warn("Utilisateur introuvable dans la base.");
+          }
+        } else {
+          // Rediriger vers la connexion si non connecté
+          window.location.href = "../../index.html";
+        }
+      });
+
+      // ✅ Fonction qui bloque l'accès à l'application
+      function bloquerAcces() {
+        const block = document.getElementById("blockedMessage");
+        const whatsapp = document.getElementById("whatsappButton");
+        const message = encodeURIComponent(
+          "Bonjour, mon compte a été bloqué car mon statut est inactif. Je souhaite renouveler mon forfait. Merci !"
+        );
+        whatsapp.href = `https://wa.me/22953444701?text=${message}`;
+        block.style.display = "block";
+
+        // Bloquer tout le reste de la page
+        document.body.style.overflow = "hidden";
+        const content = document.querySelectorAll(
+          "body > *:not(#blockedMessage)"
+        );
+        content.forEach((el) => {
+          if (el.id !== "blockedMessage") {
+            el.style.display = "none";
+          }
+        });
+      }
+    </script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/demo/datatables-demo.js"></script>
+  </body>
+</html>

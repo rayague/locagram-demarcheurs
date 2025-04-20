@@ -3,17 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-plus/dist/index.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./dashboard/utilisateurs/img/locagram1.png"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Import Vue 3 -->
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <!-- Import Element Plus JS -->
+    <script src="https://unpkg.com/element-plus"></script>
     <title>Locagram | Connexion des Démarcheurs</title>
   </head>
   <body>
     <div
-      class="min-h-screen bg-slate-950 py-6 flex flex-col justify-center sm:py-12"
+      class="flex flex-col justify-center min-h-screen py-6 bg-slate-950 sm:py-12"
     >
       <div class="relative py-3 sm:max-w-xl sm:mx-auto">
         <div
-          class="absolute inset-0 bg-gradient-to-r from-green-300 to-green-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"
+          class="absolute inset-0 transform -skew-y-6 shadow-lg bg-gradient-to-r from-green-300 to-green-600 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"
         ></div>
         <div
           class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20"
@@ -23,29 +37,31 @@
               <h1 class="text-3xl font-black tracking-tighter text-green-500">
                 Connexion des Démarcheurs
               </h1>
-              <p class="text-sm text-gray-600 mt-2">
+              <p class="mt-2 text-sm text-gray-600">
                 Connectez-vous pour accéder à votre compte Locagram.
               </p>
             </div>
             <div class="divide-y divide-gray-200">
               <form
-                class="py-8 text-base flex flex-col leading-6 space-y-8 text-gray-700 sm:text-lg sm:leading-7"
+                id="login-form"
+                class="flex flex-col py-8 space-y-8 text-base leading-6 text-gray-700 sm:text-lg sm:leading-7"
               >
-                <!-- Numéro de la carte CIP -->
+                <!-- Email -->
                 <div class="relative">
                   <input
-                    autocomplete="off"
-                    id="cip"
-                    name="cip"
-                    type="text"
-                    class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-rose-600"
-                    placeholder="Numéro de la carte CIP"
+                    id="email"
+                    name="email"
+                    type="email"
+                    class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-gray-300 peer focus:outline-none focus:border-rose-600"
+                    placeholder="Votre email"
+                    required
                   />
                   <label
-                    for="cip"
+                    for="email"
                     class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
-                    >Numéro de la carte CIP</label
                   >
+                    Votre Email
+                  </label>
                 </div>
 
                 <!-- Mot de passe -->
@@ -55,46 +71,207 @@
                     id="password"
                     name="password"
                     type="password"
-                    class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-rose-600"
+                    class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-gray-300 peer focus:outline-none focus:border-rose-600"
                     placeholder="Mot de passe"
+                    required
                   />
                   <label
                     for="password"
                     class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
-                    >Mot de passe</label
                   >
+                    Mot de passe
+                  </label>
                 </div>
 
-                <!-- Submit Button -->
-                <div class="flex text-center relative">
-                  <a
-                    href="dashboard/utilisateurs/index.html"
-                    class="bg-green-500 text-white rounded-md font-bold text-center px-4 py-2 w-full"
+                <!-- Bouton de soumission -->
+                <div class="relative flex text-center">
+                  <button
+                    type="submit"
+                    class="w-full px-4 py-2 font-bold text-center text-white bg-green-500 rounded-md"
                   >
                     Se connecter
-                  </a>
+                  </button>
                 </div>
-
-                <!-- Lien vers l'inscription -->
               </form>
               <a
                 href="register.html"
-                class="text-sky-600 underline underline-offset-2 text-md font-bold"
+                class="font-bold underline text-sky-600 underline-offset-2 text-md"
+                >S'inscrire</a
               >
-                S'inscrire
-              </a>
-              <br />
-              <br />
+              <br /><br />
               <a
                 href=""
-                class="text-sky-600 underline underline-offset-2 text-md font-bold"
+                class="font-bold underline text-sky-600 underline-offset-2 text-md"
+                >Mot de passe oublié</a
               >
-                Mot de passe oublié
-              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+      import {
+        getAuth,
+        signInWithEmailAndPassword,
+      } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+      import {
+        getFirestore,
+        doc,
+        getDoc,
+        setDoc,
+        collection,
+        query,
+        where,
+        getDocs,
+      } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
+
+      const { ElNotification } = window.ElementPlus;
+
+      // Configuration Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyCeaMAgyFWN12ktRuGSHsLdySgiZqvBIKA",
+        authDomain: "locagram-f08b9.firebaseapp.com",
+        projectId: "locagram-f08b9",
+        storageBucket: "locagram-f08b9.appspot.com",
+        messagingSenderId: "504321320981",
+        appId: "1:504321320981:web:65037b379691080972c61c",
+      };
+
+      // Initialisation de Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const db = getFirestore(app);
+
+      // Fonctions de notification
+      function showError(message) {
+        ElNotification({
+          title: "Erreur",
+          message: message,
+          type: "error",
+          duration: 5000,
+        });
+      }
+
+      function showSuccess(message) {
+        ElNotification({
+          title: "Succès",
+          message: message,
+          type: "success",
+          duration: 5000,
+        });
+      }
+
+      // Fonction principale de connexion
+      async function login(email, password) {
+        try {
+          // Authentification via Firebase
+          const userCredential = await signInWithEmailAndPassword(
+            auth,
+            email,
+            password
+          );
+          const user = userCredential.user;
+
+          // Vérifier si l'email correspond aux administrateurs spéciaux
+          if (
+            email === "houedekoutinconfiance@gmail.com" ||
+            email === "rayague03@gmail.com"
+          ) {
+            await handleSpecialAdmin(email, password);
+            return; // La redirection s'effectue dans handleSpecialAdmin
+          }
+
+          // Pour tous les autres emails, rechercher le document dans Firestore par le champ "email"
+          const usersCol = collection(db, "utilisateurs");
+          const q = query(usersCol, where("email", "==", email));
+          const querySnapshot = await getDocs(q);
+
+          if (querySnapshot.empty) {
+            showError("Utilisateur non trouvé.");
+            return;
+          }
+
+          const userData = querySnapshot.docs[0].data();
+
+          if (userData.status === "inactif") {
+            showSuccess("Utilisateur inactif, redirection...");
+            window.location.href = "./forfait_inactif.html";
+          } else {
+            showSuccess("Connexion réussie !");
+            window.location.href = "/dashboard/utilisateurs/index.html";
+          }
+        } catch (error) {
+          console.error("Erreur de connexion:", error);
+          showError("Erreur de connexion: " + error.message);
+        }
+      }
+
+      // Fonction pour gérer spécifiquement les administrateurs spéciaux
+      async function handleSpecialAdmin(email, password) {
+        const usersCol = collection(db, "utilisateurs");
+        // On utilise l'email comme identifiant de document pour les admins spéciaux
+        const adminDocRef = doc(usersCol, email);
+        const adminDoc = await getDoc(adminDocRef);
+
+        if (adminDoc.exists()) {
+          showSuccess(
+            "Utilisateur déjà existant, redirection vers administration."
+          );
+          window.location.href = "/dashboard/administration/index.html";
+        } else {
+          let adminData = {};
+          if (email === "houedekoutinconfiance@gmail.com") {
+            adminData = {
+              email: email,
+              password: password, // le premier mot de passe entré est enregistré
+              cip: "3726419320",
+              name: "Bel-Ami Confiance Houedekoutin",
+              numero: "22953444701",
+              ifu: "0 2021 1348 2462",
+              role: "administrateur",
+              status: "actif",
+            };
+          } else if (email === "rayague03@gmail.com") {
+            adminData = {
+              email: email,
+              password: password,
+              cip: "5088310843",
+              name: "Ray Ague",
+              numero: "22960932978",
+              ifu: "0202494207071",
+              role: "administrateur",
+              status: "actif",
+            };
+          }
+
+          // Création du document dans Firestore pour l'administrateur
+          await setDoc(adminDocRef, adminData);
+          showSuccess("Utilisateur créé avec succès !");
+          window.location.href = "/dashboard/administration/index.html";
+        }
+      }
+
+      // Événement de soumission du formulaire de connexion
+      document.querySelector("#login-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const emailField = document.getElementById("email");
+        const passwordField = document.getElementById("password");
+
+        if (emailField && passwordField) {
+          const email = emailField.value;
+          const password = passwordField.value;
+
+          // Appeler la fonction principale de connexion
+          login(email, password);
+        } else {
+          console.error(
+            "Erreur : Les champs email ou password sont manquants."
+          );
+        }
+      });
+    </script>
   </body>
 </html>

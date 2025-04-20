@@ -3,16 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Import Element Plus CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-plus/dist/index.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./dashboard/utilisateurs/img/locagram1.png"
+    />
+
+    <!-- Import Vue 3 -->
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <!-- Import Element Plus JS -->
+    <script src="https://unpkg.com/element-plus"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/notyf@3.0.0/notyf.min.css"
+      rel="stylesheet"
+    />
+
     <title>Locagram | Inscription des Démarcheurs</title>
   </head>
   <body>
     <div
-      class="min-h-screen bg-slate-950 py-6 flex flex-col justify-center sm:py-12"
+      class="flex flex-col justify-center min-h-screen py-6 bg-slate-950 sm:py-12"
     >
       <div class="relative py-3 sm:max-w-xl sm:mx-auto">
         <div
-          class="absolute inset-0 bg-gradient-to-r from-green-300 to-green-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"
+          class="absolute inset-0 transform -skew-y-6 shadow-lg bg-gradient-to-r from-green-300 to-green-600 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"
         ></div>
         <div
           class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20"
@@ -22,24 +44,25 @@
               <h1 class="text-3xl font-black tracking-tighter text-green-500">
                 Inscription des Démarcheurs
               </h1>
-              <p class="text-sm text-gray-600 mt-2">
+              <p class="mt-2 text-sm text-gray-600">
                 Créez votre compte pour rejoindre la plateforme Locagram et
                 commencer vos démarches.
               </p>
             </div>
             <div class="divide-y divide-gray-200">
-              <div
-                class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7"
+              <form
+                id="signup-form"
+                class="py-8 space-y-4 text-base leading-6 text-gray-700 sm:text-lg sm:leading-7"
               >
                 <!-- Nom Complet -->
                 <div class="relative">
                   <input
-                    autocomplete="off"
                     id="name"
                     name="name"
                     type="text"
-                    class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-rose-600"
+                    class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-gray-300 peer focus:outline-none focus:border-rose-600"
                     placeholder="Nom complet"
+                    required
                   />
                   <label
                     for="name"
@@ -51,12 +74,12 @@
                 <!-- Email -->
                 <div class="relative">
                   <input
-                    autocomplete="off"
                     id="email"
                     name="email"
                     type="email"
-                    class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-blue-600"
+                    class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-gray-300 peer focus:outline-none focus:border-blue-600"
                     placeholder="Adresse email"
+                    required
                   />
                   <label
                     for="email"
@@ -68,12 +91,12 @@
                 <!-- Téléphone -->
                 <div class="relative">
                   <input
-                    autocomplete="off"
                     id="phone"
                     name="phone"
                     type="tel"
-                    class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-blue-600"
+                    class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-gray-300 peer focus:outline-none focus:border-blue-600"
                     placeholder="Numéro de téléphone"
+                    required
                   />
                   <label
                     for="phone"
@@ -85,12 +108,12 @@
                 <!-- Numéro IFU -->
                 <div class="relative">
                   <input
-                    autocomplete="off"
                     id="ifu"
                     name="ifu"
                     type="text"
-                    class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-blue-600"
+                    class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-gray-300 peer focus:outline-none focus:border-blue-600"
                     placeholder="Numéro IFU"
+                    required
                   />
                   <label
                     for="ifu"
@@ -102,12 +125,12 @@
                 <!-- Numéro de la Carte CIP -->
                 <div class="relative">
                   <input
-                    autocomplete="off"
                     id="cip"
                     name="cip"
                     type="text"
-                    class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-blue-600"
+                    class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-gray-300 peer focus:outline-none focus:border-blue-600"
                     placeholder="Numéro de la carte CIP"
+                    required
                   />
                   <label
                     for="cip"
@@ -119,12 +142,12 @@
                 <!-- Mot de passe -->
                 <div class="relative">
                   <input
-                    autocomplete="off"
                     id="password"
                     name="password"
                     type="password"
-                    class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-blue-600"
+                    class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-gray-300 peer focus:outline-none focus:border-blue-600"
                     placeholder="Mot de passe"
+                    required
                   />
                   <label
                     for="password"
@@ -136,12 +159,12 @@
                 <!-- Confirmation du mot de passe -->
                 <div class="relative">
                   <input
-                    autocomplete="off"
                     id="confirm_password"
                     name="confirm_password"
                     type="password"
-                    class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-blue-600"
+                    class="w-full h-10 text-gray-900 placeholder-transparent border-b-2 border-gray-300 peer focus:outline-none focus:border-blue-600"
                     placeholder="Confirmer le mot de passe"
+                    required
                   />
                   <label
                     for="confirm_password"
@@ -151,26 +174,178 @@
                 </div>
 
                 <!-- Submit Button -->
-                <div class="relative">
-                  <a
-                    href="dashboard/utilisateurs/index.html"
-                    class="bg-green-500 text-white font-bold rounded-md px-4 py-2 w-full"
+                <div class="relative flex text-center">
+                  <button
+                    type="submit"
+                    class="w-full px-4 py-2 font-bold text-center text-white bg-green-500 rounded-md"
                   >
                     S'inscrire
-                  </a>
+                  </button>
                 </div>
                 <br />
                 <a
                   href="index.html"
-                  class="text-sky-600 underline underline-offset-2 text-md font-bold mt-4"
+                  class="mt-4 font-bold underline text-sky-600 underline-offset-2 text-md"
                 >
                   Se connecter
                 </a>
-              </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+      import {
+        getAuth,
+        createUserWithEmailAndPassword,
+      } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+      } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
+      import ElementPlus from "https://unpkg.com/element-plus";
+      import { ElNotification } from "https://unpkg.com/element-plus";
+
+      // Configuration Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyCeaMAgyFWN12ktRuGSHsLdySgiZqvBIKA",
+        authDomain: "locagram-f08b9.firebaseapp.com",
+        projectId: "locagram-f08b9",
+        storageBucket: "locagram-f08b9.appspot.com",
+        messagingSenderId: "504321320981",
+        appId: "1:504321320981:web:65037b379691080972c61c",
+      };
+
+      // Initialisation de Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const db = getFirestore(app);
+
+      // Fonction pour vérifier si l'email est valide selon les normes du Bénin
+      function isValidEmail(email) {
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        return emailPattern.test(email);
+      }
+
+      // Fonction pour vérifier si le CIP est valide selon les normes du Bénin
+      function isValidCIP(cip) {
+        const cipPattern = /^[0-9]{10}$/; // Exemple de pattern pour le CIP (10 chiffres)
+        return cipPattern.test(cip);
+      }
+
+      // Fonction pour vérifier si l'IFU est valide selon les normes du Bénin
+      function isValidIFU(ifu) {
+        const ifuPattern = /^[0-9]{10}$/; // Exemple de pattern pour l'IFU (10 chiffres)
+        return ifuPattern.test(ifu);
+      }
+
+      // Fonction d'inscription
+      async function signup(
+        name,
+        email,
+        phone,
+        ifu,
+        cip,
+        password,
+        confirmPassword
+      ) {
+        if (password !== confirmPassword) {
+          showError("Les mots de passe ne correspondent pas.");
+          return;
+        }
+
+        // Vérifier les données saisies
+        if (!isValidEmail(email)) {
+          showError("L'email n'est pas valide. Exemple : user@example.com");
+          return;
+        }
+
+        if (!isValidCIP(cip)) {
+          showError("Le numéro CIP doit être composé de 10 chiffres.");
+          return;
+        }
+
+        if (!isValidIFU(ifu)) {
+          showError("Le numéro IFU doit être composé de 10 chiffres.");
+          return;
+        }
+
+        try {
+          // Créer l'utilisateur dans Firebase Auth
+          const userCredential = await createUserWithEmailAndPassword(
+            auth,
+            email,
+            password
+          );
+          console.log("Utilisateur inscrit:", userCredential);
+
+          // Enregistrer les informations de l'utilisateur dans Firestore
+          const userRef = collection(db, "utilisateurs");
+          await addDoc(userRef, {
+            name,
+            email,
+            phone,
+            ifu,
+            cip,
+            status: "inactif", // Statut initial de l'utilisateur
+            role: "utilisateur", // Rôle par défaut
+          });
+
+          // Notification de succès
+          showSuccess("Inscription réussie ! Vous êtes maintenant inscrit.");
+
+          // Rediriger vers la page forfait_inactif.html
+          setTimeout(() => {
+            window.location.href = "./forfait_inactif.html"; // Page de redirection
+          }, 2000);
+        } catch (error) {
+          console.error("Erreur lors de l'inscription:", error);
+          showError("Erreur lors de l'inscription : " + error.message);
+        }
+      }
+
+      // Fonction pour afficher une notification d'erreur
+      function showError(message) {
+        ElNotification({
+          title: "Erreur",
+          message: message,
+          type: "error",
+          duration: 5000,
+        });
+      }
+
+      // Fonction pour afficher une notification de succès
+      function showSuccess(message) {
+        ElNotification({
+          title: "Succès",
+          message: message,
+          type: "success",
+          duration: 3000,
+        });
+      }
+
+      // Gérer la soumission du formulaire
+      document.querySelector("#signup-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const ifu = document.getElementById("ifu").value;
+        const cip = document.getElementById("cip").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword =
+          document.getElementById("confirm_password").value;
+
+        // Appeler la fonction signup
+        signup(name, email, phone, ifu, cip, password, confirmPassword);
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3.0.0/notyf.min.js"></script>
   </body>
 </html>

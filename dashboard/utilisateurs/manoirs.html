@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" type="image/png" href="./img/locagram1.png" />
+
+    <title>Locagram | Utilisateur</title>
+
+    <!-- Custom fonts for this template-->
+    <link
+      href="vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+  </head>
+
+  <body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul
+        class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion"
+        id="accordionSidebar"
+      >
+        <!-- Sidebar - Brand -->
+        <a
+          class="sidebar-brand d-flex align-items-center justify-content-center"
+          href="index.html"
+        >
+          <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-laugh-wink"></i>
+          </div>
+          <div class="mx-3 sidebar-brand-text">Locagram</div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="my-0 sidebar-divider" />
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Tableau de board</span></a
+          >
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
+
+        <ul class="navbar-nav">
+          <!-- Nav Item - Accueil -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="fas fa-fw fa-home"></i>
+              <span>Accueil</span>
+            </a>
+          </li>
+
+          <!-- Nav Item - Postes -->
+          <li class="nav-item">
+            <a class="nav-link active" href="postes.html">
+              <i class="fas fa-fw fa-briefcase"></i>
+              <span>Mes Postes</span>
+            </a>
+          </li>
+
+          <!-- Nav Item - Catégories -->
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="clients.html">
+              <i class="fas fa-fw fa-users"></i>
+              <span>Mes Clients</span>
+            </a>
+          </li> -->
+
+          <!-- Nav Item - Notifications -->
+          <li class="nav-item">
+            <a class="nav-link" href="notifications.html">
+              <i class="fas fa-fw fa-bell"></i>
+              <span>Mes Notifications</span>
+            </a>
+          </li>
+
+          <!-- Nav Item - Forfaits -->
+          <li class="nav-item">
+            <a class="nav-link" href="forfait.html">
+              <i class="fas fa-fw fa-credit-card"></i>
+              <span>Mon Forfaits</span>
+            </a>
+          </li>
+
+          <!-- Nav Item - Profil -->
+          <li class="nav-item">
+            <a class="nav-link" href="profil.html">
+              <i class="fas fa-fw fa-user"></i>
+              <span>Profil</span>
+            </a>
+          </li>
+
+          <!-- Nav Item - Déconnexion avec Modal -->
+          <li class="nav-item">
+            <a
+              class="text-white nav-link bg-danger"
+              href="#"
+              data-toggle="modal"
+              data-target="#logoutModal"
+            >
+              <i class="fas fa-fw fa-sign-out-alt"></i>
+              <span>Déconnexion</span>
+            </a>
+          </li>
+        </ul>
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block" />
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          <button class="border-0 rounded-circle" id="sidebarToggle"></button>
+        </div>
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav
+            class="mb-4 bg-white shadow navbar navbar-expand navbar-light topbar static-top"
+          >
+            <!-- Sidebar Toggle (Topbar) -->
+            <button
+              id="sidebarToggleTop"
+              class="mr-3 btn btn-link d-md-none rounded-circle"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+          </nav>
+          <!-- End of Topbar -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <!-- Page Heading -->
+            <!-- Bouton Retour a la page de poste -->
+            <a href="./postes.html" type="button" class="my-2 btn btn-success">
+              Retour
+            </a>
+            <div
+              class="mb-4 d-sm-flex align-items-center justify-content-between"
+            >
+              <h1 class="mb-0 text-gray-800 h3">Postes</h1>
+            </div>
+
+            <!-- Bouton pour ouvrir le modal des Appartements -->
+            <button
+              class="mb-4 btn btn-success"
+              data-toggle="modal"
+              data-target="#appartementModal"
+            >
+              <i class="fas fa-plus"></i> Ajouter un appartement
+            </button>
+
+            <!-- Content Row -->
+          </div>
+          <!-- /.container-fluid -->
+
+          <!-- Loader -->
+          <div id="manoirLoader" class="loader">
+            <div class="spinner-border text-danger" role="status">
+              <span class="sr-only">Chargement...</span>
+            </div>
+            <p class="mt-3">Enregistrement du manoir...</p>
+          </div>
+
+          <!-- Bouton Ajouter -->
+          <button
+            type="button"
+            class="btn btn-danger my-3"
+            data-toggle="modal"
+            data-target="#addManoirModal"
+          >
+            Ajouter un Manoir
+          </button>
+
+          <!-- Tableau des Manoirs -->
+          <div class="table-responsive">
+            <table class="table table-bordered" id="manoirTable">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Image</th>
+                  <th>Nom</th>
+                  <th>Ville</th>
+                  <th>Quartier</th>
+                  <th>Capacité</th>
+                  <th>Prix</th>
+                  <th>Disponibilité</th>
+                  <th>Description</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
+          <!-- Modal pour Ajouter un Manoir -->
+          <div
+            class="modal fade"
+            id="addManoirModal"
+            tabindex="-1"
+            role="dialog"
+          >
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                  <h5 class="modal-title">Ajouter un Manoir</h5>
+                  <button
+                    type="button"
+                    class="close text-white"
+                    data-dismiss="modal"
+                  >
+                    <span>&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form id="manoirForm">
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="manoirName">Nom</label>
+                        <input
+                          type="text"
+                          id="manoirName"
+                          class="form-control"
+                          required
+                        />
+                      </div>
+                      <div class="form-group col-md-3">
+                        <label for="manoirCity">Ville</label>
+                        <input
+                          type="text"
+                          id="manoirCity"
+                          class="form-control"
+                          required
+                        />
+                      </div>
+                      <div class="form-group col-md-3">
+                        <label for="manoirQuarter">Quartier</label>
+                        <input
+                          type="text"
+                          id="manoirQuarter"
+                          class="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-group col-md-4">
+                        <label for="manoirCapacity">Capacité</label>
+                        <input
+                          type="number"
+                          id="manoirCapacity"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label for="manoirPrice">Prix (FCFA)</label>
+                        <input
+                          type="number"
+                          id="manoirPrice"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label for="manoirAvailability">Disponibilité</label>
+                        <select id="manoirAvailability" class="form-control">
+                          <option>Disponible</option>
+                          <option>Non disponible</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="manoirDescription">Description</label>
+                      <textarea
+                        id="manoirDescription"
+                        class="form-control"
+                        rows="3"
+                      ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="manoirImage">Image</label>
+                      <input
+                        type="file"
+                        id="manoirImage"
+                        class="form-control"
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-secondary" data-dismiss="modal">
+                    Fermer
+                  </button>
+                  <button class="btn btn-danger" id="saveManoirBtn">
+                    Enregistrer
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Style du loader -->
+          <style>
+            .loader {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(255, 255, 255, 0.8);
+              z-index: 1050;
+              display: none;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+            }
+          </style>
+
+          <!-- /.container-fluid -->
+        </div>
+
+        <!-- Modal pour ajouter/modifier un appartement -->
+        <div
+          class="modal fade"
+          id="appartementModal"
+          tabindex="-1"
+          aria-labelledby="appartementModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="text-white modal-header bg-success">
+                <h5 class="modal-title" id="appartementModalLabel">
+                  Ajouter un appartement
+                </h5>
+                <button
+                  type="button"
+                  class="text-white close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form id="formAppartement" enctype="multipart/form-data">
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="appartementNom">Nom</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="appartementNom"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="appartementVille">Ville</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="appartementVille"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="appartementQuartier">Quartier</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="appartementQuartier"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="appartementAdresse">Adresse complète</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="appartementAdresse"
+                      required
+                    />
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-4">
+                      <label for="appartementPrix">Prix</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="appartementPrix"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="appartementPieces">Nombre de pièces</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="appartementPieces"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="appartementChambres"
+                        >Nombre de chambres</label
+                      >
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="appartementChambres"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="appartementEquipements">Équipements</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="appartementEquipements"
+                      placeholder="Ex: WiFi, Cuisine équipée..."
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="appartementImages">Images</label>
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="appartementImages"
+                      multiple
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="appartementAutres">Autres détails</label>
+                    <textarea
+                      class="form-control"
+                      id="appartementAutres"
+                      rows="3"
+                      placeholder="Ajoutez ici toute autre information utile..."
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="appartementDisponibilite">Disponibilité</label>
+                    <select class="form-control" id="appartementDisponibilite">
+                      <option>Oui</option>
+                      <option>Non</option>
+                    </select>
+                  </div>
+                  <button type="submit" class="btn btn-success">
+                    Enregistrer
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="bg-white sticky-footer">
+          <div class="container my-auto">
+            <div class="my-auto text-center copyright">
+              <span
+                >Copyright &copy; Locagram
+                <a
+                  href="https://portfolio-cnkp.vercel.app"
+                  target="_blank"
+                  class="text-success"
+                  >Ray Ague</a
+                >
+                2025</span
+              >
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="rounded scroll-to-top" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div
+      class="modal fade"
+      id="logoutModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button
+              class="close"
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Select "Logout" below if you are ready to end your current session.
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loader SB Admin 2 -->
+    <div
+      id="pageLoader"
+      class="bg-white d-flex justify-content-center align-items-center"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1050;
+      "
+    >
+      <div
+        class="spinner-border text-success"
+        role="status"
+        style="width: 3rem; height: 3rem"
+      >
+        <span class="sr-only">Chargement...</span>
+      </div>
+    </div>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+        deleteDoc,
+        getDocs,
+        doc,
+      } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
+      import {
+        getAuth,
+        onAuthStateChanged,
+      } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
+      import {
+        getStorage,
+        ref,
+        uploadBytes,
+        getDownloadURL,
+      } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-storage.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyCeaMAgyFWN12ktRuGSHsLdySgiZqvBIKA",
+        authDomain: "locagram-f08b9.firebaseapp.com",
+        projectId: "locagram-f08b9",
+        storageBucket: "locagram-f08b9.appspot.com",
+        messagingSenderId: "504321320981",
+        appId: "1:504321320981:web:65037b379691080972c61c",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+      const auth = getAuth(app);
+      const storage = getStorage(app);
+
+      const manoirCollection = collection(db, "manoirs");
+      let currentUser = null;
+
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          currentUser = user;
+          chargerManoirs();
+        }
+      });
+
+      async function chargerManoirs() {
+        const snapshot = await getDocs(manoirCollection);
+        const tbody = document.querySelector("#manoirTable tbody");
+        tbody.innerHTML = "";
+
+        snapshot.forEach((docSnap) => {
+          const data = docSnap.data();
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td><img src="${
+              data.imageURL || "https://via.placeholder.com/100"
+            }" width="100" /></td>
+            <td>${data.nom}</td>
+            <td>${data.ville}</td>
+            <td>${data.quartier}</td>
+            <td>${data.capacite || "-"}</td>
+            <td>${data.prix ? data.prix.toLocaleString() + " FCFA" : "-"}</td>
+            <td>${data.disponibilite}</td>
+            <td>${data.description || ""}</td>
+            <td>
+              <button class="btn btn-danger btn-sm" onclick="supprimerManoir('${
+                docSnap.id
+              }')">Supprimer</button>
+            </td>
+          `;
+          tbody.appendChild(tr);
+        });
+      }
+
+      document
+        .getElementById("saveManoirBtn")
+        .addEventListener("click", async () => {
+          if (!currentUser) return alert("Vous devez être connecté.");
+
+          const nom = document.getElementById("manoirName").value;
+          const ville = document.getElementById("manoirCity").value;
+          const quartier = document.getElementById("manoirQuarter").value;
+          const capacite = parseInt(
+            document.getElementById("manoirCapacity").value
+          );
+          const prix = parseFloat(document.getElementById("manoirPrice").value);
+          const disponibilite =
+            document.getElementById("manoirAvailability").value;
+          const description =
+            document.getElementById("manoirDescription").value;
+          const imageFile = document.getElementById("manoirImage").files[0];
+
+          const loader = document.getElementById("manoirLoader");
+          loader.style.display = "flex";
+
+          let imageURL = "";
+          try {
+            if (imageFile) {
+              const imageRef = ref(
+                storage,
+                `manoirs/${Date.now()}_${imageFile.name}`
+              );
+              const snapshot = await uploadBytes(imageRef, imageFile);
+              imageURL = await getDownloadURL(snapshot.ref);
+            }
+
+            const manoir = {
+              nom,
+              ville,
+              quartier,
+              capacite: isNaN(capacite) ? null : capacite,
+              prix: isNaN(prix) ? null : prix,
+              disponibilite,
+              description,
+              imageURL,
+              userId: currentUser.uid,
+              createdAt: new Date(),
+            };
+
+            await addDoc(manoirCollection, manoir);
+            document.getElementById("manoirForm").reset();
+            $("#addManoirModal").modal("hide");
+            await chargerManoirs();
+          } catch (error) {
+            console.error("Erreur d'enregistrement :", error);
+            alert("Erreur lors de l'enregistrement.");
+          } finally {
+            loader.style.display = "none";
+          }
+        });
+
+      window.supprimerManoir = async function (id) {
+        if (!confirm("Supprimer ce manoir ?")) return;
+        try {
+          await deleteDoc(doc(db, "manoirs", id));
+          await chargerManoirs();
+        } catch (error) {
+          console.error("Erreur suppression :", error);
+          alert("Erreur lors de la suppression.");
+        }
+      };
+    </script>
+
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("pageLoader");
+
+        // Ajoute une classe pour l'effet de fondu
+        loader.classList.add("fade");
+
+        // Cache totalement l’élément après la transition
+        setTimeout(() => {
+          loader.style.display = "none"; // Enlève de l'affichage
+          loader.style.pointerEvents = "none"; // Par sécurité
+          loader.style.zIndex = "-1"; // S'assure qu'il ne bloque plus rien
+        }, 500); // même durée que la transition CSS
+      });
+
+      // ✅ Vérification du statut utilisateur
+      onAuthStateChanged(auth, async (user) => {
+        if (user) {
+          const usersCol = collection(db, "utilisateurs");
+          const q = query(usersCol, where("email", "==", user.email));
+          const querySnapshot = await getDocs(q);
+          if (!querySnapshot.empty) {
+            const userData = querySnapshot.docs[0].data();
+            const status = userData.status
+              ? userData.status.toLowerCase()
+              : "inactif";
+
+            if (status !== "actif") {
+              bloquerAcces();
+            }
+          } else {
+            console.warn("Utilisateur introuvable dans la base.");
+          }
+        } else {
+          // Rediriger vers la connexion si non connecté
+          window.location.href = "../../index.html";
+        }
+      });
+
+      // ✅ Fonction qui bloque l'accès à l'application
+      function bloquerAcces() {
+        const block = document.getElementById("blockedMessage");
+        const whatsapp = document.getElementById("whatsappButton");
+        const message = encodeURIComponent(
+          "Bonjour, mon compte a été bloqué car mon statut est inactif. Je souhaite renouveler mon forfait. Merci !"
+        );
+        whatsapp.href = `https://wa.me/22953444701?text=${message}`;
+        block.style.display = "block";
+
+        // Bloquer tout le reste de la page
+        document.body.style.overflow = "hidden";
+        const content = document.querySelectorAll(
+          "body > *:not(#blockedMessage)"
+        );
+        content.forEach((el) => {
+          if (el.id !== "blockedMessage") {
+            el.style.display = "none";
+          }
+        });
+      }
+    </script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/demo/datatables-demo.js"></script>
+  </body>
+</html>

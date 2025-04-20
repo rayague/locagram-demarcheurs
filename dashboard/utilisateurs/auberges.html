@@ -7,6 +7,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link rel="icon" type="image/png" href="./img/locagram1.png" />
+
     <meta name="description" content="" />
     <meta name="author" content="" />
 
@@ -43,11 +45,11 @@
           <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
           </div>
-          <div class="sidebar-brand-text mx-3">Locagram</div>
+          <div class="mx-3 sidebar-brand-text">Locagram</div>
         </a>
 
         <!-- Divider -->
-        <hr class="sidebar-divider my-0" />
+        <hr class="my-0 sidebar-divider" />
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
@@ -78,12 +80,12 @@
           </li>
 
           <!-- Nav Item - Catégories -->
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="clients.html">
               <i class="fas fa-fw fa-users"></i>
               <span>Mes Clients</span>
             </a>
-          </li>
+          </li> -->
 
           <!-- Nav Item - Notifications -->
           <li class="nav-item">
@@ -109,9 +111,14 @@
             </a>
           </li>
 
-          <!-- Nav Item - Profil -->
+          <!-- Nav Item - Déconnexion avec Modal -->
           <li class="nav-item">
-            <a class="nav-link bg-danger" href="profil.html">
+            <a
+              class="text-white nav-link bg-danger"
+              href="#"
+              data-toggle="modal"
+              data-target="#logoutModal"
+            >
               <i class="fas fa-fw fa-sign-out-alt"></i>
               <span>Déconnexion</span>
             </a>
@@ -122,7 +129,7 @@
 
         <!-- Sidebar Toggler (Sidebar) -->
         <div class="text-center d-none d-md-inline">
-          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+          <button class="border-0 rounded-circle" id="sidebarToggle"></button>
         </div>
       </ul>
       <!-- End of Sidebar -->
@@ -133,100 +140,15 @@
         <div id="content">
           <!-- Topbar -->
           <nav
-            class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
+            class="mb-4 bg-white shadow navbar navbar-expand navbar-light topbar static-top"
           >
             <!-- Sidebar Toggle (Topbar) -->
             <button
               id="sidebarToggleTop"
-              class="btn btn-link d-md-none rounded-circle mr-3"
+              class="mr-3 btn btn-link d-md-none rounded-circle"
             >
               <i class="fa fa-bars"></i>
             </button>
-
-            <!-- Topbar Navbar -->
-            <ul class="navbar-nav ml-auto">
-              <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-              <li class="nav-item dropdown no-arrow d-sm-none">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="searchDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <i class="fas fa-search fa-fw"></i>
-                </a>
-                <!-- Dropdown - Messages -->
-                <div
-                  class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                  aria-labelledby="searchDropdown"
-                >
-                  <form class="form-inline mr-auto w-100 navbar-search">
-                    <div class="input-group">
-                      <input
-                        type="text"
-                        class="form-control bg-light border-0 small"
-                        placeholder="Search for..."
-                        aria-label="Search"
-                        aria-describedby="basic-addon2"
-                      />
-                      <div class="input-group-append">
-                        <button class="btn btn-primary" type="button">
-                          <i class="fas fa-search fa-sm"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </li>
-
-              <div class="topbar-divider d-none d-sm-block"></div>
-
-              <!-- Nav Item - User Information -->
-              <li class="nav-item dropdown no-arrow">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="userDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <span class="mr-2 d-none d-lg-inline text-gray-600 small"
-                    >Douglas McGee</span
-                  >
-                  <img
-                    class="img-profile rounded-circle"
-                    src="img/undraw_profile.svg"
-                  />
-                </a>
-                <!-- Dropdown - User Information -->
-                <div
-                  class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                  aria-labelledby="userDropdown"
-                >
-                  <a class="dropdown-item" href="#">
-                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Profil
-                  </a>
-
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#logoutModal"
-                  >
-                    <i
-                      class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
-                    ></i>
-                    Déconnexion
-                  </a>
-                </div>
-              </li>
-            </ul>
           </nav>
           <!-- End of Topbar -->
 
@@ -235,14 +157,14 @@
             <!-- Page Heading -->
 
             <!-- Bouton Retour a la page de poste -->
-            <a href="./postes.html" type="button" class="btn btn-success my-2">
+            <a href="./postes.html" type="button" class="my-2 btn btn-success">
               Retour
             </a>
 
             <div
-              class="d-sm-flex align-items-center justify-content-between mb-4"
+              class="mb-4 d-sm-flex align-items-center justify-content-between"
             >
-              <h1 class="h3 mb-0 text-gray-800">Postes</h1>
+              <h1 class="mb-0 text-gray-800 h3">Postes</h1>
             </div>
 
             <!-- Content Row -->
@@ -252,9 +174,9 @@
           <!-- Begin Page Content -->
           <div class="container-fluid">
             <!-- DataTales Example -->
-            <div class="card shadow mb-4">
+            <div class="mb-4 shadow card">
               <div
-                class="card-header py-3 d-flex justify-content-between align-items-center"
+                class="py-3 card-header d-flex justify-content-between align-items-center"
               >
                 <h6 class="m-0 font-weight-bold text-primary">
                   Liste des auberges
@@ -277,7 +199,7 @@
                     width="100%"
                     cellspacing="0"
                   >
-                    <thead class="bg-light text-center">
+                    <thead class="text-center bg-light">
                       <tr>
                         <th>Nom</th>
                         <th>Ville</th>
@@ -326,7 +248,8 @@
             </div>
           </div>
 
-          <!-- Modal -->
+          <!-- Ajoute ici les modaux d'ajout et d'édition de l'auberge (inchangés) -->
+          <!-- Exemple pour le modal d'ajout -->
           <div
             class="modal fade"
             id="aubergeModal"
@@ -350,8 +273,7 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-
-                <!-- Formulaire -->
+                <!-- Formulaire d'ajout -->
                 <form id="aubergeForm">
                   <div class="modal-body row">
                     <div class="col-md-6">
@@ -364,7 +286,6 @@
                           required
                         />
                       </div>
-
                       <div class="form-group">
                         <label for="ville">Ville *</label>
                         <input
@@ -374,7 +295,6 @@
                           required
                         />
                       </div>
-
                       <div class="form-group">
                         <label for="quartier">Quartier *</label>
                         <input
@@ -384,7 +304,6 @@
                           required
                         />
                       </div>
-
                       <div class="form-group">
                         <label for="adresseDetail">Adresse détaillée</label>
                         <textarea
@@ -393,7 +312,6 @@
                           rows="2"
                         ></textarea>
                       </div>
-
                       <div class="form-group">
                         <label for="prix">Prix par nuit (FCFA) *</label>
                         <input
@@ -403,7 +321,6 @@
                           required
                         />
                       </div>
-
                       <div class="form-group">
                         <label for="disponibilite">Disponibilité *</label>
                         <select
@@ -430,7 +347,6 @@
                           required
                         />
                       </div>
-
                       <div class="form-group">
                         <label for="typeChambre">Type de chambre *</label>
                         <select class="form-control" id="typeChambre" required>
@@ -440,7 +356,6 @@
                           <option>Suite</option>
                         </select>
                       </div>
-
                       <div class="form-group">
                         <label for="confort">Niveau de confort *</label>
                         <select class="form-control" id="confort" required>
@@ -449,7 +364,6 @@
                           <option>Haut standing</option>
                         </select>
                       </div>
-
                       <div class="form-group">
                         <label for="equipements"
                           >Équipements (Wi-Fi, Climatisation, etc.)</label
@@ -461,7 +375,6 @@
                           placeholder="Ex : Wi-Fi, TV, Climatisation..."
                         />
                       </div>
-
                       <div class="form-group">
                         <label for="description">Description complète</label>
                         <textarea
@@ -470,7 +383,6 @@
                           rows="3"
                         ></textarea>
                       </div>
-
                       <div class="form-group">
                         <label for="images">Photos de l’auberge</label>
                         <input
@@ -500,7 +412,7 @@
             </div>
           </div>
 
-          <!-- Modal de modification d’auberge -->
+          <!-- Modal d'édition (exemple, inchangé) -->
           <div
             class="modal fade"
             id="editAubergeModal"
@@ -511,19 +423,18 @@
           >
             <div class="modal-dialog modal-lg" role="document">
               <div class="modal-content">
-                <div class="modal-header bg-warning text-white">
+                <div class="text-white modal-header bg-warning">
                   <h5 class="modal-title" id="editAubergeModalLabel">
                     Modifier l'auberge
                   </h5>
                   <button
                     type="button"
-                    class="close text-white"
+                    class="text-white close"
                     data-dismiss="modal"
                   >
                     <span>&times;</span>
                   </button>
                 </div>
-
                 <div class="modal-body">
                   <form id="editAubergeForm">
                     <div class="form-row">
@@ -537,7 +448,6 @@
                           required
                         />
                       </div>
-
                       <div class="form-group col-md-6">
                         <label for="editTypeChambre">Type de chambre</label>
                         <select
@@ -545,13 +455,12 @@
                           id="editTypeChambre"
                           name="typeChambre"
                         >
-                          <option>Simple</option>
-                          <option>Double</option>
+                          <option>Chambre simple</option>
+                          <option>Chambre double</option>
                           <option>Suite</option>
                         </select>
                       </div>
                     </div>
-
                     <div class="form-row">
                       <div class="form-group col-md-4">
                         <label for="editVille">Ville</label>
@@ -563,7 +472,6 @@
                           required
                         />
                       </div>
-
                       <div class="form-group col-md-4">
                         <label for="editQuartier">Quartier</label>
                         <input
@@ -573,7 +481,6 @@
                           name="quartier"
                         />
                       </div>
-
                       <div class="form-group col-md-4">
                         <label for="editAdresseDetail">Adresse détaillée</label>
                         <input
@@ -584,7 +491,6 @@
                         />
                       </div>
                     </div>
-
                     <div class="form-row">
                       <div class="form-group col-md-4">
                         <label for="editCapacite">Capacité</label>
@@ -595,7 +501,6 @@
                           name="capacite"
                         />
                       </div>
-
                       <div class="form-group col-md-4">
                         <label for="editConfort">Confort</label>
                         <select
@@ -608,7 +513,6 @@
                           <option>Haut standing</option>
                         </select>
                       </div>
-
                       <div class="form-group col-md-4">
                         <label for="editPrix">Prix (FCFA)</label>
                         <input
@@ -619,7 +523,6 @@
                         />
                       </div>
                     </div>
-
                     <div class="form-row">
                       <div class="form-group col-md-6">
                         <label for="editDisponibilite">Disponibilité</label>
@@ -632,7 +535,6 @@
                           <option>Indisponible</option>
                         </select>
                       </div>
-
                       <div class="form-group col-md-6">
                         <label for="editEquipements">Équipements</label>
                         <input
@@ -644,7 +546,6 @@
                         />
                       </div>
                     </div>
-
                     <div class="text-right">
                       <button type="submit" class="btn btn-warning">
                         Enregistrer les modifications
@@ -661,9 +562,9 @@
         <!-- End of Main Content -->
 
         <!-- Footer -->
-        <footer class="sticky-footer bg-white">
+        <footer class="bg-white sticky-footer">
           <div class="container my-auto">
-            <div class="copyright text-center my-auto">
+            <div class="my-auto text-center copyright">
               <span
                 >Copyright &copy; Locagram
                 <a
@@ -684,34 +585,35 @@
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
+    <a class="rounded scroll-to-top" href="#page-top">
       <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
+    <!-- Fenêtre modale de confirmation pour la déconnexion -->
     <div
       class="modal fade"
       id="logoutModal"
       tabindex="-1"
       role="dialog"
-      aria-labelledby="exampleModalLabel"
+      aria-labelledby="logoutModalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <h5 class="modal-title" id="logoutModalLabel">Prêt à quitter ?</h5>
             <button
               class="close"
               type="button"
               data-dismiss="modal"
-              aria-label="Close"
+              aria-label="Fermer"
             >
               <span aria-hidden="true">×</span>
             </button>
           </div>
           <div class="modal-body">
-            Select "Logout" below if you are ready to end your current session.
+            Sélectionnez « Déconnexion » ci-dessous si vous êtes prêt(e) à
+            mettre fin à votre session actuelle.
           </div>
           <div class="modal-footer">
             <button
@@ -719,72 +621,342 @@
               type="button"
               data-dismiss="modal"
             >
-              Cancel
+              Annuler
             </button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
+            <!-- Remplacez href par un appel à votre fonction logout si nécessaire -->
+            <a class="btn btn-primary" href="login.html">Déconnexion</a>
           </div>
         </div>
       </div>
     </div>
 
-    <script>
-      document
-        .getElementById("aubergeForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
+    <!-- Loader SB Admin 2 -->
+    <div
+      id="pageLoader"
+      class="bg-white d-flex justify-content-center align-items-center"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1050;
+      "
+    >
+      <div
+        class="spinner-border text-success"
+        role="status"
+        style="width: 3rem; height: 3rem"
+      >
+        <span class="sr-only">Chargement...</span>
+      </div>
+    </div>
 
-          const nom = document.getElementById("nomAuberge").value;
-          const emplacement = document.getElementById("emplacement").value;
-          const prix = document.getElementById("prix").value;
-          const description = document.getElementById("description").value;
-          const images = document.getElementById("images").files;
+    <!-- Assure-toi d’inclure ce script à la fin de la page, après le HTML -->
+    <script type="module">
+      // Importer les modules Firebase nécessaires
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+        getDocs,
+        query,
+        where,
+        doc,
+        updateDoc,
+        deleteDoc,
+        getDoc,
+      } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
+      import {
+        getAuth,
+        onAuthStateChanged,
+      } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
 
-          // Pour test : afficher les infos dans la console
-          console.log({ nom, emplacement, prix, description, images });
+      // Configuration Firebase (que tu m'as fournie)
+      const firebaseConfig = {
+        apiKey: "AIzaSyCeaMAgyFWN12ktRuGSHsLdySgiZqvBIKA",
+        authDomain: "locagram-f08b9.firebaseapp.com",
+        projectId: "locagram-f08b9",
+        storageBucket: "locagram-f08b9.appspot.com",
+        messagingSenderId: "504321320981",
+        appId: "1:504321320981:web:65037b379691080972c61c",
+      };
 
-          // Fermer le modal
-          $("#aubergeModal").modal("hide");
+      // Initialiser Firebase et Firestore
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+      const auth = getAuth(app);
 
-          // Afficher une notification ou envoyer à un backend ici
-          alert("Auberge enregistrée avec succès !");
-        });
-    </script>
-    <script>
-      function editAuberge(button) {
-        // Récupère la ligne parente du bouton
-        var row = button.closest("tr");
-        var cells = row.getElementsByTagName("td");
+      // Variable globale pour stocker l’utilisateur connecté
+      let currentUser = null;
 
-        // Récupère les valeurs depuis les cellules
-        var nom = cells[0].innerText.trim();
-        var ville = cells[1].innerText.trim();
-        var quartier = cells[2].innerText.trim();
-        var adresse = cells[3].innerText.trim();
-        var prix = cells[4].innerText.trim();
-        var capacite = cells[5].innerText.trim();
-        var typeChambre = cells[6].innerText.trim();
-        var confort = cells[7].innerText.trim();
-        var equipements = cells[8].innerText.trim();
-        var disponibilite = cells[9].innerText.trim();
+      // Référence à la collection "auberges"
+      const aubergesCollection = collection(db, "auberges");
 
-        // Remplir le formulaire dans le modal
-        document.getElementById("editNomAuberge").value = nom;
-        document.getElementById("editVille").value = ville;
-        document.getElementById("editQuartier").value = quartier;
-        document.getElementById("editAdresseDetail").value = adresse;
-        document.getElementById("editPrix").value = prix;
-        document.getElementById("editCapacite").value = capacite;
-        document.getElementById("editTypeChambre").value = typeChambre;
-        document.getElementById("editConfort").value = confort;
-        document.getElementById("editEquipements").value = equipements;
-        document.getElementById("editDisponibilite").value = disponibilite;
+      // Définir une fonction pour charger et afficher les auberges de l'utilisateur connecté
+      async function chargerAuberges() {
+        if (!currentUser) return; // Si aucun utilisateur n'est connecté, ne rien faire
 
-        // Ouvre le modal
-        const modal = new bootstrap.Modal(
-          document.getElementById("editAubergeModal")
+        // Créer une requête qui sélectionne uniquement les documents dont le champ userId correspond à l'utilisateur courant
+        const aubergesQuery = query(
+          aubergesCollection,
+          where("userId", "==", currentUser.uid)
         );
-        modal.show();
+        const snapshot = await getDocs(aubergesQuery);
+        const tbody = document.querySelector("#dataTable tbody");
+        tbody.innerHTML = ""; // Vider le tableau avant de remplir avec les données
+
+        snapshot.forEach((docSnap) => {
+          const data = docSnap.data();
+          const tr = document.createElement("tr");
+          tr.setAttribute("data-id", docSnap.id);
+          tr.innerHTML = `
+        <td>${data.nom || ""}</td>
+        <td>${data.ville || ""}</td>
+        <td>${data.quartier || ""}</td>
+        <td>${data.adresseDetail || ""}</td>
+        <td>${data.capacite || ""}</td>
+        <td>${data.typeChambre || ""}</td>
+        <td>${data.confort || ""}</td>
+        <td>${data.prix || ""}</td>
+        <td>${data.disponibilite || ""}</td>
+        <td>${data.equipements || ""}</td>
+        <td class="text-center">
+          <button class="btn btn-sm btn-info" onclick="remplirFormEdition('${
+            docSnap.id
+          }')">Modifier</button>
+          <button class="btn btn-sm btn-danger" onclick="supprimerAuberge('${
+            docSnap.id
+          }')">Supprimer</button>
+        </td>
+      `;
+          tbody.appendChild(tr);
+        });
       }
+
+      // Gérer l'authentification : quand l'état change (lorsqu'un utilisateur se connecte ou se déconnecte)
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          currentUser = user;
+          console.log("Utilisateur connecté :", user.email);
+          chargerAuberges();
+        } else {
+          currentUser = null;
+          console.log("Aucun utilisateur connecté");
+          // Rediriger l'utilisateur vers la page de login, ou afficher un message
+        }
+      });
+
+      // Ajouter une auberge depuis le formulaire "aubergeForm" en incluant le userId
+      const aubergeForm = document.getElementById("aubergeForm");
+      aubergeForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        if (!currentUser) {
+          alert("Connectez-vous pour ajouter un poste.");
+          return;
+        }
+
+        // Récupérer les valeurs du formulaire
+        const auberge = {
+          nom: document.getElementById("nomAuberge").value,
+          ville: document.getElementById("ville").value,
+          quartier: document.getElementById("quartier").value,
+          adresseDetail: document.getElementById("adresseDetail").value,
+          prix: parseFloat(document.getElementById("prix").value),
+          disponibilite: document.getElementById("disponibilite").value,
+          capacite: parseInt(document.getElementById("capacite").value),
+          typeChambre: document.getElementById("typeChambre").value,
+          confort: document.getElementById("confort").value,
+          equipements: document.getElementById("equipements").value,
+          description: document.getElementById("description").value,
+          userId: currentUser.uid, // Lier le poste à l'utilisateur connecté
+          // Note : Pour les images, une gestion spécifique (upload vers Firebase Storage) sera nécessaire.
+        };
+
+        try {
+          await addDoc(aubergesCollection, auberge);
+          // Réinitialiser le formulaire et fermer le modal
+          aubergeForm.reset();
+          $("#aubergeModal").modal("hide");
+          chargerAuberges();
+        } catch (error) {
+          console.error("Erreur lors de l'ajout de l'auberge :", error);
+        }
+      });
+
+      // Variable globale pour stocker l'id de l'auberge en cours d'édition
+      let currentEditId = null;
+
+      // Fonction globale pour remplir le formulaire d'édition pour un poste donné
+      window.remplirFormEdition = async function (id) {
+        if (!currentUser) return;
+        currentEditId = id;
+        const docRef = doc(db, "auberges", id);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          const aubergeData = docSnap.data();
+          // Vérifier que l'utilisateur connecté est bien propriétaire du poste
+          if (aubergeData.userId !== currentUser.uid) {
+            alert("Vous n'êtes pas autorisé à modifier ce poste.");
+            return;
+          }
+          // Remplir les champs du formulaire d'édition avec les données récupérées
+          document.getElementById("editNomAuberge").value =
+            aubergeData.nom || "";
+          document.getElementById("editTypeChambre").value =
+            aubergeData.typeChambre || "";
+          document.getElementById("editVille").value = aubergeData.ville || "";
+          document.getElementById("editQuartier").value =
+            aubergeData.quartier || "";
+          document.getElementById("editAdresseDetail").value =
+            aubergeData.adresseDetail || "";
+          document.getElementById("editCapacite").value =
+            aubergeData.capacite || "";
+          document.getElementById("editConfort").value =
+            aubergeData.confort || "";
+          document.getElementById("editPrix").value = aubergeData.prix || "";
+          document.getElementById("editDisponibilite").value =
+            aubergeData.disponibilite || "";
+          document.getElementById("editEquipements").value =
+            aubergeData.equipements || "";
+
+          // Ouvrir le modal d'édition
+          $("#editAubergeModal").modal("show");
+        } else {
+          alert("Le poste demandé n'existe pas.");
+        }
+      };
+
+      // Gérer la soumission du formulaire d'édition
+      const editAubergeForm = document.getElementById("editAubergeForm");
+      editAubergeForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        if (!currentUser || !currentEditId) return;
+
+        // Préparer les données mises à jour
+        const aubergeUpdate = {
+          nom: document.getElementById("editNomAuberge").value,
+          typeChambre: document.getElementById("editTypeChambre").value,
+          ville: document.getElementById("editVille").value,
+          quartier: document.getElementById("editQuartier").value,
+          adresseDetail: document.getElementById("editAdresseDetail").value,
+          capacite: parseInt(document.getElementById("editCapacite").value),
+          confort: document.getElementById("editConfort").value,
+          prix: parseFloat(document.getElementById("editPrix").value),
+          disponibilite: document.getElementById("editDisponibilite").value,
+          equipements: document.getElementById("editEquipements").value,
+          // Le champ userId ne doit pas être modifié
+        };
+
+        // Récupérer le document pour vérifier l'appartenance
+        const docRef = doc(db, "auberges", currentEditId);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists() && docSnap.data().userId === currentUser.uid) {
+          try {
+            await updateDoc(docRef, aubergeUpdate);
+            editAubergeForm.reset();
+            currentEditId = null;
+            $("#editAubergeModal").modal("hide");
+            chargerAuberges();
+          } catch (error) {
+            console.error("Erreur lors de la mise à jour du poste :", error);
+          }
+        } else {
+          alert("Vous n'êtes pas autorisé à modifier ce poste.");
+        }
+      });
+
+      // Fonction globale pour supprimer un poste
+      window.supprimerAuberge = async function (id) {
+        if (!currentUser) return;
+        if (confirm("Êtes-vous sûr de vouloir supprimer ce poste ?")) {
+          const docRef = doc(db, "auberges", id);
+          const docSnap = await getDoc(docRef);
+          if (docSnap.exists() && docSnap.data().userId === currentUser.uid) {
+            try {
+              await deleteDoc(docRef);
+              chargerAuberges();
+            } catch (error) {
+              console.error("Erreur lors de la suppression du poste :", error);
+            }
+          } else {
+            alert("Vous n'êtes pas autorisé à supprimer ce poste.");
+          }
+        }
+      };
+
+      // Optionnel : tu peux ajouter une vérification pour s’assurer que les formulaires soient accessibles uniquement lorsque l’utilisateur est connecté
+
+      // Charger la liste des auberges dès que la page est chargée si l’utilisateur est déjà connecté
+      window.addEventListener("load", () => {
+        if (auth.currentUser) {
+          currentUser = auth.currentUser;
+          chargerAuberges();
+        }
+      });
+
+      // ✅ Vérification du statut utilisateur
+      onAuthStateChanged(auth, async (user) => {
+        if (user) {
+          const usersCol = collection(db, "utilisateurs");
+          const q = query(usersCol, where("email", "==", user.email));
+          const querySnapshot = await getDocs(q);
+          if (!querySnapshot.empty) {
+            const userData = querySnapshot.docs[0].data();
+            const status = userData.status
+              ? userData.status.toLowerCase()
+              : "inactif";
+
+            if (status !== "actif") {
+              bloquerAcces();
+            }
+          } else {
+            console.warn("Utilisateur introuvable dans la base.");
+          }
+        } else {
+          // Rediriger vers la connexion si non connecté
+          window.location.href = "../../index.html";
+        }
+      });
+
+      // ✅ Fonction qui bloque l'accès à l'application
+      function bloquerAcces() {
+        const block = document.getElementById("blockedMessage");
+        const whatsapp = document.getElementById("whatsappButton");
+        const message = encodeURIComponent(
+          "Bonjour, mon compte a été bloqué car mon statut est inactif. Je souhaite renouveler mon forfait. Merci !"
+        );
+        whatsapp.href = `https://wa.me/22953444701?text=${message}`;
+        block.style.display = "block";
+
+        // Bloquer tout le reste de la page
+        document.body.style.overflow = "hidden";
+        const content = document.querySelectorAll(
+          "body > *:not(#blockedMessage)"
+        );
+        content.forEach((el) => {
+          if (el.id !== "blockedMessage") {
+            el.style.display = "none";
+          }
+        });
+      }
+    </script>
+
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("pageLoader");
+
+        // Ajoute une classe pour l'effet de fondu
+        loader.classList.add("fade");
+
+        // Cache totalement l’élément après la transition
+        setTimeout(() => {
+          loader.style.display = "none"; // Enlève de l'affichage
+          loader.style.pointerEvents = "none"; // Par sécurité
+          loader.style.zIndex = "-1"; // S'assure qu'il ne bloque plus rien
+        }, 500); // même durée que la transition CSS
+      });
     </script>
 
     <!-- Bootstrap core JavaScript-->

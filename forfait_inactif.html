@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./dashboard/utilisateurs/img/locagram1.png"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Locagram | Forfait inactif</title>
+  </head>
+  <body class="text-white bg-slate-950">
+    <div class="flex flex-col justify-center min-h-screen px-6 py-12 sm:px-12">
+      <div
+        class="max-w-lg p-8 mx-auto space-y-6 bg-gray-800 rounded-lg shadow-lg"
+      >
+        <h3 class="text-2xl font-semibold text-center text-green-500">
+          Chers démarcheur,
+        </h3>
+        <p class="text-lg text-center text-gray-300">
+          Actuellement, vous n'avez aucun forfait actif. Nous vous proposons
+          plusieurs forfaits adaptés à vos besoins. Vous pouvez bénéficier de
+          réductions intéressantes si vous optez pour un forfait de plus de deux
+          mois. Découvrez nos forfaits ci-dessous :
+        </p>
+
+        <form
+          id="forfaitForm"
+          action="https://wa.me/+22953444701"
+          method="get"
+          target="_blank"
+          class="flex flex-col"
+        >
+          <div class="space-y-4">
+            <label
+              for="forfaitSelect"
+              class="block text-lg font-medium text-gray-300"
+              >Choisissez un forfait</label
+            >
+            <select
+              id="forfaitSelect"
+              name="forfait"
+              class="block w-full bg-gray-700 text-gray-200 border border-gray-600 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-sm p-2.5"
+            >
+              <option value="forfait_1500_1mois">
+                Forfait 1500 F CFA - 1 mois
+              </option>
+              <option value="forfait_3000_2mois">
+                Forfait 3000 F CFA - 2 mois
+              </option>
+              <option value="forfait_4000_3mois">
+                Forfait 4000 F CFA - 3 mois
+              </option>
+              <option value="forfait_5000_6mois">
+                Forfait 5000 F CFA - 4 mois
+              </option>
+              <option value="forfait_6500_6mois">
+                Forfait 6500 F CFA - 5 mois
+              </option>
+              <option value="forfait_8000_6mois">
+                Forfait 8000 F CFA - 6 mois
+              </option>
+              <option value="forfait_9000_6mois">
+                Forfait 9000 F CFA - 7 mois
+              </option>
+              <option value="forfait_10000_6mois">
+                Forfait 10000 F CFA - 8 mois
+              </option>
+              <option value="forfait_12000_6mois">
+                Forfait 12000 F CFA - 9 mois
+              </option>
+              <option value="forfait_13500_6mois">
+                Forfait 13500 F CFA - 10 mois
+              </option>
+              <option value="forfait_14000_6mois">
+                Forfait 14000 F CFA - 11 mois
+              </option>
+              <option value="forfait_15000_6mois">
+                Forfait 15000 F CFA - 12 mois
+              </option>
+            </select>
+
+            <button
+              type="submit"
+              class="w-full px-6 py-3 font-bold text-white bg-green-500 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400"
+            >
+              Envoyer
+            </button>
+          </div>
+          <a
+            href="./index.html"
+            class="w-full px-6 py-3 mt-8 font-bold text-center text-white rounded-md bg-sky-500 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-400"
+          >
+            connexion
+          </a>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Ajouter un écouteur d'événement pour rediriger l'utilisateur vers WhatsApp après la soumission du formulaire
+      document
+        .getElementById("forfaitForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const forfait = document.getElementById("forfaitSelect").value;
+          const message = encodeURIComponent(
+            `Bonjour, je souhaite souscrire au forfait ${forfait}.`
+          );
+          const url = `https://wa.me/+22953444701?text=${message}`;
+
+          // Redirection vers WhatsApp
+          window.location.href = url;
+        });
+    </script>
+  </body>
+</html>

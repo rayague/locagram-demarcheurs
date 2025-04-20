@@ -7,6 +7,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link rel="icon" type="image/png" href="./img/locagram1.png" />
+
     <meta name="description" content="" />
     <meta name="author" content="" />
 
@@ -43,11 +45,11 @@
           <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
           </div>
-          <div class="sidebar-brand-text mx-3">Locagram</div>
+          <div class="mx-3 sidebar-brand-text">Locagram</div>
         </a>
 
         <!-- Divider -->
-        <hr class="sidebar-divider my-0" />
+        <hr class="my-0 sidebar-divider" />
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
@@ -78,12 +80,12 @@
           </li>
 
           <!-- Nav Item - Catégories -->
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="clients.html">
               <i class="fas fa-fw fa-users"></i>
               <span>Mes Clients</span>
             </a>
-          </li>
+          </li> -->
 
           <!-- Nav Item - Notifications -->
           <li class="nav-item">
@@ -109,9 +111,14 @@
             </a>
           </li>
 
-          <!-- Nav Item - Profil -->
+          <!-- Nav Item - Déconnexion avec Modal -->
           <li class="nav-item">
-            <a class="nav-link bg-danger" href="profil.html">
+            <a
+              class="text-white nav-link bg-danger"
+              href="#"
+              data-toggle="modal"
+              data-target="#logoutModal"
+            >
               <i class="fas fa-fw fa-sign-out-alt"></i>
               <span>Déconnexion</span>
             </a>
@@ -122,7 +129,7 @@
 
         <!-- Sidebar Toggler (Sidebar) -->
         <div class="text-center d-none d-md-inline">
-          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+          <button class="border-0 rounded-circle" id="sidebarToggle"></button>
         </div>
       </ul>
       <!-- End of Sidebar -->
@@ -133,158 +140,91 @@
         <div id="content">
           <!-- Topbar -->
           <nav
-            class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
+            class="mb-4 bg-white shadow navbar navbar-expand navbar-light topbar static-top"
           >
             <!-- Sidebar Toggle (Topbar) -->
             <button
               id="sidebarToggleTop"
-              class="btn btn-link d-md-none rounded-circle mr-3"
+              class="mr-3 btn btn-link d-md-none rounded-circle"
             >
               <i class="fa fa-bars"></i>
             </button>
 
             <!-- Topbar Navbar -->
-            <ul class="navbar-nav ml-auto">
-              <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-              <li class="nav-item dropdown no-arrow d-sm-none">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="searchDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <i class="fas fa-search fa-fw"></i>
-                </a>
-                <!-- Dropdown - Messages -->
-                <div
-                  class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                  aria-labelledby="searchDropdown"
-                >
-                  <form class="form-inline mr-auto w-100 navbar-search">
-                    <div class="input-group">
-                      <input
-                        type="text"
-                        class="form-control bg-light border-0 small"
-                        placeholder="Search for..."
-                        aria-label="Search"
-                        aria-describedby="basic-addon2"
-                      />
-                      <div class="input-group-append">
-                        <button class="btn btn-primary" type="button">
-                          <i class="fas fa-search fa-sm"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </li>
-
-              <div class="topbar-divider d-none d-sm-block"></div>
-
-              <!-- Nav Item - User Information -->
-              <li class="nav-item dropdown no-arrow">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="userDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <span class="mr-2 d-none d-lg-inline text-gray-600 small"
-                    >Douglas McGee</span
-                  >
-                  <img
-                    class="img-profile rounded-circle"
-                    src="img/undraw_profile.svg"
-                  />
-                </a>
-                <!-- Dropdown - User Information -->
-                <div
-                  class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                  aria-labelledby="userDropdown"
-                >
-                  <a class="dropdown-item" href="#">
-                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Profil
-                  </a>
-
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#logoutModal"
-                  >
-                    <i
-                      class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
-                    ></i>
-                    Déconnexion
-                  </a>
-                </div>
-              </li>
-            </ul>
           </nav>
           <!-- End of Topbar -->
 
           <!-- Sidebar (SB Admin) -->
           <div id="wrapper">
             <!-- Profile Section -->
-            <div class="container-fluid mt-5">
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
+            <div class="mt-5 container-fluid">
+              <div class="mb-4 shadow card">
+                <div class="py-3 card-header">
                   <h6 class="m-0 font-weight-bold text-primary">Mon Profil</h6>
                 </div>
                 <div class="card-body">
                   <!-- Profile Information -->
                   <div class="row">
-                    <div class="col-md-4 text-center">
+                    <div class="text-center col-md-4">
                       <img
                         src="./img/avatar.png"
-                        class="rounded-circle img-fluid h-25 mb-3"
+                        class="mb-3 rounded-circle img-fluid h-25"
                         alt="Profile Picture"
                       />
-                      <h4>John Doe</h4>
-                      <p class="text-muted">Utilisateur</p>
+                      <h4 id="displayName">Nom & Prénom</h4>
+                      <p id="role" class="text-muted">Utilisateur</p>
+                      <p>
+                        Statut :
+                        <span id="status" class="badge badge-success"></span>
+                      </p>
                     </div>
                     <div class="col-md-8">
                       <table class="table">
                         <tbody>
                           <tr>
                             <td><i class="fas fa-user-circle"></i></td>
-                            <td><strong>Nom complet :</strong> John Doe</td>
+                            <td>
+                              <strong>Nom complet :</strong>
+                              <span id="fullName"></span>
+                            </td>
                           </tr>
                           <tr>
                             <td><i class="fas fa-envelope"></i></td>
                             <td>
-                              <strong>Email :</strong> john.doe@example.com
+                              <strong>Email :</strong>
+                              <span id="email"></span>
                             </td>
                           </tr>
                           <tr>
                             <td><i class="fas fa-phone-alt"></i></td>
-                            <td><strong>Téléphone :</strong> +1 555-1234</td>
+                            <td>
+                              <strong>Téléphone :</strong>
+                              <span id="phone"></span>
+                            </td>
                           </tr>
                           <tr>
                             <td><i class="fas fa-id-card"></i></td>
-                            <td><strong>Numéro IFU :</strong> 123456789</td>
+                            <td>
+                              <strong>Numéro IFU :</strong>
+                              <span id="ifu"></span>
+                            </td>
                           </tr>
                           <tr>
                             <td><i class="fas fa-credit-card"></i></td>
-                            <td><strong>Numéro CIP :</strong> 987654321</td>
+                            <td>
+                              <strong>Numéro CIP :</strong>
+                              <span id="cip"></span>
+                            </td>
                           </tr>
-                          <!-- Nouveau statut Forfait -->
+                          <!-- Exemple de statut Forfait -->
                           <tr>
                             <td><i class="fas fa-calendar-check"></i></td>
                             <td>
                               <strong>Statut Forfait :</strong>
                               <span
                                 id="forfait-status"
-                                class="badge badge-success p-2"
-                                >34 jours restant</span
-                              >
+                                class="p-2 badge badge-success"
+                              ></span>
                             </td>
                           </tr>
                         </tbody>
@@ -293,17 +233,29 @@
                   </div>
 
                   <!-- Action Buttons -->
-                  <div
-                    class="d-flex justify-content-between mt-4 hover:d-column"
-                  >
+                  <div class="mt-4 d-flex justify-content-between">
+                    <!-- Bouton pour modifier le profil -->
                     <button
-                      class="btn btn-warning"
+                      class="btn btn-info"
                       data-toggle="modal"
                       data-target="#editProfileModal"
                     >
                       <i class="fas fa-edit"></i> Modifier mon profil
                     </button>
-                    <button class="btn btn-danger" onclick="logout()">
+
+                    <!-- Bouton pour modifier le mot de passe -->
+                    <button
+                      class="btn btn-warning"
+                      data-toggle="modal"
+                      data-target="#editPasswordModal"
+                    >
+                      <i class="fas fa-key"></i> Modifier mon mot de passe
+                    </button>
+                    <button
+                      class="btn btn-danger"
+                      data-toggle="modal"
+                      data-target="#logoutModal"
+                    >
                       <i class="fas fa-sign-out-alt"></i> Se déconnecter
                     </button>
                   </div>
@@ -312,7 +264,63 @@
             </div>
           </div>
 
-          <!-- Modal Modifier Profil -->
+          <!-- Modal pour modifier le mot de passe -->
+          <div
+            class="modal fade"
+            id="editPasswordModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="editPasswordModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="editPasswordModalLabel">
+                    Modifier le mot de passe
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Fermer"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form id="passwordForm">
+                    <div class="form-group">
+                      <label for="newPassword">Nouveau mot de passe</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="newPassword"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="confirmPassword"
+                        >Confirmer le mot de passe</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="confirmPassword"
+                        required
+                      />
+                    </div>
+                    <div id="errorMessagePassword" class="text-danger"></div>
+                    <button type="submit" class="mt-3 btn btn-primary">
+                      Modifier
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal pour modifier le profil -->
           <div
             class="modal fade"
             id="editProfileModal"
@@ -331,87 +339,54 @@
                     type="button"
                     class="close"
                     data-dismiss="modal"
-                    aria-label="Close"
+                    aria-label="Fermer"
                   >
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  <!-- Formulaire de modification de profil -->
-                  <form id="editProfileForm">
+                  <form id="profileForm">
                     <div class="form-group">
-                      <label for="fullName">Nom complet</label>
+                      <label for="editName">Nom complet</label>
                       <input
                         type="text"
                         class="form-control"
-                        id="fullName"
-                        value="John Doe"
+                        id="editName"
+                        required
                       />
                     </div>
                     <div class="form-group">
-                      <label for="email">Email</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        value="john.doe@example.com"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <label for="phone">Numéro de téléphone</label>
-                      <input
-                        type="tel"
-                        class="form-control"
-                        id="phone"
-                        value="+1 555-1234"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <label for="ifu">Numéro IFU</label>
+                      <label for="editPhone">Téléphone</label>
                       <input
                         type="text"
                         class="form-control"
-                        id="ifu"
-                        value="123456789"
+                        id="editPhone"
+                        required
                       />
                     </div>
                     <div class="form-group">
-                      <label for="cip">Numéro CIP</label>
+                      <label for="editIFU">Numéro IFU</label>
                       <input
                         type="text"
                         class="form-control"
-                        id="cip"
-                        value="987654321"
+                        id="editIFU"
+                        required
                       />
                     </div>
-                    <!-- Option Forfait -->
                     <div class="form-group">
-                      <label for="forfait">Statut Forfait</label>
+                      <label for="editCIP">Numéro CIP</label>
                       <input
                         type="text"
                         class="form-control"
-                        id="forfait"
-                        value="Illimité"
-                        disabled
+                        id="editCIP"
+                        required
                       />
                     </div>
+                    <div id="errorMessageProfile" class="text-danger"></div>
+                    <button type="submit" class="mt-3 btn btn-primary">
+                      Enregistrer les modifications
+                    </button>
                   </form>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-dismiss="modal"
-                  >
-                    Fermer
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-primary"
-                    id="saveProfileBtn"
-                  >
-                    Sauvegarder les modifications
-                  </button>
                 </div>
               </div>
             </div>
@@ -421,10 +396,41 @@
         </div>
         <!-- End of Main Content -->
 
+        <!-- Bloc HTML pour l'alerte (à mettre dans le body de la page si tu veux le préparer) -->
+        <div
+          id="blockedMessage"
+          style="
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: 9999;
+            text-align: center;
+            padding-top: 100px;
+          "
+        >
+          <h2 style="color: #dc3545">⛔ Accès restreint</h2>
+          <p style="font-size: 18px">
+            Votre statut est <strong>inactif</strong>. Veuillez renouveler votre
+            forfait pour accéder à cette fonctionnalité.
+          </p>
+          <a
+            id="whatsappButton"
+            target="_blank"
+            class="btn btn-success"
+            style="margin-top: 20px; font-size: 18px"
+          >
+            📲 Contacter sur WhatsApp
+          </a>
+        </div>
+
         <!-- Footer -->
-        <footer class="sticky-footer bg-white">
+        <footer class="bg-white sticky-footer">
           <div class="container my-auto">
-            <div class="copyright text-center my-auto">
+            <div class="my-auto text-center copyright">
               <span
                 >Copyright &copy; Locagram
                 <a
@@ -445,34 +451,35 @@
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
+    <a class="rounded scroll-to-top" href="#page-top">
       <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
+    <!-- Fenêtre modale de confirmation pour la déconnexion -->
     <div
       class="modal fade"
       id="logoutModal"
       tabindex="-1"
       role="dialog"
-      aria-labelledby="exampleModalLabel"
+      aria-labelledby="logoutModalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <h5 class="modal-title" id="logoutModalLabel">Prêt à quitter ?</h5>
             <button
               class="close"
               type="button"
               data-dismiss="modal"
-              aria-label="Close"
+              aria-label="Fermer"
             >
               <span aria-hidden="true">×</span>
             </button>
           </div>
           <div class="modal-body">
-            Select "Logout" below if you are ready to end your current session.
+            Sélectionnez « Déconnexion » ci-dessous si vous êtes prêt(e) à
+            mettre fin à votre session actuelle.
           </div>
           <div class="modal-footer">
             <button
@@ -480,11 +487,34 @@
               type="button"
               data-dismiss="modal"
             >
-              Cancel
+              Annuler
             </button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
+            <!-- Remplacez href par un appel à votre fonction logout si nécessaire -->
+            <a class="btn btn-primary" href="login.html">Déconnexion</a>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Loader SB Admin 2 -->
+    <div
+      id="pageLoader"
+      class="bg-white d-flex justify-content-center align-items-center"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1050;
+      "
+    >
+      <div
+        class="spinner-border text-success"
+        role="status"
+        style="width: 3rem; height: 3rem"
+      >
+        <span class="sr-only">Chargement...</span>
       </div>
     </div>
 
@@ -504,29 +534,285 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
-    <script>
-      // Fonction de déconnexion
-      function logout() {
-        // Pour l'instant, affichons une alerte, on peut rediriger vers la page de déconnexion réelle
-        alert("Vous avez été déconnecté.");
-        // Par exemple, rediriger vers la page de login
-        // window.location.href = "login.html";
+
+    <!-- Scripts JS -->
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Firebase App et modules -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+      import {
+        getAuth,
+        onAuthStateChanged,
+        signOut,
+        updatePassword,
+      } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+      import {
+        getFirestore,
+        collection,
+        query,
+        where,
+        getDocs,
+        updateDoc,
+        doc,
+      } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
+
+      // Configuration Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyCeaMAgyFWN12ktRuGSHsLdySgiZqvBIKA",
+        authDomain: "locagram-f08b9.firebaseapp.com",
+        projectId: "locagram-f08b9",
+        storageBucket: "locagram-f08b9.appspot.com",
+        messagingSenderId: "504321320981",
+        appId: "1:504321320981:web:65037b379691080972c61c",
+      };
+
+      // Initialisation de Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const db = getFirestore(app);
+
+      // Fonction pour charger le profil de l'utilisateur connecté
+      async function loadUserProfile() {
+        onAuthStateChanged(auth, async (user) => {
+          if (user) {
+            const email = user.email;
+            // Recherche par champ "email" dans la collection utilisateurs
+            const usersCol = collection(db, "utilisateurs");
+            const q = query(usersCol, where("email", "==", email));
+            const querySnapshot = await getDocs(q);
+            if (!querySnapshot.empty) {
+              const docSnapshot = querySnapshot.docs[0];
+              const userData = docSnapshot.data();
+              // Injection des informations dans le DOM
+              document.getElementById("displayName").innerText =
+                userData.name || "Nom non défini";
+              document.getElementById("fullName").innerText =
+                userData.name || "Nom non défini";
+              document.getElementById("email").innerText =
+                userData.email || email;
+              document.getElementById("phone").innerText =
+                userData.numero || "Non défini";
+              document.getElementById("ifu").innerText =
+                userData.ifu || "Non défini";
+              document.getElementById("cip").innerText =
+                userData.cip || "Non défini";
+              document.getElementById("role").innerText =
+                userData.role || "Utilisateur";
+              // Affichage du statut
+              if (
+                userData.status &&
+                userData.status.toLowerCase() === "actif"
+              ) {
+                document.getElementById("status").innerText = "actif";
+                document.getElementById("status").className =
+                  "badge badge-success";
+              } else {
+                document.getElementById("status").innerText =
+                  userData.status || "inactif";
+                document.getElementById("status").className =
+                  "badge badge-danger";
+              }
+              // Exemple : actualisation forfait (adapter selon ta logique)
+              document.getElementById("forfait-status").innerText =
+                "34 jours restant";
+
+              // Pré-remplissage du formulaire de modification de profil
+              document.getElementById("editName").value = userData.name || "";
+              document.getElementById("editPhone").value =
+                userData.numero || "";
+              document.getElementById("editIFU").value = userData.ifu || "";
+              document.getElementById("editCIP").value = userData.cip || "";
+            } else {
+              console.error("Profil utilisateur non trouvé.");
+            }
+          } else {
+            // Rediriger vers la page de connexion
+            window.location.href = "../../index.html";
+          }
+        });
       }
 
-      // Sauvegarder les modifications du profil
-      document
-        .getElementById("saveProfileBtn")
-        .addEventListener("click", function () {
-          const fullName = document.getElementById("fullName").value;
-          const email = document.getElementById("email").value;
-          const phone = document.getElementById("phone").value;
-          const ifu = document.getElementById("ifu").value;
-          const cip = document.getElementById("cip").value;
+      loadUserProfile();
 
-          // Ici, vous pouvez effectuer des validations et soumettre les données à un serveur
-          alert("Profil mis à jour avec succès!");
-          $("#editProfileModal").modal("hide");
+      // Fonction de déconnexion
+      window.logout = async function () {
+        try {
+          await signOut(auth);
+          window.location.href = "../../index.html";
+        } catch (error) {
+          console.error("Erreur lors de la déconnexion :", error);
+        }
+      };
+
+      // Gestion du changement de mot de passe
+      document
+        .getElementById("passwordForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const newPassword = document.getElementById("newPassword").value;
+          const confirmPassword =
+            document.getElementById("confirmPassword").value;
+          const errorMessagePassword = document.getElementById(
+            "errorMessagePassword"
+          );
+
+          if (newPassword !== confirmPassword) {
+            errorMessagePassword.innerText =
+              "Les mots de passe ne correspondent pas.";
+            return;
+          }
+
+          const user = auth.currentUser;
+          if (user) {
+            try {
+              await updatePassword(user, newPassword);
+              errorMessagePassword.innerText = "";
+              $("#editPasswordModal").modal("hide");
+              alert("Mot de passe modifié avec succès !");
+            } catch (error) {
+              errorMessagePassword.innerText =
+                "Erreur lors de la modification du mot de passe : " +
+                error.message;
+            }
+          }
         });
+
+      // Gestion de la modification du profil
+      document
+        .getElementById("profileForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const editName = document.getElementById("editName").value.trim();
+          const editPhone = document.getElementById("editPhone").value.trim();
+          const editIFU = document.getElementById("editIFU").value.trim();
+          const editCIP = document.getElementById("editCIP").value.trim();
+          const errorMessageProfile = document.getElementById(
+            "errorMessageProfile"
+          );
+
+          // Vérifier que les champs requis sont remplis
+          if (!editName || !editPhone || !editIFU || !editCIP) {
+            errorMessageProfile.innerText = "Veuillez remplir tous les champs.";
+            return;
+          }
+
+          // Récupérer l'utilisateur actuel
+          const user = auth.currentUser;
+          if (user) {
+            // Rechercher le document utilisateur dans Firestore par email
+            const usersCol = collection(db, "utilisateurs");
+            const q = query(usersCol, where("email", "==", user.email));
+            const querySnapshot = await getDocs(q);
+            if (!querySnapshot.empty) {
+              const docRef = querySnapshot.docs[0].ref;
+              try {
+                // Mise à jour du document avec les nouvelles valeurs
+                await updateDoc(docRef, {
+                  name: editName,
+                  numero: editPhone,
+                  ifu: editIFU,
+                  cip: editCIP,
+                });
+                errorMessageProfile.innerText = "";
+                $("#editProfileModal").modal("hide");
+                alert("Profil mis à jour avec succès !");
+                // Recharge le profil pour afficher les modifications
+                loadUserProfile();
+              } catch (error) {
+                errorMessageProfile.innerText =
+                  "Erreur lors de la mise à jour du profil : " + error.message;
+              }
+            } else {
+              errorMessageProfile.innerText = "Profil utilisateur non trouvé.";
+            }
+          }
+        });
+
+      // Fonction de confirmation pour la déconnexion
+      function confirmLogout() {
+        if (confirm("Êtes-vous sûr de vouloir vous déconnecter ?")) {
+          // Si l'utilisateur confirme, appelle la fonction de déconnexion existante
+          logout();
+        }
+      }
+
+      // Fonction de déconnexion (à appeler après confirmation)
+      async function logout() {
+        try {
+          // Ici, tu peux appeler ta logique Firebase signOut ou autre
+          // Ex : await signOut(auth);
+
+          // Redirection vers la page de connexion
+          window.location.href = "../../index.html";
+        } catch (error) {
+          console.error("Erreur lors de la déconnexion :", error);
+        }
+      }
+    </script>
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("pageLoader");
+
+        // Ajoute une classe pour l'effet de fondu
+        loader.classList.add("fade");
+
+        // Cache totalement l’élément après la transition
+        setTimeout(() => {
+          loader.style.display = "none"; // Enlève de l'affichage
+          loader.style.pointerEvents = "none"; // Par sécurité
+          loader.style.zIndex = "-1"; // S'assure qu'il ne bloque plus rien
+        }, 500); // même durée que la transition CSS
+      });
+
+      // ✅ Vérification du statut utilisateur
+      onAuthStateChanged(auth, async (user) => {
+        if (user) {
+          const usersCol = collection(db, "utilisateurs");
+          const q = query(usersCol, where("email", "==", user.email));
+          const querySnapshot = await getDocs(q);
+          if (!querySnapshot.empty) {
+            const userData = querySnapshot.docs[0].data();
+            const status = userData.status
+              ? userData.status.toLowerCase()
+              : "inactif";
+
+            if (status !== "actif") {
+              bloquerAcces();
+            }
+          } else {
+            console.warn("Utilisateur introuvable dans la base.");
+          }
+        } else {
+          // Rediriger vers la connexion si non connecté
+          window.location.href = "../../index.html";
+        }
+      });
+
+      // ✅ Fonction qui bloque l'accès à l'application
+      function bloquerAcces() {
+        const block = document.getElementById("blockedMessage");
+        const whatsapp = document.getElementById("whatsappButton");
+        const message = encodeURIComponent(
+          "Bonjour, mon compte a été bloqué car mon statut est inactif. Je souhaite renouveler mon forfait. Merci !"
+        );
+        whatsapp.href = `https://wa.me/22953444701?text=${message}`;
+        block.style.display = "block";
+
+        // Bloquer tout le reste de la page
+        document.body.style.overflow = "hidden";
+        const content = document.querySelectorAll(
+          "body > *:not(#blockedMessage)"
+        );
+        content.forEach((el) => {
+          if (el.id !== "blockedMessage") {
+            el.style.display = "none";
+          }
+        });
+      }
     </script>
   </body>
 </html>

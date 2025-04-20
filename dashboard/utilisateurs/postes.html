@@ -7,6 +7,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link rel="icon" type="image/png" href="./img/locagram1.png" />
+
     <meta name="description" content="" />
     <meta name="author" content="" />
 
@@ -43,11 +45,11 @@
           <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
           </div>
-          <div class="sidebar-brand-text mx-3">Locagram</div>
+          <div class="mx-3 sidebar-brand-text">Locagram</div>
         </a>
 
         <!-- Divider -->
-        <hr class="sidebar-divider my-0" />
+        <hr class="my-0 sidebar-divider" />
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
@@ -78,12 +80,12 @@
           </li>
 
           <!-- Nav Item - Catégories -->
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="clients.html">
               <i class="fas fa-fw fa-users"></i>
               <span>Mes Clients</span>
             </a>
-          </li>
+          </li> -->
 
           <!-- Nav Item - Notifications -->
           <li class="nav-item">
@@ -109,9 +111,14 @@
             </a>
           </li>
 
-          <!-- Nav Item - Profil -->
+          <!-- Nav Item - Déconnexion avec Modal -->
           <li class="nav-item">
-            <a class="nav-link bg-danger" href="profil.html">
+            <a
+              class="text-white nav-link bg-danger"
+              href="#"
+              data-toggle="modal"
+              data-target="#logoutModal"
+            >
               <i class="fas fa-fw fa-sign-out-alt"></i>
               <span>Déconnexion</span>
             </a>
@@ -122,7 +129,7 @@
 
         <!-- Sidebar Toggler (Sidebar) -->
         <div class="text-center d-none d-md-inline">
-          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+          <button class="border-0 rounded-circle" id="sidebarToggle"></button>
         </div>
       </ul>
       <!-- End of Sidebar -->
@@ -142,48 +149,48 @@
               <div id="content">
                 <!-- Navbar -->
                 <nav
-                  class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
+                  class="mb-4 bg-white shadow navbar navbar-expand navbar-light topbar static-top"
                 >
                   <button
                     id="sidebarToggleTop"
-                    class="btn btn-link d-md-none rounded-circle mr-3"
+                    class="mr-3 btn btn-link d-md-none rounded-circle"
                   >
                     <i class="fa fa-bars"></i>
                   </button>
                 </nav>
                 <!-- Fin Navbar -->
-
                 <div class="container-fluid">
-                  <h1 class="h3 mb-4 text-gray-800 text-center">
+                  <h1 class="mb-4 text-center text-gray-800 h3">
                     Gestion des Catégories
                   </h1>
 
                   <!-- Grille de Cartes pour les groupes de catégories -->
                   <div class="row">
-                    <!-- Carte Maisons -->
-                    <div class="col-xl-3 col-md-4 col-sm-6 mb-4">
-                      <div class="card border-left-primary shadow h-100 py-2">
+                    <!-- Carte Maisons à Louer -->
+                    <div class="mb-4 col-xl-3 col-md-4 col-sm-6">
+                      <div class="py-2 shadow card border-left-primary h-100">
                         <div class="card-body">
                           <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
+                            <div class="mr-2 col">
                               <div
-                                class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                                class="mb-1 text-xs font-weight-bold text-primary text-uppercase"
                               >
                                 Maisons à Louer
                               </div>
                               <p class="mb-0 text-gray-800">
-                                Gérez vos maisons à louer en toute simplicité.
+                                Gérez les maisons à louer pour vos administrés
+                                et consultez les demandes en un clic.
                               </p>
                             </div>
                             <div class="col-auto">
-                              <i class="fas fa-home fa-2x text-gray-300"></i>
+                              <i class="text-gray-300 fas fa-home fa-2x"></i>
                             </div>
                           </div>
                           <div class="mt-3">
                             <a
                               href="maison_a_louer.html"
-                              class="btn btn-primary btn-block mt-2"
-                              >Consulter les annonces</a
+                              class="mt-2 btn btn-primary btn-block"
+                              >Visualiser les Postes</a
                             >
                           </div>
                         </div>
@@ -191,29 +198,30 @@
                     </div>
 
                     <!-- Carte Auberges -->
-                    <div class="col-xl-3 col-md-4 col-sm-6 mb-4">
-                      <div class="card border-left-warning shadow h-100 py-2">
+                    <div class="mb-4 col-xl-3 col-md-4 col-sm-6">
+                      <div class="py-2 shadow card border-left-warning h-100">
                         <div class="card-body">
                           <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
+                            <div class="mr-2 col">
                               <div
-                                class="text-xs font-weight-bold text-warning text-uppercase mb-1"
+                                class="mb-1 text-xs font-weight-bold text-warning text-uppercase"
                               >
                                 Auberges
                               </div>
                               <p class="mb-0 text-gray-800">
-                                Ajoutez et gérez vos auberges facilement.
+                                Gérez les auberges de la ville et consultez les
+                                annonces des établissements disponibles.
                               </p>
                             </div>
                             <div class="col-auto">
-                              <i class="fas fa-bed fa-2x text-gray-300"></i>
+                              <i class="text-gray-300 fas fa-bed fa-2x"></i>
                             </div>
                           </div>
                           <div class="mt-3">
                             <a
                               href="auberges.html"
-                              class="btn btn-primary btn-block mt-2"
-                              >Consulter les annonces</a
+                              class="mt-2 btn btn-primary btn-block"
+                              >Visualiser les Postes</a
                             >
                           </div>
                         </div>
@@ -221,31 +229,32 @@
                     </div>
 
                     <!-- Carte Appartements -->
-                    <div class="col-xl-3 col-md-4 col-sm-6 mb-4">
-                      <div class="card border-left-success shadow h-100 py-2">
+                    <div class="mb-4 col-xl-3 col-md-4 col-sm-6">
+                      <div class="py-2 shadow card border-left-success h-100">
                         <div class="card-body">
                           <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
+                            <div class="mr-2 col">
                               <div
-                                class="text-xs font-weight-bold text-success text-uppercase mb-1"
+                                class="mb-1 text-xs font-weight-bold text-success text-uppercase"
                               >
                                 Appartements
                               </div>
                               <p class="mb-0 text-gray-800">
-                                Gérez vos appartements à louer facilement.
+                                Gérez facilement les appartements disponibles à
+                                la location dans la ville.
                               </p>
                             </div>
                             <div class="col-auto">
                               <i
-                                class="fas fa-building fa-2x text-gray-300"
+                                class="text-gray-300 fas fa-building fa-2x"
                               ></i>
                             </div>
                           </div>
                           <div class="mt-3">
                             <a
                               href="appartements.html"
-                              class="btn btn-primary btn-block mt-2"
-                              >Consulter les annonces</a
+                              class="mt-2 btn btn-primary btn-block"
+                              >Visualiser les Postes</a
                             >
                           </div>
                         </div>
@@ -253,29 +262,483 @@
                     </div>
 
                     <!-- Carte Villas -->
-                    <div class="col-xl-3 col-md-4 col-sm-6 mb-4">
-                      <div class="card border-left-danger shadow h-100 py-2">
+                    <div class="mb-4 col-xl-3 col-md-4 col-sm-6">
+                      <div class="py-2 shadow card border-left-danger h-100">
                         <div class="card-body">
                           <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
+                            <div class="mr-2 col">
                               <div
-                                class="text-xs font-weight-bold text-danger text-uppercase mb-1"
+                                class="mb-1 text-xs font-weight-bold text-danger text-uppercase"
                               >
                                 Villas
                               </div>
                               <p class="mb-0 text-gray-800">
-                                Gérez vos villas et maisons de luxe.
+                                Gérez les villas et maisons de luxe, consultez
+                                les nouvelles offres et suivis.
                               </p>
                             </div>
                             <div class="col-auto">
-                              <i class="fas fa-gem fa-2x text-gray-300"></i>
+                              <i class="text-gray-300 fas fa-gem fa-2x"></i>
                             </div>
                           </div>
                           <div class="mt-3">
                             <a
                               href="villas.html"
-                              class="btn btn-primary btn-block mt-2"
-                              >Consulter les annonces</a
+                              class="mt-2 btn btn-primary btn-block"
+                              >Visualiser les Postes</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Carte Manoirs -->
+                    <div class="mb-4 col-xl-3 col-md-4 col-sm-6">
+                      <div class="py-2 shadow card border-left-danger h-100">
+                        <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                            <div class="mr-2 col">
+                              <div
+                                class="mb-1 text-xs font-weight-bold text-danger text-uppercase"
+                              >
+                                Manoirs
+                              </div>
+                              <p class="mb-0 text-gray-800">
+                                Gérez les manoirs historiques ou de luxe pour
+                                des événements ou séjours haut de gamme.
+                              </p>
+                            </div>
+                            <div class="col-auto">
+                              <i
+                                class="text-gray-300 fas fa-chess-rook fa-2x"
+                              ></i>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <a
+                              href="manoirs.html"
+                              class="mt-2 btn btn-primary btn-block"
+                              >Visualiser les Postes</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Carte Ateliers -->
+                    <div class="mb-4 col-xl-3 col-md-4 col-sm-6">
+                      <div class="py-2 shadow card border-left-warning h-100">
+                        <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                            <div class="mr-2 col">
+                              <div
+                                class="mb-1 text-xs font-weight-bold text-warning text-uppercase"
+                              >
+                                Ateliers
+                              </div>
+                              <p class="mb-0 text-gray-800">
+                                Gérez les espaces dédiés à l'artisanat ou aux
+                                événements créatifs.
+                              </p>
+                            </div>
+                            <div class="col-auto">
+                              <i
+                                class="text-gray-300 fas fa-paint-brush fa-2x"
+                              ></i>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <a
+                              href="ateliers.html"
+                              class="mt-2 btn btn-primary btn-block"
+                              >Visualiser les Postes</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Carte Chalets -->
+                    <div class="mb-4 col-xl-3 col-md-4 col-sm-6">
+                      <div class="py-2 shadow card border-left-success h-100">
+                        <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                            <div class="mr-2 col">
+                              <div
+                                class="mb-1 text-xs font-weight-bold text-success text-uppercase"
+                              >
+                                Chalets
+                              </div>
+                              <p class="mb-0 text-gray-800">
+                                Consultez les chalets de vacances disponibles en
+                                montagne ou à la campagne.
+                              </p>
+                            </div>
+                            <div class="col-auto">
+                              <i class="text-gray-300 fas fa-tree fa-2x"></i>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <a
+                              href="chalets.html"
+                              class="mt-2 btn btn-primary btn-block"
+                              >Visualiser les Postes</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Carte Lofts -->
+                    <div class="mb-4 col-xl-3 col-md-4 col-sm-6">
+                      <div class="py-2 shadow card border-left-info h-100">
+                        <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                            <div class="mr-2 col">
+                              <div
+                                class="mb-1 text-xs font-weight-bold text-info text-uppercase"
+                              >
+                                Lofts
+                              </div>
+                              <p class="mb-0 text-gray-800">
+                                Gérez les espaces modernes ouverts pour les
+                                amateurs de style urbain.
+                              </p>
+                            </div>
+                            <div class="col-auto">
+                              <i
+                                class="text-gray-300 fas fa-warehouse fa-2x"
+                              ></i>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <a
+                              href="lofts.html"
+                              class="mt-2 btn btn-primary btn-block"
+                              >Visualiser les Postes</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Carte Studios -->
+                    <div class="mb-4 col-xl-3 col-md-4 col-sm-6">
+                      <div class="py-2 shadow card border-left-primary h-100">
+                        <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                            <div class="mr-2 col">
+                              <div
+                                class="mb-1 text-xs font-weight-bold text-primary text-uppercase"
+                              >
+                                Studios
+                              </div>
+                              <p class="mb-0 text-gray-800">
+                                Consultez les studios disponibles, idéals pour
+                                les étudiants ou personnes seules.
+                              </p>
+                            </div>
+                            <div class="col-auto">
+                              <i
+                                class="text-gray-300 fas fa-door-open fa-2x"
+                              ></i>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <a
+                              href="studios.html"
+                              class="mt-2 btn btn-primary btn-block"
+                              >Visualiser les Postes</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Carte Pavillons -->
+                    <div class="mb-4 col-xl-3 col-md-4 col-sm-6">
+                      <div class="py-2 shadow card border-left-secondary h-100">
+                        <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                            <div class="mr-2 col">
+                              <div
+                                class="mb-1 text-xs font-weight-bold text-secondary text-uppercase"
+                              >
+                                Pavillons
+                              </div>
+                              <p class="mb-0 text-gray-800">
+                                Gérez les petites maisons individuelles dans les
+                                zones résidentielles.
+                              </p>
+                            </div>
+                            <div class="col-auto">
+                              <i
+                                class="text-gray-300 fas fa-house-user fa-2x"
+                              ></i>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <a
+                              href="pavillons.html"
+                              class="mt-2 btn btn-primary btn-block"
+                              >Visualiser les Postes</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Carte Mobil-homes -->
+                    <div class="mb-4 col-xl-3 col-md-4 col-sm-6">
+                      <div class="py-2 shadow card border-left-warning h-100">
+                        <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                            <div class="mr-2 col">
+                              <div
+                                class="mb-1 text-xs font-weight-bold text-warning text-uppercase"
+                              >
+                                Mobil-homes
+                              </div>
+                              <p class="mb-0 text-gray-800">
+                                Gérez les hébergements mobiles pour les séjours
+                                en camping ou en bord de plage.
+                              </p>
+                            </div>
+                            <div class="col-auto">
+                              <i class="text-gray-300 fas fa-trailer fa-2x"></i>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <a
+                              href="mobilhomes.html"
+                              class="mt-2 btn btn-primary btn-block"
+                              >Visualiser les Postes</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Carte Appartements Meublés -->
+                    <div class="mb-4 col-xl-3 col-md-4 col-sm-6">
+                      <div class="py-2 shadow card border-left-info h-100">
+                        <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                            <div class="mr-2 col">
+                              <div
+                                class="mb-1 text-xs font-weight-bold text-info text-uppercase"
+                              >
+                                Appartements Meublés
+                              </div>
+                              <p class="mb-0 text-gray-800">
+                                Gérez les logements meublés prêts à l’emploi
+                                pour des séjours flexibles.
+                              </p>
+                            </div>
+                            <div class="col-auto">
+                              <i class="text-gray-300 fas fa-couch fa-2x"></i>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <a
+                              href="appartements_meubles.html"
+                              class="mt-2 btn btn-primary btn-block"
+                              >Visualiser les Postes</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Carte Duplex -->
+                    <div class="mb-4 col-xl-3 col-md-4 col-sm-6">
+                      <div class="py-2 shadow card border-left-dark h-100">
+                        <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                            <div class="mr-2 col">
+                              <div
+                                class="mb-1 text-xs font-weight-bold text-dark text-uppercase"
+                              >
+                                Duplex
+                              </div>
+                              <p class="mb-0 text-gray-800">
+                                Découvrez et gérez les duplex, parfaits pour les
+                                familles ou les professionnels.
+                              </p>
+                            </div>
+                            <div class="col-auto">
+                              <i
+                                class="text-gray-300 fas fa-layer-group fa-2x"
+                              ></i>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <a
+                              href="duplex.html"
+                              class="mt-2 btn btn-primary btn-block"
+                              >Visualiser les Postes</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Carte Penthouse -->
+                    <div class="mb-4 col-xl-3 col-md-4 col-sm-6">
+                      <div class="py-2 shadow card border-left-danger h-100">
+                        <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                            <div class="mr-2 col">
+                              <div
+                                class="mb-1 text-xs font-weight-bold text-danger text-uppercase"
+                              >
+                                Penthouses
+                              </div>
+                              <p class="mb-0 text-gray-800">
+                                Consultez les appartements haut de gamme situés
+                                au dernier étage des immeubles.
+                              </p>
+                            </div>
+                            <div class="col-auto">
+                              <i class="text-gray-300 fas fa-city fa-2x"></i>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <a
+                              href="penthouses.html"
+                              class="mt-2 btn btn-primary btn-block"
+                              >Visualiser les Postes</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Carte Chambres d'hôtel -->
+                    <div class="mb-4 col-xl-3 col-md-4 col-sm-6">
+                      <div class="py-2 shadow card border-left-primary h-100">
+                        <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                            <div class="mr-2 col">
+                              <div
+                                class="mb-1 text-xs font-weight-bold text-primary text-uppercase"
+                              >
+                                Chambres d'hôtel
+                              </div>
+                              <p class="mb-0 text-gray-800">
+                                Visualisez les offres de chambres d'hôtel pour
+                                les séjours de courte durée.
+                              </p>
+                            </div>
+                            <div class="col-auto">
+                              <i
+                                class="text-gray-300 fas fa-concierge-bell fa-2x"
+                              ></i>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <a
+                              href="hotels.html"
+                              class="mt-2 btn btn-primary btn-block"
+                              >Visualiser les Postes</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Carte Loft Industriel -->
+                    <div class="mb-4 col-xl-3 col-md-4 col-sm-6">
+                      <div class="py-2 shadow card border-left-secondary h-100">
+                        <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                            <div class="mr-2 col">
+                              <div
+                                class="mb-1 text-xs font-weight-bold text-secondary text-uppercase"
+                              >
+                                Lofts Industriels
+                              </div>
+                              <p class="mb-0 text-gray-800">
+                                Gérez les lofts au style industriel avec de
+                                grands volumes et une ambiance unique.
+                              </p>
+                            </div>
+                            <div class="col-auto">
+                              <i
+                                class="text-gray-300 fas fa-industry fa-2x"
+                              ></i>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <a
+                              href="lofts_industriels.html"
+                              class="mt-2 btn btn-primary btn-block"
+                              >Visualiser les Postes</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Carte Caravanes -->
+                    <div class="mb-4 col-xl-3 col-md-4 col-sm-6">
+                      <div class="py-2 shadow card border-left-warning h-100">
+                        <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                            <div class="mr-2 col">
+                              <div
+                                class="mb-1 text-xs font-weight-bold text-warning text-uppercase"
+                              >
+                                Caravanes
+                              </div>
+                              <p class="mb-0 text-gray-800">
+                                Gérer les caravanes disponibles pour les séjours
+                                nomades ou les vacances itinérantes.
+                              </p>
+                            </div>
+                            <div class="col-auto">
+                              <i class="text-gray-300 fas fa-caravan fa-2x"></i>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <a
+                              href="caravanes.html"
+                              class="mt-2 btn btn-primary btn-block"
+                              >Visualiser les Postes</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Carte Parcelles à Vendre -->
+                    <div class="mb-4 col-xl-3 col-md-4 col-sm-6">
+                      <div class="py-2 shadow card border-left-success h-100">
+                        <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                            <div class="mr-2 col">
+                              <div
+                                class="mb-1 text-xs font-weight-bold text-success text-uppercase"
+                              >
+                                Parcelles à Vendre
+                              </div>
+                              <p class="mb-0 text-gray-800">
+                                Gérez les parcelles de terrain à vendre et
+                                suivez les différentes transactions
+                                immobilières.
+                              </p>
+                            </div>
+                            <div class="col-auto">
+                              <i
+                                class="text-gray-300 fas fa-map-marker-alt fa-2x"
+                              ></i>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <a
+                              href="parcelle_a_vendre.html"
+                              class="mt-2 btn btn-primary btn-block"
+                              >Visualiser les Postes</a
                             >
                           </div>
                         </div>
@@ -293,9 +756,9 @@
         <!-- End of Main Content -->
 
         <!-- Footer -->
-        <footer class="sticky-footer bg-white">
+        <footer class="bg-white sticky-footer">
           <div class="container my-auto">
-            <div class="copyright text-center my-auto">
+            <div class="my-auto text-center copyright">
               <span
                 >Copyright &copy; Locagram
                 <a
@@ -316,34 +779,35 @@
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
+    <a class="rounded scroll-to-top" href="#page-top">
       <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
+    <!-- Fenêtre modale de confirmation pour la déconnexion -->
     <div
       class="modal fade"
       id="logoutModal"
       tabindex="-1"
       role="dialog"
-      aria-labelledby="exampleModalLabel"
+      aria-labelledby="logoutModalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <h5 class="modal-title" id="logoutModalLabel">Prêt à quitter ?</h5>
             <button
               class="close"
               type="button"
               data-dismiss="modal"
-              aria-label="Close"
+              aria-label="Fermer"
             >
               <span aria-hidden="true">×</span>
             </button>
           </div>
           <div class="modal-body">
-            Select "Logout" below if you are ready to end your current session.
+            Sélectionnez « Déconnexion » ci-dessous si vous êtes prêt(e) à
+            mettre fin à votre session actuelle.
           </div>
           <div class="modal-footer">
             <button
@@ -351,13 +815,97 @@
               type="button"
               data-dismiss="modal"
             >
-              Cancel
+              Annuler
             </button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
+            <!-- Remplacez href par un appel à votre fonction logout si nécessaire -->
+            <a class="btn btn-primary" href="login.html">Déconnexion</a>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Loader SB Admin 2 -->
+    <div
+      id="pageLoader"
+      class="bg-white d-flex justify-content-center align-items-center"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1050;
+      "
+    >
+      <div
+        class="spinner-border text-success"
+        role="status"
+        style="width: 3rem; height: 3rem"
+      >
+        <span class="sr-only">Chargement...</span>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("pageLoader");
+
+        // Ajoute une classe pour l'effet de fondu
+        loader.classList.add("fade");
+
+        // Cache totalement l’élément après la transition
+        setTimeout(() => {
+          loader.style.display = "none"; // Enlève de l'affichage
+          loader.style.pointerEvents = "none"; // Par sécurité
+          loader.style.zIndex = "-1"; // S'assure qu'il ne bloque plus rien
+        }, 500); // même durée que la transition CSS
+      });
+      // ✅ Vérification du statut utilisateur
+      onAuthStateChanged(auth, async (user) => {
+        if (user) {
+          const usersCol = collection(db, "utilisateurs");
+          const q = query(usersCol, where("email", "==", user.email));
+          const querySnapshot = await getDocs(q);
+          if (!querySnapshot.empty) {
+            const userData = querySnapshot.docs[0].data();
+            const status = userData.status
+              ? userData.status.toLowerCase()
+              : "inactif";
+
+            if (status !== "actif") {
+              bloquerAcces();
+            }
+          } else {
+            console.warn("Utilisateur introuvable dans la base.");
+          }
+        } else {
+          // Rediriger vers la connexion si non connecté
+          window.location.href = "../../index.html";
+        }
+      });
+
+      // ✅ Fonction qui bloque l'accès à l'application
+      function bloquerAcces() {
+        const block = document.getElementById("blockedMessage");
+        const whatsapp = document.getElementById("whatsappButton");
+        const message = encodeURIComponent(
+          "Bonjour, mon compte a été bloqué car mon statut est inactif. Je souhaite renouveler mon forfait. Merci !"
+        );
+        whatsapp.href = `https://wa.me/22953444701?text=${message}`;
+        block.style.display = "block";
+
+        // Bloquer tout le reste de la page
+        document.body.style.overflow = "hidden";
+        const content = document.querySelectorAll(
+          "body > *:not(#blockedMessage)"
+        );
+        content.forEach((el) => {
+          if (el.id !== "blockedMessage") {
+            el.style.display = "none";
+          }
+        });
+      }
+    </script>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>

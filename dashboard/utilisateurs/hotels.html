@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" type="image/png" href="./img/locagram1.png" />
+
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Locagram | Utilisateur</title>
+
+    <!-- Custom fonts for this template-->
+    <link
+      href="vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+  </head>
+
+  <body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul
+        class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion"
+        id="accordionSidebar"
+      >
+        <!-- Sidebar - Brand -->
+        <a
+          class="sidebar-brand d-flex align-items-center justify-content-center"
+          href="index.html"
+        >
+          <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-laugh-wink"></i>
+          </div>
+          <div class="mx-3 sidebar-brand-text">Locagram</div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="my-0 sidebar-divider" />
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Tableau de board</span></a
+          >
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
+
+        <ul class="navbar-nav">
+          <!-- Nav Item - Accueil -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="fas fa-fw fa-home"></i>
+              <span>Accueil</span>
+            </a>
+          </li>
+
+          <!-- Nav Item - Postes -->
+          <li class="nav-item">
+            <a class="nav-link active" href="postes.html">
+              <i class="fas fa-fw fa-briefcase"></i>
+              <span>Mes Postes</span>
+            </a>
+          </li>
+
+          <!-- Nav Item - Catégories -->
+          <li class="nav-item">
+            <a class="nav-link" href="clients.html">
+              <i class="fas fa-fw fa-users"></i>
+              <span>Mes Clients</span>
+            </a>
+          </li>
+
+          <!-- Nav Item - Notifications -->
+          <li class="nav-item">
+            <a class="nav-link" href="notifications.html">
+              <i class="fas fa-fw fa-bell"></i>
+              <span>Mes Notifications</span>
+            </a>
+          </li>
+
+          <!-- Nav Item - Forfaits -->
+          <li class="nav-item">
+            <a class="nav-link" href="forfait.html">
+              <i class="fas fa-fw fa-credit-card"></i>
+              <span>Mon Forfaits</span>
+            </a>
+          </li>
+
+          <!-- Nav Item - Profil -->
+          <li class="nav-item">
+            <a class="nav-link" href="profil.html">
+              <i class="fas fa-fw fa-user"></i>
+              <span>Profil</span>
+            </a>
+          </li>
+
+          <!-- Nav Item - Déconnexion avec Modal -->
+          <li class="nav-item">
+            <a
+              class="text-white nav-link bg-danger"
+              href="#"
+              data-toggle="modal"
+              data-target="#logoutModal"
+            >
+              <i class="fas fa-fw fa-sign-out-alt"></i>
+              <span>Déconnexion</span>
+            </a>
+          </li>
+        </ul>
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block" />
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          <button class="border-0 rounded-circle" id="sidebarToggle"></button>
+        </div>
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav
+            class="mb-4 bg-white shadow navbar navbar-expand navbar-light topbar static-top"
+          >
+            <!-- Sidebar Toggle (Topbar) -->
+            <button
+              id="sidebarToggleTop"
+              class="mr-3 btn btn-link d-md-none rounded-circle"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+          </nav>
+          <!-- End of Topbar -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <!-- Page Heading -->
+            <div
+              class="mb-4 d-sm-flex align-items-center justify-content-between"
+            >
+              <h1 class="mb-0 text-gray-800 h3">Hôtel de Ville</h1>
+            </div>
+
+            <!-- Content Row -->
+          </div>
+          <!-- /.container-fluid -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <!-- Page Heading -->
+
+            <!-- Bouton Retour a la page de poste -->
+            <a href="./postes.html" type="button" class="my-2 btn btn-success">
+              Retour
+            </a>
+
+            <!-- Section Hôtels -->
+            <div class="mb-4 shadow card">
+              <div
+                class="py-3 card-header d-flex justify-content-between align-items-center"
+              >
+                <h6 class="m-0 font-weight-bold text-primary">
+                  Tous les Hôtels
+                </h6>
+                <button class="btn btn-success" onclick="ouvrirFormHotel()">
+                  + Ajouter un Hôtel
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table
+                    class="table table-bordered"
+                    id="hotelTable"
+                    width="100%"
+                    cellspacing="0"
+                  >
+                    <thead>
+                      <tr>
+                        <th>Image / Nom</th>
+                        <th>Ville</th>
+                        <th>Quartier</th>
+                        <th>Type</th>
+                        <th>Prix/Nuit</th>
+                        <th>Restauration</th>
+                        <th>Wi-Fi</th>
+                        <th>Piscine</th>
+                        <th>Parking</th>
+                        <th>Étoiles</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal Ajouter/Modifier Hôtel -->
+            <div
+              class="modal fade"
+              id="hotelModal"
+              tabindex="-1"
+              aria-labelledby="hotelModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="text-white modal-header bg-success">
+                    <h5 class="modal-title" id="hotelModalLabel">
+                      Ajouter un Hôtel
+                    </h5>
+                    <button
+                      type="button"
+                      class="text-white close"
+                      data-dismiss="modal"
+                    >
+                      <span>&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="formHotel">
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label>Nom de l'Hôtel</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="hotelNom"
+                            required
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label>Type d'Hôtel</label>
+                          <select class="form-control" id="hotelType">
+                            <option>Hôtel</option>
+                            <option>Appartement</option>
+                            <option>Auberge</option>
+                            <option>Maison d'hôtes</option>
+                            <option>Resort</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label>Ville</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="hotelVille"
+                            required
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label>Quartier</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="hotelQuartier"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Description</label>
+                        <textarea
+                          class="form-control"
+                          id="hotelDescription"
+                          rows="2"
+                          placeholder="Décrivez brièvement l'hôtel..."
+                        ></textarea>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="form-group col-md-4">
+                          <label>Prix par Nuit (XOF)</label>
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="hotelPrix"
+                            required
+                          />
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label>Disponibilité</label>
+                          <select class="form-control" id="hotelDisponibilite">
+                            <option>Disponible</option>
+                            <option>Non disponible</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label>Note Moyenne (sur 5)</label>
+                          <input
+                            type="number"
+                            step="0.1"
+                            max="5"
+                            min="0"
+                            class="form-control"
+                            id="hotelNote"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="form-group col-md-3">
+                          <label>Restauration</label>
+                          <select class="form-control" id="hotelRestauration">
+                            <option>Oui</option>
+                            <option>Non</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                          <label>Wi-Fi</label>
+                          <select class="form-control" id="hotelWifi">
+                            <option>Oui</option>
+                            <option>Non</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                          <label>Piscine</label>
+                          <select class="form-control" id="hotelPiscine">
+                            <option>Oui</option>
+                            <option>Non</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                          <label>Parking</label>
+                          <select class="form-control" id="hotelParking">
+                            <option>Oui</option>
+                            <option>Non</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label>Nombre d'étoiles</label>
+                          <select class="form-control" id="hotelEtoiles">
+                            <option value="1">⭐</option>
+                            <option value="2">⭐⭐</option>
+                            <option value="3">⭐⭐⭐</option>
+                            <option value="4">⭐⭐⭐⭐</option>
+                            <option value="5">⭐⭐⭐⭐⭐</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label>Image de l'Hôtel</label>
+                          <input
+                            type="file"
+                            class="form-control-file"
+                            id="hotelImage"
+                            accept="image/*"
+                          />
+                        </div>
+                      </div>
+
+                      <button type="submit" class="btn btn-success">
+                        Enregistrer
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="bg-white sticky-footer">
+          <div class="container my-auto">
+            <div class="my-auto text-center copyright">
+              <span
+                >Copyright &copy; Locagram
+                <a
+                  href="https://portfolio-cnkp.vercel.app"
+                  target="_blank"
+                  class="text-success"
+                  >Ray Ague</a
+                >
+                2025</span
+              >
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="rounded scroll-to-top" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Fenêtre modale de confirmation pour la déconnexion -->
+    <div
+      class="modal fade"
+      id="logoutModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="logoutModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="logoutModalLabel">Prêt à quitter ?</h5>
+            <button
+              class="close"
+              type="button"
+              data-dismiss="modal"
+              aria-label="Fermer"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Sélectionnez « Déconnexion » ci-dessous si vous êtes prêt(e) à
+            mettre fin à votre session actuelle.
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-dismiss="modal"
+            >
+              Annuler
+            </button>
+            <!-- Remplacez href par un appel à votre fonction logout si nécessaire -->
+            <a class="btn btn-primary" href="login.html">Déconnexion</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loader SB Admin 2 -->
+    <div
+      id="pageLoader"
+      class="bg-white d-flex justify-content-center align-items-center"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1050;
+      "
+    >
+      <div
+        class="spinner-border text-success"
+        role="status"
+        style="width: 3rem; height: 3rem"
+      >
+        <span class="sr-only">Chargement...</span>
+      </div>
+    </div>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+        getDocs,
+        updateDoc,
+        deleteDoc,
+        doc,
+        getDoc,
+        query,
+        where,
+      } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
+      import {
+        getAuth,
+        onAuthStateChanged,
+      } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
+      import {
+        getStorage,
+        ref as storageRef,
+        uploadBytes,
+        getDownloadURL,
+      } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-storage.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyCeaMAgyFWN12ktRuGSHsLdySgiZqvBIKA",
+        authDomain: "locagram-f08b9.firebaseapp.com",
+        projectId: "locagram-f08b9",
+        storageBucket: "locagram-f08b9.appspot.com",
+        messagingSenderId: "504321320981",
+        appId: "1:504321320981:web:65037b379691080972c61c",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+      const auth = getAuth(app);
+      const storage = getStorage(app);
+
+      const hotelCollection = collection(db, "hotels");
+      let currentUser = null;
+      let currentHotelEditId = null;
+
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          currentUser = user;
+          chargerHotels();
+        }
+      });
+
+      async function chargerHotels() {
+        const q = query(
+          hotelCollection,
+          where("userId", "==", currentUser.uid)
+        );
+        const snapshot = await getDocs(q);
+        const tbody = document.querySelector("#hotelTable tbody");
+        tbody.innerHTML = "";
+
+        snapshot.forEach((docSnap) => {
+          const data = docSnap.data();
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+              <td>
+                <img src="${
+                  data.image || ""
+                }" alt="Image" width="60" height="40" style="object-fit: cover; border-radius: 4px;" /><br>
+                ${data.nom}
+              </td>
+              <td>${data.ville}</td>
+              <td>${data.quartier}</td>
+              <td>${data.type || ""}</td>
+              <td>${data.prix} XOF</td>
+              <td>${data.restauration || "Non"}</td>
+              <td>${data.wifi || "Non"}</td>
+              <td>${data.piscine || "Non"}</td>
+              <td>${data.parking || "Non"}</td>
+              <td>${"⭐".repeat(data.etoiles || 0)}</td>
+              <td>
+                <button class="btn btn-warning btn-sm" onclick="remplirFormHotel('${
+                  docSnap.id
+                }')">Modifier</button>
+                <button class="btn btn-danger btn-sm" onclick="supprimerHotel('${
+                  docSnap.id
+                }')">Supprimer</button>
+              </td>
+            `;
+          tbody.appendChild(tr);
+        });
+      }
+
+      window.remplirFormHotel = async function (id) {
+        const ref = doc(db, "hotels", id);
+        const snap = await getDoc(ref);
+        if (snap.exists() && snap.data().userId === currentUser.uid) {
+          const d = snap.data();
+          currentHotelEditId = id;
+          document.getElementById("hotelNom").value = d.nom;
+          document.getElementById("hotelType").value = d.type || "";
+          document.getElementById("hotelVille").value = d.ville;
+          document.getElementById("hotelQuartier").value = d.quartier || "";
+          document.getElementById("hotelDescription").value =
+            d.description || "";
+          document.getElementById("hotelPrix").value = d.prix || "";
+          document.getElementById("hotelDisponibilite").value =
+            d.disponibilite || "Disponible";
+          document.getElementById("hotelNote").value = d.note || "";
+          document.getElementById("hotelRestauration").value =
+            d.restauration || "Non";
+          document.getElementById("hotelWifi").value = d.wifi || "Non";
+          document.getElementById("hotelPiscine").value = d.piscine || "Non";
+          document.getElementById("hotelParking").value = d.parking || "Non";
+          document.getElementById("hotelEtoiles").value = d.etoiles || 1;
+
+          document.getElementById("hotelModalLabel").innerText =
+            "Modifier l'Hôtel";
+          $("#hotelModal").modal("show");
+        }
+      };
+
+      window.ouvrirFormHotel = function () {
+        currentHotelEditId = null;
+        document.getElementById("formHotel").reset();
+        document.getElementById("hotelModalLabel").innerText =
+          "Ajouter un Hôtel";
+        $("#hotelModal").modal("show");
+      };
+
+      window.supprimerHotel = async function (id) {
+        const ref = doc(db, "hotels", id);
+        const snap = await getDoc(ref);
+        if (snap.exists() && snap.data().userId === currentUser.uid) {
+          if (confirm("Supprimer cet hôtel ?")) {
+            await deleteDoc(ref);
+            chargerHotels();
+          }
+        }
+      };
+
+      document
+        .getElementById("formHotel")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const imageFile = document.getElementById("hotelImage").files[0];
+          let imageUrl = "";
+
+          if (imageFile) {
+            const imgRef = storageRef(
+              storage,
+              "hotel_images/" + Date.now() + "_" + imageFile.name
+            );
+            const snapshot = await uploadBytes(imgRef, imageFile);
+            imageUrl = await getDownloadURL(snapshot.ref);
+          }
+
+          const hotel = {
+            nom: document.getElementById("hotelNom").value,
+            type: document.getElementById("hotelType").value,
+            ville: document.getElementById("hotelVille").value,
+            quartier: document.getElementById("hotelQuartier").value,
+            description: document.getElementById("hotelDescription").value,
+            prix: parseFloat(document.getElementById("hotelPrix").value),
+            disponibilite: document.getElementById("hotelDisponibilite").value,
+            note: parseFloat(document.getElementById("hotelNote").value),
+            restauration: document.getElementById("hotelRestauration").value,
+            wifi: document.getElementById("hotelWifi").value,
+            piscine: document.getElementById("hotelPiscine").value,
+            parking: document.getElementById("hotelParking").value,
+            etoiles: parseInt(document.getElementById("hotelEtoiles").value),
+            userId: currentUser.uid,
+          };
+
+          if (imageUrl !== "") {
+            hotel.image = imageUrl;
+          }
+
+          if (currentHotelEditId) {
+            await updateDoc(doc(db, "hotels", currentHotelEditId), hotel);
+            currentHotelEditId = null;
+          } else {
+            await addDoc(hotelCollection, hotel);
+          }
+
+          document.getElementById("formHotel").reset();
+          $("#hotelModal").modal("hide");
+          chargerHotels();
+        });
+
+      // ✅ Vérification du statut utilisateur
+      onAuthStateChanged(auth, async (user) => {
+        if (user) {
+          const usersCol = collection(db, "utilisateurs");
+          const q = query(usersCol, where("email", "==", user.email));
+          const querySnapshot = await getDocs(q);
+          if (!querySnapshot.empty) {
+            const userData = querySnapshot.docs[0].data();
+            const status = userData.status
+              ? userData.status.toLowerCase()
+              : "inactif";
+
+            if (status !== "actif") {
+              bloquerAcces();
+            }
+          } else {
+            console.warn("Utilisateur introuvable dans la base.");
+          }
+        } else {
+          // Rediriger vers la connexion si non connecté
+          window.location.href = "../../index.html";
+        }
+      });
+
+      // ✅ Fonction qui bloque l'accès à l'application
+      function bloquerAcces() {
+        const block = document.getElementById("blockedMessage");
+        const whatsapp = document.getElementById("whatsappButton");
+        const message = encodeURIComponent(
+          "Bonjour, mon compte a été bloqué car mon statut est inactif. Je souhaite renouveler mon forfait. Merci !"
+        );
+        whatsapp.href = `https://wa.me/22953444701?text=${message}`;
+        block.style.display = "block";
+
+        // Bloquer tout le reste de la page
+        document.body.style.overflow = "hidden";
+        const content = document.querySelectorAll(
+          "body > *:not(#blockedMessage)"
+        );
+        content.forEach((el) => {
+          if (el.id !== "blockedMessage") {
+            el.style.display = "none";
+          }
+        });
+      }
+    </script>
+
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("pageLoader");
+
+        // Ajoute une classe pour l'effet de fondu
+        loader.classList.add("fade");
+
+        // Cache totalement l’élément après la transition
+        setTimeout(() => {
+          loader.style.display = "none"; // Enlève de l'affichage
+          loader.style.pointerEvents = "none"; // Par sécurité
+          loader.style.zIndex = "-1"; // S'assure qu'il ne bloque plus rien
+        }, 500); // même durée que la transition CSS
+      });
+    </script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/demo/datatables-demo.js"></script>
+  </body>
+</html>

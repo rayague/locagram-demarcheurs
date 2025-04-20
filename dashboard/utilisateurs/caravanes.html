@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" type="image/png" href="./img/locagram1.png" />
+
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Locagram | Utilisateur</title>
+
+    <!-- Custom fonts for this template-->
+    <link
+      href="vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+  </head>
+
+  <body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul
+        class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion"
+        id="accordionSidebar"
+      >
+        <!-- Sidebar - Brand -->
+        <a
+          class="sidebar-brand d-flex align-items-center justify-content-center"
+          href="index.html"
+        >
+          <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-laugh-wink"></i>
+          </div>
+          <div class="mx-3 sidebar-brand-text">Locagram</div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="my-0 sidebar-divider" />
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Tableau de board</span></a
+          >
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
+
+        <ul class="navbar-nav">
+          <!-- Nav Item - Accueil -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="fas fa-fw fa-home"></i>
+              <span>Accueil</span>
+            </a>
+          </li>
+
+          <!-- Nav Item - Postes -->
+          <li class="nav-item">
+            <a class="nav-link active" href="postes.html">
+              <i class="fas fa-fw fa-briefcase"></i>
+              <span>Mes Postes</span>
+            </a>
+          </li>
+
+          <!-- Nav Item - Catégories -->
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="clients.html">
+              <i class="fas fa-fw fa-users"></i>
+              <span>Mes Clients</span>
+            </a>
+          </li> -->
+
+          <!-- Nav Item - Notifications -->
+          <li class="nav-item">
+            <a class="nav-link" href="notifications.html">
+              <i class="fas fa-fw fa-bell"></i>
+              <span>Mes Notifications</span>
+            </a>
+          </li>
+
+          <!-- Nav Item - Forfaits -->
+          <li class="nav-item">
+            <a class="nav-link" href="forfait.html">
+              <i class="fas fa-fw fa-credit-card"></i>
+              <span>Mon Forfaits</span>
+            </a>
+          </li>
+
+          <!-- Nav Item - Profil -->
+          <li class="nav-item">
+            <a class="nav-link" href="profil.html">
+              <i class="fas fa-fw fa-user"></i>
+              <span>Profil</span>
+            </a>
+          </li>
+
+          <!-- Nav Item - Déconnexion avec Modal -->
+          <li class="nav-item">
+            <a
+              class="text-white nav-link bg-danger"
+              href="#"
+              data-toggle="modal"
+              data-target="#logoutModal"
+            >
+              <i class="fas fa-fw fa-sign-out-alt"></i>
+              <span>Déconnexion</span>
+            </a>
+          </li>
+        </ul>
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block" />
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          <button class="border-0 rounded-circle" id="sidebarToggle"></button>
+        </div>
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav
+            class="mb-4 bg-white shadow navbar navbar-expand navbar-light topbar static-top"
+          >
+            <!-- Sidebar Toggle (Topbar) -->
+            <button
+              id="sidebarToggleTop"
+              class="mr-3 btn btn-link d-md-none rounded-circle"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+          </nav>
+          <!-- End of Topbar -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <!-- Page Heading -->
+
+            <!-- Bouton Retour a la page de poste -->
+            <a href="./postes.html" type="button" class="my-2 btn btn-success">
+              Retour
+            </a>
+
+            <div
+              class="mb-4 d-sm-flex align-items-center justify-content-between"
+            >
+              <h1 class="mb-0 text-gray-800 h3">Postes</h1>
+            </div>
+
+            <!-- Content Row -->
+          </div>
+          <!-- /.container-fluid -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <!-- DataTales Example -->
+            <div class="mb-4 shadow card">
+              <div
+                class="py-3 card-header d-flex justify-content-between align-items-center"
+              >
+                <h6 class="m-0 font-weight-bold text-primary">
+                  Liste des Caravanes
+                </h6>
+                <!-- Bouton pour ouvrir le modal -->
+                <div class="container mb-3 text-right">
+                  <button
+                    class="btn btn-warning"
+                    data-toggle="modal"
+                    data-target="#modalCaravane"
+                    id="btn-ajouter"
+                  >
+                    <i class="fas fa-plus"></i> Ajouter une Caravane
+                  </button>
+                </div>
+              </div>
+              <div class="my-5 container-fluid">
+                <div class="table-responsive">
+                  <table
+                    class="table table-bordered table-striped"
+                    id="table-caravanes"
+                  >
+                    <thead class="thead-dark">
+                      <tr>
+                        <th>Nom</th>
+                        <th>Prix (€)</th>
+                        <th>Capacité</th>
+                        <th>Disponibilité</th>
+                        <th>Description</th>
+                        <th>Image</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Les lignes seront générées dynamiquement -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="modalCaravane"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="modalTitle"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="text-white modal-header bg-warning">
+                  <h5 class="modal-title" id="modalTitle">
+                    Ajouter une Caravane
+                  </h5>
+                  <button
+                    type="button"
+                    class="text-white close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+
+                <form id="caravane-form">
+                  <div class="modal-body">
+                    <input type="hidden" id="caravane-id" />
+
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label>Nom</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="nom"
+                          required
+                        />
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label>Prix (€)</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="prix"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label>Capacité</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="capacite"
+                          required
+                        />
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label>Disponibilité</label>
+                        <select class="form-control" id="disponibilite">
+                          <option value="Disponible">Disponible</option>
+                          <option value="Indisponible">Indisponible</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Description</label>
+                      <textarea
+                        class="form-control"
+                        id="description"
+                        rows="3"
+                        required
+                      ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Image</label>
+                      <input
+                        type="file"
+                        class="form-control-file"
+                        id="image"
+                        accept="image/*"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-warning">
+                      Enregistrer
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Annuler
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- /.container-fluid -->
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="bg-white sticky-footer">
+          <div class="container my-auto">
+            <div class="my-auto text-center copyright">
+              <span
+                >Copyright &copy; Locagram
+                <a
+                  href="https://portfolio-cnkp.vercel.app"
+                  target="_blank"
+                  class="text-success"
+                  >Ray Ague</a
+                >
+                2025</span
+              >
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="rounded scroll-to-top" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Fenêtre modale de confirmation pour la déconnexion -->
+    <div
+      class="modal fade"
+      id="logoutModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="logoutModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="logoutModalLabel">Prêt à quitter ?</h5>
+            <button
+              class="close"
+              type="button"
+              data-dismiss="modal"
+              aria-label="Fermer"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Sélectionnez « Déconnexion » ci-dessous si vous êtes prêt(e) à
+            mettre fin à votre session actuelle.
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-dismiss="modal"
+            >
+              Annuler
+            </button>
+            <!-- Remplacez href par un appel à votre fonction logout si nécessaire -->
+            <a class="btn btn-primary" href="login.html">Déconnexion</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loader SB Admin 2 -->
+    <div
+      id="pageLoader"
+      class="bg-white d-flex justify-content-center align-items-center"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1050;
+      "
+    >
+      <div
+        class="spinner-border text-success"
+        role="status"
+        style="width: 3rem; height: 3rem"
+      >
+        <span class="sr-only">Chargement...</span>
+      </div>
+    </div>
+
+    <!-- Assure-toi d’inclure ce script à la fin de la page, après le HTML -->
+    <script type="module">
+      // Importer les modules Firebase nécessaires
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+        getDocs,
+        query,
+        where,
+        doc,
+        updateDoc,
+        deleteDoc,
+        getDoc,
+      } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
+      import {
+        getAuth,
+        onAuthStateChanged,
+      } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
+
+      // Configuration Firebase (que tu m'as fournie)
+      const firebaseConfig = {
+        apiKey: "AIzaSyCeaMAgyFWN12ktRuGSHsLdySgiZqvBIKA",
+        authDomain: "locagram-f08b9.firebaseapp.com",
+        projectId: "locagram-f08b9",
+        storageBucket: "locagram-f08b9.appspot.com",
+        messagingSenderId: "504321320981",
+        appId: "1:504321320981:web:65037b379691080972c61c",
+      };
+
+      // Initialiser Firebase et Firestore
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+      const auth = getAuth(app);
+
+      // Variable globale pour stocker l’utilisateur connecté
+      let currentUser = null;
+
+      // Référence à la collection "auberges"
+      const aubergesCollection = collection(db, "auberges");
+
+      // Définir une fonction pour charger et afficher les auberges de l'utilisateur connecté
+      async function chargerAuberges() {
+        if (!currentUser) return; // Si aucun utilisateur n'est connecté, ne rien faire
+
+        // Créer une requête qui sélectionne uniquement les documents dont le champ userId correspond à l'utilisateur courant
+        const aubergesQuery = query(
+          aubergesCollection,
+          where("userId", "==", currentUser.uid)
+        );
+        const snapshot = await getDocs(aubergesQuery);
+        const tbody = document.querySelector("#dataTable tbody");
+        tbody.innerHTML = ""; // Vider le tableau avant de remplir avec les données
+
+        snapshot.forEach((docSnap) => {
+          const data = docSnap.data();
+          const tr = document.createElement("tr");
+          tr.setAttribute("data-id", docSnap.id);
+          tr.innerHTML = `
+        <td>${data.nom || ""}</td>
+        <td>${data.ville || ""}</td>
+        <td>${data.quartier || ""}</td>
+        <td>${data.adresseDetail || ""}</td>
+        <td>${data.capacite || ""}</td>
+        <td>${data.typeChambre || ""}</td>
+        <td>${data.confort || ""}</td>
+        <td>${data.prix || ""}</td>
+        <td>${data.disponibilite || ""}</td>
+        <td>${data.equipements || ""}</td>
+        <td class="text-center">
+          <button class="btn btn-sm btn-info" onclick="remplirFormEdition('${
+            docSnap.id
+          }')">Modifier</button>
+          <button class="btn btn-sm btn-danger" onclick="supprimerAuberge('${
+            docSnap.id
+          }')">Supprimer</button>
+        </td>
+      `;
+          tbody.appendChild(tr);
+        });
+      }
+
+      // Gérer l'authentification : quand l'état change (lorsqu'un utilisateur se connecte ou se déconnecte)
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          currentUser = user;
+          console.log("Utilisateur connecté :", user.email);
+          chargerAuberges();
+        } else {
+          currentUser = null;
+          console.log("Aucun utilisateur connecté");
+          // Rediriger l'utilisateur vers la page de login, ou afficher un message
+        }
+      });
+
+      // Ajouter une auberge depuis le formulaire "aubergeForm" en incluant le userId
+      const aubergeForm = document.getElementById("aubergeForm");
+      aubergeForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        if (!currentUser) {
+          alert("Connectez-vous pour ajouter un poste.");
+          return;
+        }
+
+        // Récupérer les valeurs du formulaire
+        const auberge = {
+          nom: document.getElementById("nomAuberge").value,
+          ville: document.getElementById("ville").value,
+          quartier: document.getElementById("quartier").value,
+          adresseDetail: document.getElementById("adresseDetail").value,
+          prix: parseFloat(document.getElementById("prix").value),
+          disponibilite: document.getElementById("disponibilite").value,
+          capacite: parseInt(document.getElementById("capacite").value),
+          typeChambre: document.getElementById("typeChambre").value,
+          confort: document.getElementById("confort").value,
+          equipements: document.getElementById("equipements").value,
+          description: document.getElementById("description").value,
+          userId: currentUser.uid, // Lier le poste à l'utilisateur connecté
+          // Note : Pour les images, une gestion spécifique (upload vers Firebase Storage) sera nécessaire.
+        };
+
+        try {
+          await addDoc(aubergesCollection, auberge);
+          // Réinitialiser le formulaire et fermer le modal
+          aubergeForm.reset();
+          $("#aubergeModal").modal("hide");
+          chargerAuberges();
+        } catch (error) {
+          console.error("Erreur lors de l'ajout de l'auberge :", error);
+        }
+      });
+
+      // Variable globale pour stocker l'id de l'auberge en cours d'édition
+      let currentEditId = null;
+
+      // Fonction globale pour remplir le formulaire d'édition pour un poste donné
+      window.remplirFormEdition = async function (id) {
+        if (!currentUser) return;
+        currentEditId = id;
+        const docRef = doc(db, "auberges", id);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          const aubergeData = docSnap.data();
+          // Vérifier que l'utilisateur connecté est bien propriétaire du poste
+          if (aubergeData.userId !== currentUser.uid) {
+            alert("Vous n'êtes pas autorisé à modifier ce poste.");
+            return;
+          }
+          // Remplir les champs du formulaire d'édition avec les données récupérées
+          document.getElementById("editNomAuberge").value =
+            aubergeData.nom || "";
+          document.getElementById("editTypeChambre").value =
+            aubergeData.typeChambre || "";
+          document.getElementById("editVille").value = aubergeData.ville || "";
+          document.getElementById("editQuartier").value =
+            aubergeData.quartier || "";
+          document.getElementById("editAdresseDetail").value =
+            aubergeData.adresseDetail || "";
+          document.getElementById("editCapacite").value =
+            aubergeData.capacite || "";
+          document.getElementById("editConfort").value =
+            aubergeData.confort || "";
+          document.getElementById("editPrix").value = aubergeData.prix || "";
+          document.getElementById("editDisponibilite").value =
+            aubergeData.disponibilite || "";
+          document.getElementById("editEquipements").value =
+            aubergeData.equipements || "";
+
+          // Ouvrir le modal d'édition
+          $("#editAubergeModal").modal("show");
+        } else {
+          alert("Le poste demandé n'existe pas.");
+        }
+      };
+
+      // Gérer la soumission du formulaire d'édition
+      const editAubergeForm = document.getElementById("editAubergeForm");
+      editAubergeForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        if (!currentUser || !currentEditId) return;
+
+        // Préparer les données mises à jour
+        const aubergeUpdate = {
+          nom: document.getElementById("editNomAuberge").value,
+          typeChambre: document.getElementById("editTypeChambre").value,
+          ville: document.getElementById("editVille").value,
+          quartier: document.getElementById("editQuartier").value,
+          adresseDetail: document.getElementById("editAdresseDetail").value,
+          capacite: parseInt(document.getElementById("editCapacite").value),
+          confort: document.getElementById("editConfort").value,
+          prix: parseFloat(document.getElementById("editPrix").value),
+          disponibilite: document.getElementById("editDisponibilite").value,
+          equipements: document.getElementById("editEquipements").value,
+          // Le champ userId ne doit pas être modifié
+        };
+
+        // Récupérer le document pour vérifier l'appartenance
+        const docRef = doc(db, "auberges", currentEditId);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists() && docSnap.data().userId === currentUser.uid) {
+          try {
+            await updateDoc(docRef, aubergeUpdate);
+            editAubergeForm.reset();
+            currentEditId = null;
+            $("#editAubergeModal").modal("hide");
+            chargerAuberges();
+          } catch (error) {
+            console.error("Erreur lors de la mise à jour du poste :", error);
+          }
+        } else {
+          alert("Vous n'êtes pas autorisé à modifier ce poste.");
+        }
+      });
+
+      // Fonction globale pour supprimer un poste
+      window.supprimerAuberge = async function (id) {
+        if (!currentUser) return;
+        if (confirm("Êtes-vous sûr de vouloir supprimer ce poste ?")) {
+          const docRef = doc(db, "auberges", id);
+          const docSnap = await getDoc(docRef);
+          if (docSnap.exists() && docSnap.data().userId === currentUser.uid) {
+            try {
+              await deleteDoc(docRef);
+              chargerAuberges();
+            } catch (error) {
+              console.error("Erreur lors de la suppression du poste :", error);
+            }
+          } else {
+            alert("Vous n'êtes pas autorisé à supprimer ce poste.");
+          }
+        }
+      };
+
+      // Optionnel : tu peux ajouter une vérification pour s’assurer que les formulaires soient accessibles uniquement lorsque l’utilisateur est connecté
+
+      // Charger la liste des auberges dès que la page est chargée si l’utilisateur est déjà connecté
+      window.addEventListener("load", () => {
+        if (auth.currentUser) {
+          currentUser = auth.currentUser;
+          chargerAuberges();
+        }
+      });
+
+      // ✅ Vérification du statut utilisateur
+      onAuthStateChanged(auth, async (user) => {
+        if (user) {
+          const usersCol = collection(db, "utilisateurs");
+          const q = query(usersCol, where("email", "==", user.email));
+          const querySnapshot = await getDocs(q);
+          if (!querySnapshot.empty) {
+            const userData = querySnapshot.docs[0].data();
+            const status = userData.status
+              ? userData.status.toLowerCase()
+              : "inactif";
+
+            if (status !== "actif") {
+              bloquerAcces();
+            }
+          } else {
+            console.warn("Utilisateur introuvable dans la base.");
+          }
+        } else {
+          // Rediriger vers la connexion si non connecté
+          window.location.href = "../../index.html";
+        }
+      });
+
+      // ✅ Fonction qui bloque l'accès à l'application
+      function bloquerAcces() {
+        const block = document.getElementById("blockedMessage");
+        const whatsapp = document.getElementById("whatsappButton");
+        const message = encodeURIComponent(
+          "Bonjour, mon compte a été bloqué car mon statut est inactif. Je souhaite renouveler mon forfait. Merci !"
+        );
+        whatsapp.href = `https://wa.me/22953444701?text=${message}`;
+        block.style.display = "block";
+
+        // Bloquer tout le reste de la page
+        document.body.style.overflow = "hidden";
+        const content = document.querySelectorAll(
+          "body > *:not(#blockedMessage)"
+        );
+        content.forEach((el) => {
+          if (el.id !== "blockedMessage") {
+            el.style.display = "none";
+          }
+        });
+      }
+    </script>
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("pageLoader");
+
+        // Ajoute une classe pour l'effet de fondu
+        loader.classList.add("fade");
+
+        // Cache totalement l’élément après la transition
+        setTimeout(() => {
+          loader.style.display = "none"; // Enlève de l'affichage
+          loader.style.pointerEvents = "none"; // Par sécurité
+          loader.style.zIndex = "-1"; // S'assure qu'il ne bloque plus rien
+        }, 500); // même durée que la transition CSS
+      });
+    </script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/demo/datatables-demo.js"></script>
+  </body>
+</html>
